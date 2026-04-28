@@ -79,6 +79,13 @@ Evalúa el Email 1 en estos ejes:
 - ¿El tono del saludo es cálido sin ser adulador? "Tu trayectoria me parece interesante" pasa; "tu perfil es impresionante" suena falso.
 - **Si T1 es un factoide de Google sin saludo previo, o T2 es un dato desconectado en lugar de empatía vertical → marcar REQUIERE REESCRITURA.**
 
+### 8. T3 muestra el moat (80% manual desaparece) o se queda en superficie
+- ¿T3 cierra mostrando que el 80% manual del equipo **desaparece** y se libera para análisis específico al vertical?
+- ¿O cierra apuntando a la **superficie** del producto (NL Q&A, "imagina preguntar X y tener Y en segundos")?
+- ¿La frase de cierre menciona qué trabajo manual deja de hacer el equipo, ancla al vertical específico del prospecto?
+- ¿El cierre se siente vacío/genérico ("se enfoca en lo que importa") o específico (lending → "análisis de riesgo y compliance" / manufactura → "costos y proveedores" / retail → "customer-360 cross-sucursal")?
+- **Si T3 termina en NL Q&A o cierre genérico sin anclaje al vertical → REQUIERE REESCRITURA. El moat es la desaparición del trabajo manual, no la superficie de queries.**
+
 ---
 
 ## OUTPUT

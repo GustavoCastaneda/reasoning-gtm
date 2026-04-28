@@ -134,37 +134,62 @@ Patrón válido (saludo + reconocimiento natural de la persona):
 
 ---
 
-**T2 — Empatía vertical + Hipótesis de dolor (línea 2)**
+**T2 — Empatía vertical: imagina el día a día (línea 2)**
 
-Demuestra entendimiento de la **complejidad operacional** de su industria/empresa — sin citar datos de Google. La empatía vertical viene de CONOCER el vertical y su dolor, no de quote-droppear noticias.
+Demuestra entendimiento de la **realidad operacional** del equipo de datos en su industria — qué hacen todos los días. Empatía viene de imaginar su día a día con 2–3 fuentes/sistemas obvios del vertical tejidos naturalmente, no de citar datos de Google ni de enumerar exhaustivamente.
 
-Encadena la realidad de su vertical con la hipótesis del 80% manual.
+**Estructura**: "En [vertical] con [2–3 fuentes/sistemas obvios], el equipo [pasa la mayor parte del tiempo / se va] [trabajando manualmente en X específico]."
 
-Patrón válido:
-- "En una empresa como Konfio, con múltiples líneas de crédito y la expansión que han logrado, el trabajo de preparación y limpieza de datos debe ser un reto importante en el día a día."
-- "Liderar ML en una fintech con la complejidad operacional de Konfio implica que una buena parte del tiempo se va en limpiar y orquestar fuentes a mano antes de poder iterar modelos."
-- "En equipos de [vertical] con la operación de [Empresa], muchos equipos todavía dedican una buena parte del tiempo a [pain del 80% manual]."
+**Tono**: directo, no hedging. "El equipo pasa la mayor parte del tiempo en X" > "el dolor de X debe ser un reto en su día a día". El primer fraseo demuestra que conoces la realidad; el segundo solo hipotetiza.
 
-**Estructura**: "En una empresa/equipo como [X], con [característica de complejidad operacional sin cifra googleable], [el dolor del 80% manual] debe ser un reto importante…"
+Patrones válidos por vertical:
 
-**Por qué importa**: la empatía vertical demuestra que entendemos la industria — no solo que la investigamos. Citar el comunicado de prensa demuestra solo lo segundo. Los buenos prospects distinguen.
+- **Lending/Fintech**: "En remesas con compliance intensivo, el día a día del equipo se va homologando ERP, feeds de KYC/AML y reportes regulatorios para que los modelos tengan datos confiables."
+- **Manufactura**: "En manufactura con ERP corporativo y MES por planta, el equipo de datos pasa la mayor parte del tiempo unificando SKUs y conciliando catálogos de proveedores en formatos distintos."
+- **Retail**: "En retail con POS por sucursal, e-commerce, marketplaces y WMS central, el equipo pasa la mayor parte del tiempo conciliando inventarios y deduplicando SKUs entre todos esos sistemas a mano."
+
+Las fuentes mencionadas son **lo obvio** del vertical — lo que cualquier persona con experiencia operacional reconoce. No hay que enumerar exhaustivamente; 2–3 sistemas tejidos naturalmente son suficientes para crear el "yes, that's my world".
 
 **ANTI-PATRONES PROHIBIDOS:**
 - ❌ "Tu pipeline no fue diseñado para…" (diagnóstico — ya cubierto en TONO)
 - ❌ Cifra específica de Google ("con $2.5B USD en compromiso…") como sustituto de empatía vertical
 - ❌ Frase desconectada que no encadena con el dolor del 80% manual
+- ❌ Hedging vague ("la mayoría de equipos como el tuyo…") cuando se puede ser específico al vertical
 
-**T3 — Producto concreto + escala + industrias (líneas 4–5)**
-Bloque concreto del producto: **operaciones específicas + fracción + tiempo + industrias**. Anclado en los datos puntuales de la sección "PRODUCTO — QUÉ HACE REASONING" arriba. **No inventar casos peer.** Ejemplo válido:
+**T3 — Producto + Compresión temporal + Liberación del equipo (líneas 3–5)**
 
-> "Nuestra plataforma automatiza limpieza, deduplicación, homologación y gobernanza — el 80% del pipeline manual — y baja flujos de semanas o meses a un par de días. Hoy lo usan equipos en fintech, manufactura y retail."
+Tres elementos en este orden:
 
-Reglas duras:
-- **Verbos concretos** (limpieza, deduplicación, homologación, gobernanza), no abstracciones ("preparación", "orquestación").
-- **Fracción real** (80% manual), no inventada.
-- **Tiempo real** (semanas/meses → días), no inventado ("3 semanas a 4 días" = fabricación).
-- **Industrias reales** (fintech, manufactura, retail), no peers anónimos con N modelos.
-- Si el caso no se puede anclar a datos reales, omite el caso y deja el bloque concreto del producto. **Es preferible un T3 sin peer que un T3 con peer fabricado.**
+1. **Producto declarado + operaciones concretas + 80%**
+   "Nuestra plataforma corre agentes que hacen ese 80% manual — limpieza, deduplicación, homologación y gobernanza."
+
+2. **Compresión temporal** (semanas/meses → días)
+   "Lo que hoy toma semanas queda listo en días."
+
+3. **Liberación del equipo** — el moat real
+   "El equipo deja de [trabajo manual específico al vertical] y se enfoca en [análisis específico al vertical]."
+
+Patrones de cierre (#3) por vertical:
+
+- **Lending/Fintech**: "...el equipo deja de pasar el día preparando datos y se enfoca en análisis de riesgo y compliance."
+- **Manufactura**: "...el equipo deja de unificar a mano y se enfoca en análisis de costos y proveedores."
+- **Retail**: "...el equipo deja de conciliar a mano y se enfoca en análisis cross-sucursal y customer-360."
+- **Telecom**: "...el equipo deja de pelear con datos en silos y se enfoca en customer-360 y atribución."
+- **Logística**: "...el equipo deja de armar reportes manualmente y se enfoca en visibilidad end-to-end y costo por ruta."
+
+**Por qué importa**: el moat de Reasoning es que **el 80% manual desaparece** — no que se puedan hacer queries en lenguaje natural. El equipo de datos celebra liberarse de la plomería, no la superficie del producto. T3 debe cerrar con esa liberación, anclada al vertical específico del prospecto.
+
+**Reglas duras:**
+- **Verbos concretos** (limpieza, deduplicación, homologación, gobernanza) en el elemento #1.
+- **Compresión real** (semanas/meses → días) en el #2 — no fabricar ("3 semanas a 4 días").
+- **Cierre específico al vertical** en el #3 — no genérico ("...y se enfoca en lo que importa").
+- **No mencionar NL Q&A** como ejemplo principal — es superficie, no el moat.
+- **No inventar casos peer** ("trabajamos con un equipo de 17 modelos…") — los datos puntuales del producto son los autorizados.
+
+**ANTI-PATRONES PROHIBIDOS:**
+- ❌ Cierre genérico ("...y tu equipo se enfoca en lo que importa") — sin anclaje al vertical
+- ❌ Cerrar con "Imagina preguntar X y tener Y en segundos" — superficie de NL Q&A, no el moat
+- ❌ Resultados fabricados ("3 semanas a 4 días", "5x más rápido")
 
 **T4 — Talk: CTA value-framed (línea 5)**
 CTA conditional anclado en propósito de valor concreto. Ver sección "CTA — Email 1" arriba para reglas completas y patrón canónico ("¿Te interesaría una llamada para que veas en dónde podríamos darle valor?"). El CTA debe tener (a) interés condicional ("¿te interesaría…", "¿vale la pena…") **Y** (b) propósito de valor explícito ("para que veas X", "para mostrarte Y"). Sin ambos, falla. **Nunca cuestionador** ("¿cómo vas a resolverlo?") y **nunca vague** ("platicarlo", "verlo", "explorarlo" como verbos solos).
