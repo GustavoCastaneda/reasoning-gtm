@@ -1,0 +1,13 @@
+{
+  "name": "reasoning-gtm",
+  "description": "Sales intelligence agent for Reasoning Labs / Singularity. Researches leads, generates outreach, builds pre-quote briefs, and processes demo transcripts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Reasoning Labs",
+    "url": "https://reasoning.so"
+  },
+  "homepage": "https://reasoning.so",
+  "settings": {
+    "agent": "gtm-agent"
+  }
+}
