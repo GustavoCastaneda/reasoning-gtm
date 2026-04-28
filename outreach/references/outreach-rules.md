@@ -166,29 +166,35 @@ Tres elementos en este orden:
 2. **Compresión temporal** (semanas/meses → días)
    "Lo que hoy toma semanas queda listo en días."
 
-3. **Liberación del equipo** — el moat real
-   "El equipo deja de [trabajo manual específico al vertical] y se enfoca en [análisis específico al vertical]."
+3. **Liberación del equipo, anclada al análisis de alto valor del prospecto** — el moat real
 
-Patrones de cierre (#3) por vertical:
+**Principio del cierre**: la frase final debe responder dos preguntas, en una sola línea natural:
+- ¿De qué **trabajo manual** se libera el equipo? (el dolor que desaparece)
+- ¿En qué **análisis de alto valor** se enfoca ahora? (la ganancia anclada a la realidad operacional del prospecto — su rol, vertical, contexto específico de la ficha)
 
-- **Lending/Fintech**: "...el equipo deja de pasar el día preparando datos y se enfoca en análisis de riesgo y compliance."
-- **Manufactura**: "...el equipo deja de unificar a mano y se enfoca en análisis de costos y proveedores."
-- **Retail**: "...el equipo deja de conciliar a mano y se enfoca en análisis cross-sucursal y customer-360."
-- **Telecom**: "...el equipo deja de pelear con datos en silos y se enfoca en customer-360 y atribución."
-- **Logística**: "...el equipo deja de armar reportes manualmente y se enfoca en visibilidad end-to-end y costo por ruta."
+El loop writer→critic→judge debe **descubrir la frase específica** para cada prospecto basándose en su ficha. **No hay phrasing canónico**. Cada email merece un cierre que aplique únicamente a ese prospecto.
 
-**Por qué importa**: el moat de Reasoning es que **el 80% manual desaparece** — no que se puedan hacer queries en lenguaje natural. El equipo de datos celebra liberarse de la plomería, no la superficie del producto. T3 debe cerrar con esa liberación, anclada al vertical específico del prospecto.
+**Ejemplos de inspiración por vertical** (NO copiar verbatim — son guía de la dirección, no plantilla):
+
+- En **lending**: el equipo se libera del trabajo de homologar buró, ERP y feeds regulatorios; se enfoca en el análisis de alto valor de su rol — modelos de riesgo, respuesta a regulador, scoring, decisión de crédito, etc. La frase específica depende de qué hace ESTE prospecto y qué dolor concreto se va.
+- En **manufactura**: el equipo se libera de unificar SKUs y conciliar catálogos a mano; se enfoca en análisis de costos, proveedores, planning de producción, calidad, etc.
+- En **retail**: el equipo se libera de conciliar inventarios cross-canal y deduplicar SKUs; se enfoca en análisis cross-sucursal, customer-360, planning de surtido, attribution, etc.
+- En **telecom / logística / otros**: aplica el mismo principio — qué trabajo manual desaparece y qué análisis de alto valor se desbloquea.
+
+**Por qué importa**: el moat de Reasoning es que **el 80% manual desaparece** — no que se puedan hacer queries en lenguaje natural. El equipo de datos celebra liberarse de la plomería, no la superficie del producto. T3 debe cerrar con esa liberación, **descubierta** por el loop para cada prospecto, no aplicada como template.
 
 **Reglas duras:**
 - **Verbos concretos** (limpieza, deduplicación, homologación, gobernanza) en el elemento #1.
 - **Compresión real** (semanas/meses → días) en el #2 — no fabricar ("3 semanas a 4 días").
-- **Cierre específico al vertical** en el #3 — no genérico ("...y se enfoca en lo que importa").
+- **Cierre específico y descubierto** en el #3 — usa la ficha del prospecto para anclar a su realidad, no copies un ejemplo verbatim.
 - **No mencionar NL Q&A** como ejemplo principal — es superficie, no el moat.
 - **No inventar casos peer** ("trabajamos con un equipo de 17 modelos…") — los datos puntuales del producto son los autorizados.
 
 **ANTI-PATRONES PROHIBIDOS:**
 - ❌ Cierre genérico ("...y tu equipo se enfoca en lo que importa") — sin anclaje al vertical
 - ❌ Cerrar con "Imagina preguntar X y tener Y en segundos" — superficie de NL Q&A, no el moat
+- ❌ Copiar verbatim los ejemplos de inspiración — son guía, no template. El cierre tiene que ser descubierto, no replicado
+- ❌ Mismo cierre exacto en dos emails de prospectos distintos del mismo vertical → señal de template, no de descubrimiento
 - ❌ Resultados fabricados ("3 semanas a 4 días", "5x más rápido")
 
 **T4 — Talk: CTA value-framed (línea 5)**
