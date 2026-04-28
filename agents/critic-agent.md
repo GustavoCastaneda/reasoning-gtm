@@ -71,6 +71,14 @@ Evalúa el Email 1 en estos ejes:
 - ¿Se usa el research como información para entender, o como exhibición ("vi que…", "noté que tu equipo…")?
 - **Si el email diagnostica al cliente, lo cuestiona o suena con superioridad → marcar REQUIERE REESCRITURA. Esto aplica antes que el resto del veredicto.**
 
+### 7. Apertura natural y empatía vertical
+- ¿El email empieza con saludo + reconocimiento del **contacto** (puesto, trayectoria, expertise) o con un factoide de la **empresa** copy-pasteable de Google?
+- ¿T1 reconoce a la persona o lee como un comunicado de prensa quoteado?
+- ¿T2 demuestra entendimiento de la complejidad operacional de la industria — algo que solo alguien que conoce el vertical diría — o es un dato desconectado del resto del email?
+- ¿La transición T1 → T2 → T3 fluye naturalmente, o se siente como pegoteo de hechos sin hilo?
+- ¿El tono del saludo es cálido sin ser adulador? "Tu trayectoria me parece interesante" pasa; "tu perfil es impresionante" suena falso.
+- **Si T1 es un factoide de Google sin saludo previo, o T2 es un dato desconectado en lugar de empatía vertical → marcar REQUIERE REESCRITURA.**
+
 ---
 
 ## OUTPUT

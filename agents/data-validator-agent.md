@@ -109,6 +109,35 @@ Autorizadas:
 ### 7. Verbos abstractos sin concretos
 Si el draft usa **solo** abstracciones ("preparación", "orquestación", "data ops") sin los verbos concretos del Chequeo 1, es FAIL aunque pase los demás. **Concreto manda.**
 
+### 8. Apertura con saludo + nombre del contacto
+La primera línea (excluyendo Subject) debe empezar con **"Hola [Nombre del contacto],"** o equivalente cercano ("Hi [Nombre],", "[Nombre],").
+
+**FAIL si**:
+- La primera línea es un factoide o sentence sin saludo previo (ej. "El compromiso de Konfio para Plan México…" empezando frío).
+- Falta el saludo + nombre.
+
+### 9. Sin factoides de Google en T1
+Después del saludo, T1 debe ser reconocimiento del **contacto** (puesto, trayectoria, expertise) — **no de la empresa como entidad noticiosa**.
+
+Patrones FAIL (red flags de factoide googleable):
+- Cifras de funding: "$2.5B USD", "Serie B de $X", "$X millones"
+- % de crecimiento citados como hecho público: "15% YoY", "duplicó su volumen el último trimestre"
+- Anuncios quoteados: "anunciaron…", "el compromiso de [Empresa] para…", "vi el anuncio de…"
+- Programas/iniciativas con montos: "Plan México $2.5B", "Plan X — Y USD en Z meses"
+- Cualquier sentence que parezca copy-paste de un comunicado de prensa
+
+**Heurística**: si la primera línea (después del saludo) podría aparecer literal en un press release o nota de TechCrunch/Bloomberg, es FAIL. Reconocer el rol del contacto sí es válido; reconocer su comunicado de prensa no.
+
+### 10. Empatía vertical en T2
+T2 (la línea después de T1) debe demostrar entendimiento de la complejidad operacional de su industria/empresa, encadenando con el dolor del 80% manual.
+
+**Patrón válido**: "En una empresa como [X], con [característica de complejidad operacional sin cifra googleable], [el dolor del 80% manual] debe ser un reto…"
+
+**FAIL si**:
+- T2 pasa directo a T3 (producto) sin tender el puente de empatía vertical.
+- T2 cita una cifra de Google ("con $2.5B USD en compromiso…") en lugar de complejidad operacional cualitativa.
+- T2 lee como factoide desconectado en lugar de hipótesis empática anclada en la industria.
+
 ---
 
 ## OUTPUT — formato exacto
@@ -126,6 +155,11 @@ PROHIBIDOS:
 5. Casos peer fabricados: [LIMPIO / FAIL — cita la frase exacta]
 6. Métricas fabricadas: [LIMPIO / FAIL — cita la frase exacta]
 7. Solo verbos abstractos: [LIMPIO / FAIL — explica]
+
+APERTURA:
+8. Saludo + nombre del contacto: [PASS / FAIL — cita la primera línea]
+9. Sin factoides de Google en T1: [LIMPIO / FAIL — cita la frase problemática]
+10. Empatía vertical en T2: [PASS / FAIL — cita T2 o explica qué falta]
 
 VEREDICTO: [PASS / FAIL]
 
