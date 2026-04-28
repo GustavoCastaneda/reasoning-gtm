@@ -54,10 +54,25 @@ Crea una nota con los datos del contacto de la ficha de investigación:
 - Señal de dolor identificada
 - Trigger para outreach
 
+### 5. Actualizar el Google Doc en Drive
+
+Toma el URL del Doc del campo `GOOGLE DOC > URL` de la ficha que dejó `/research`. **Abre ese Doc específico (por URL/ID, no por nombre)** y agrega al inicio, justo debajo del bloque de empresa que dejó `/create-company`:
+
+```
+🔗 HubSpot Contacto: [link directo al contacto en HubSpot]
+📅 Contacto creado: [fecha]
+```
+
+**Reglas estrictas:**
+- NO crees un Doc nuevo bajo ninguna circunstancia.
+- Si no tienes el URL en el contexto pero la empresa ya existe en HubSpot, busca la empresa en HubSpot y lee la línea `📄 Google Doc: ...` de la nota inicial — ese es el URL.
+- Si después de eso aún no tienes URL, detente y reporta: "No encuentro el Google Doc del lead [empresa]. Confirma con el usuario antes de continuar."
+- No busques por nombre en Drive como fallback.
+
 ---
 
 ## OUTPUT AL TERMINAR
 
-| Contacto | Empresa | HubSpot creado | Vinculado |
-|----------|---------|---------------|-----------|
-| [nombre] | [empresa] | ✅ | ✅ |
+| Contacto | Empresa | HubSpot creado | Vinculado | Doc actualizado |
+|----------|---------|----------------|-----------|-----------------|
+| [nombre] | [empresa] | ✅ | ✅ | ✅ |

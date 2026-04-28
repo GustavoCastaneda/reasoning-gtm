@@ -77,6 +77,10 @@ CONTACTO
 
 TRIGGER PARA OUTREACH
 • [1 línea con el dato más específico y accionable para personalizar el email]
+
+GOOGLE DOC
+• URL: [URL completo del Doc creado en Drive — ID resoluble]
+• Título: [Empresa] — Lead Research YYYY-MM-DD
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -94,8 +98,9 @@ Ejecuta estas dos acciones por cada lead sin pedir confirmación:
 
 ### 1. Crear Google Doc en Drive
 - Crea un Doc con el contenido completo de la ficha
-- Título del Doc: `[Empresa] — Lead Research [fecha]`
+- Título exacto: `[Empresa] — Lead Research YYYY-MM-DD` (fecha en formato ISO)
 - Guárdalo en la carpeta **"Leads activos"** en Drive (si no existe, créala)
+- **Captura el URL del Doc** y agrégalo a la ficha en la sección `GOOGLE DOC`. Esto es crítico: los skills downstream (`/create-company`, `/create-contact`) usan ese URL para actualizar el Doc — no buscan por nombre. Si el URL no queda en la ficha, los skills siguientes crearían un Doc nuevo en vez de actualizar este.
 
 ### 2. Pasar las fichas al siguiente skill
 Las fichas quedan disponibles en el chat para que el siguiente skill (`create-company`) las consuma directamente. No hace falta que el usuario las copie — están en el contexto de la sesión.

@@ -172,4 +172,5 @@ Los agentes de outreach no se invocan manualmente — el skill `/outreach` los o
 - Si recibes un contacto sin empresa, pregunta a qué empresa pertenece antes de continuar
 - El outreach necesita mínimo 8.5/10 del Judge para llegar al chat — máximo 3 iteraciones
 - `/post-llamada` acumula — nunca reemplaza información existente
+- **Solo debe existir UN Google Doc por lead.** Cualquier skill que toque el Doc usa el URL del campo `GOOGLE DOC > URL` de la ficha de research, o lo recupera de la línea `📄 Google Doc:` en la nota inicial de la empresa en HubSpot. Nunca buscar por nombre, nunca crear uno nuevo. Si no se encuentra el URL, parar y reportar — no improvisar
 - Español para LATAM, inglés para US

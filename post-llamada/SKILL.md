@@ -93,14 +93,18 @@ Siguiente paso: [acuerdo] — [timeline]
 
 ## PASO 4 — Actualizar el Google Doc en Drive
 
-Busca el Doc `[Empresa] — Lead Research` en la carpeta "Leads activos" y agrega una nueva sección al final:
+1. **Localiza el URL del Doc** vía la nota inicial del registro de la empresa en HubSpot — busca la línea `📄 Google Doc: [URL]` que dejó `/create-company` cuando se creó la empresa.
+2. **Abre ese Doc específico (por URL/ID, no por nombre)** y agrega una nueva sección AL FINAL:
 
 ```
 ## [Propósito de la llamada] — [fecha]
 [contenido del expediente de esta llamada]
 ```
 
-No borres ni modifiques las secciones anteriores — solo agrega al final.
+**Reglas estrictas:**
+- No borres ni modifiques las secciones anteriores — solo agrega al final.
+- NO crees un Doc nuevo bajo ninguna circunstancia. Si la nota de HubSpot no tiene la línea `📄 Google Doc:` o el URL no resuelve, **detente y reporta**: "No encuentro el Google Doc del lead [empresa]. Verifica que `/research` y `/create-company` se hayan corrido para esta empresa."
+- No busques por nombre en Drive como fallback — eso generaba duplicados.
 
 ---
 

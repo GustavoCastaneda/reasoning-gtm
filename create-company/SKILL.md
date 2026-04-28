@@ -37,15 +37,23 @@ Si algún campo no está disponible en la ficha, déjalo vacío — no inventes 
 ## DESPUÉS DE CREAR CADA EMPRESA
 
 ### 1. Agregar nota en HubSpot
-Crea una nota en el registro de la empresa con el contenido completo de la ficha de investigación — industria, competidores, contacto, trigger para outreach.
+Crea una nota en el registro de la empresa con:
+- El contenido completo de la ficha de investigación (industria, competidores, contacto, trigger para outreach).
+- **Una línea final fija**: `📄 Google Doc: [URL del Doc tomado del campo GOOGLE DOC > URL de la ficha]`. Esto permite que `/post-llamada` y `/lead-brief` (en sesiones posteriores) recuperen el URL desde HubSpot sin buscar en Drive.
 
 ### 2. Actualizar el Google Doc en Drive
-Busca el Doc `[Empresa] — Lead Research` en la carpeta "Leads activos" y agrega al inicio:
+
+Toma el URL del Doc del campo `GOOGLE DOC > URL` de la ficha que dejó `/research` en el contexto. **Abre ese Doc específico (por URL/ID, no por nombre)** y agrega al inicio:
 
 ```
-🔗 HubSpot: [link directo al registro de la empresa]
-📅 Creado: [fecha]
+🔗 HubSpot Empresa: [link directo al registro de la empresa en HubSpot]
+📅 Empresa creada: [fecha]
 ```
+
+**Reglas estrictas:**
+- NO crees un Doc nuevo bajo ninguna circunstancia.
+- Si el campo `GOOGLE DOC > URL` no está en la ficha o el URL no resuelve, **detente y reporta**: "No encuentro el Google Doc del lead [empresa]. Corre primero `/research` o pásame el URL del Doc."
+- No busques por nombre como fallback — eso es lo que generaba duplicados.
 
 ---
 
