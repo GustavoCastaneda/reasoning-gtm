@@ -32,9 +32,8 @@ El 80% del tiempo de cualquier equipo de datos no se gasta en análisis — se g
 3. **Análisis** — Detección de anomalías, diagnóstico multi-hipótesis, modelos predictivos. Corre de forma continua sin esperar a que alguien abra un dashboard.
 4. **Acción** — Entrega proactiva por Slack, correo o Teams. El sistema interrumpe cuando algo cambia, con el diagnóstico hecho y la acción lista para aprobar. También responde preguntas en lenguaje natural: "¿Cuáles fueron nuestros cinco proveedores con mayor incremento de precio este trimestre?" → respuesta en segundos, sin SQL.
 
-O se pueden consumir en el dashboard con text-to-sql.
-
 **Lo que NO somos:**
+- No somos un dashboard. No reemplazamos Power BI.
 - No somos una consultora de MDM.
 - Somos la capa que elimina la plomería de datos y convierte el pipeline manual en automático.
 
@@ -42,8 +41,8 @@ O se pueden consumir en el dashboard con text-to-sql.
 - Para el equipo de datos: "El 80% de tu trabajo que es plomería, lo hacemos nosotros. Tú te enfocas en análisis de alto valor."
 - Para el dueño/director: "Toda la analítica de tu negocio disponible 24/7 sin depender de que alguien te arme un reporte."
 
-**Caso de referencia:**
-Financiera con 8 sucursales, 8 líneas de crédito, 4 tipos de crédito, productos de inversión, equipo de datos de 4 personas. El 80% del trabajo del equipo era plomería.
+**Caso de referencia (primer piloto activo):**
+Financiera con 8 sucursales, 8 líneas de crédito, 4 tipos de crédito, productos de inversión, equipo de datos de 4 personas. El 80% del trabajo del equipo era plomería. Actualmente en piloto.
 
 **Estadísticas de respaldo:**
 - 80% del tiempo de data science se va en preparar datos
@@ -117,3 +116,57 @@ Stages en orden:
 - Escala según complejidad de datos, volumen, fuentes y usuarios
 - Setup adicional solo si la extracción de datos es compleja
 - Nunca mandar cotización por email sin contexto — siempre presentar en llamada
+
+---
+
+## GUÍA DEL PLUGIN — SKILLS Y AGENTES DISPONIBLES
+
+### Flujo completo de ventas
+
+```
+1. research          → investigar el lead
+2. create-company    → crear empresa en HubSpot
+3. create-contact    → crear contacto vinculado en HubSpot
+4. outreach          → generar y refinar la secuencia de emails
+       └── writer-agent   → escribe el draft
+       └── critic-agent   → revisa y da recomendaciones
+       └── judge-agent    → califica del 1-10 (mínimo 8.5 para aprobar)
+5. post-demo         → procesar cualquier llamada y acumular expediente
+6. lead-brief        → resumen ejecutivo antes de cotizar
+```
+
+---
+
+### Skills disponibles
+
+| Skill | Cuándo invocar | Input esperado |
+|-------|---------------|----------------|
+| `research` | Antes de contactar un lead nuevo | Tabla Excel con: empresa, contacto, puesto, work email, linkedin |
+| `create-company` | Después de research | Las fichas del contexto de la sesión |
+| `create-contact` | Después de create-company | Las fichas del contexto de la sesión |
+| `outreach` | Después de create-contact | Nombre de empresa (toma la ficha del contexto) |
+| `post-demo` | Después de cualquier llamada con el cliente | `[Empresa] | [propósito de la llamada]` |
+| `lead-brief` | Antes de una cotización o reunión importante | Nombre de empresa |
+
+---
+
+### Agentes disponibles
+
+| Agente | Rol | Lo invoca |
+|--------|-----|-----------|
+| `writer-agent` | Escribe el draft de outreach | El skill `outreach` automáticamente |
+| `critic-agent` | Revisa el draft y da recomendaciones | El skill `outreach` automáticamente |
+| `judge-agent` | Califica del 1-10 como si fuera el cliente | El skill `outreach` automáticamente |
+
+Los agentes de outreach no se invocan manualmente — el skill `outreach` los orquesta.
+
+---
+
+### Reglas generales
+
+- Siempre consulta HubSpot, Granola y Calendar antes de responder sobre un lead
+- Máximo 10 leads por sesión en `research`
+- Si recibes un contacto sin empresa, pregunta a qué empresa pertenece antes de continuar
+- El outreach necesita mínimo 8.5/10 del Judge para llegar al chat — máximo 3 iteraciones
+- `post-demo` acumula — nunca reemplaza información existente
+- Español para LATAM, inglés para US
