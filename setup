@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+# reasoning-gtm setup — instala skills, agents y MCP en Claude Code
+set -e
+umask 077
+
+INSTALL_DIR="$(cd "$(dirname "$0")" && pwd)"
+CLAUDE_DIR="$HOME/.claude"
+SKILLS_DIR="$CLAUDE_DIR/skills"
+AGENTS_DIR="$CLAUDE_DIR/agents"
+
+echo "Instalando reasoning-gtm..."
+
+mkdir -p "$SKILLS_DIR" "$AGENTS_DIR"
+
+# 1. Symlink each skill directory (any folder at repo root with a SKILL.md)
+echo "  Instalando skills..."
+installed_skills=()
+for entry in "$INSTALL_DIR"/*/; do
+  skill_name="$(basename "$entry")"
+  [ -f "$entry/SKILL.md" ] || continue
+
+  target="$SKILLS_DIR/$skill_name"
+  [ -e "$target" ] && [ ! -L "$target" ] && rm -rf "$target"
+  ln -snf "${entry%/}" "$target"
+
+  installed_skills+=("$skill_name")
+  echo "    ✓ /$skill_name"
+done
+
+# 2. Copy agents
+echo "  Instalando agents..."
+installed_agents=()
+if [ -d "$INSTALL_DIR/agents" ]; then
+  for agent_file in "$INSTALL_DIR/agents"/*.md; do
+    [ -f "$agent_file" ] || continue
+    agent_name="$(basename "$agent_file")"
+    cp -f "$agent_file" "$AGENTS_DIR/$agent_name"
+    installed_agents+=("$agent_name")
+    echo "    ✓ $agent_name"
+  done
+fi
+
+# 3. Install .mcp.json (merge if user already has one)
+echo "  Instalando MCP servers..."
+MCP_SOURCE="$INSTALL_DIR/.mcp.json"
+MCP_TARGET="$CLAUDE_DIR/.mcp.json"
+
+if [ -f "$MCP_SOURCE" ]; then
+  if [ -f "$MCP_TARGET" ]; then
+    cp "$MCP_TARGET" "$MCP_TARGET.backup"
+    echo "    Backup de .mcp.json existente guardado en .mcp.json.backup"
+    python3 -c "
+import json
+with open('$MCP_TARGET') as f:
+    existing = json.load(f)
+with open('$MCP_SOURCE') as f:
+    new = json.load(f)
+existing.setdefault('mcpServers', {}).update(new.get('mcpServers', {}))
+with open('$MCP_TARGET', 'w') as f:
+    json.dump(existing, f, indent=2)
+print('    ✓ MCP servers merged')
+"
+  else
+    cp "$MCP_SOURCE" "$MCP_TARGET"
+    echo "    ✓ .mcp.json instalado"
+  fi
+fi
+
+echo ""
+echo "reasoning-gtm instalado."
+echo ""
+echo "Skills disponibles:"
+for s in "${installed_skills[@]}"; do
+  echo "  /$s"
+done
+echo ""
+echo "Agents instalados:"
+for a in "${installed_agents[@]}"; do
+  echo "  $a"
+done
+echo ""
+echo "Para actualizar:"
+echo "  cd ~/.claude/skills/reasoning-gtm && git pull && ./setup"
+echo ""
+echo "Reinicia Claude Code para activar."

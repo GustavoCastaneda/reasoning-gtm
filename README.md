@@ -1,150 +1,62 @@
 # reasoning-gtm
 
-Plugin de Claude Code para el proceso completo de ventas de Reasoning Labs. Investiga leads, genera outreach refinado con un loop de 3 agentes, gestiona el expediente del cliente, y prepara briefs pre-cotización.
+Sales intelligence agent para Reasoning Labs. Investiga leads, genera outreach refinado con un loop de 3 agentes, gestiona el expediente del cliente en HubSpot y prepara briefs pre-cotización.
 
----
-
-## Instalación
+## Install
 
 ```bash
-# Local (desarrollo)
-claude --plugin-dir ./reasoning-gtm
-
-# Desde GitHub
-/plugin install github.com/reasoning-labs/reasoning-gtm
+git clone https://github.com/GustavoCastaneda/reasoning-gtm.git ~/.claude/skills/reasoning-gtm && cd ~/.claude/skills/reasoning-gtm && ./setup
 ```
 
----
+## Update
 
-## Flujo de ventas
-
-```
-1. research          → investiga el lead y crea el Doc en Drive
-2. create-company    → crea la empresa en HubSpot
-3. create-contact    → crea el contacto vinculado en HubSpot
-4. outreach          → genera y refina la secuencia de emails (loop Writer → Critic → Judge)
-5. post-demo         → procesa cada llamada y acumula el expediente
-6. lead-brief        → resumen ejecutivo antes de cotizar
+```bash
+cd ~/.claude/skills/reasoning-gtm && git pull && ./setup
 ```
 
----
+## What gets installed
 
-## Skills
+**Slash commands** (skills):
 
-### `research`
-Investiga cada lead en 4 bloques: industria, empresa, competidores y contacto. Detecta señales de FOMO si un competidor ya usa una solución de datos similar. Crea un Google Doc por lead en la carpeta "Leads activos" en Drive.
+| Skill | Cuándo usarlo |
+|-------|---------------|
+| `/gtm` | **Entry point recomendado.** Lenguaje natural — describe lo que quieres y orquesta los skills correctos. Acepta tabla pegada, CSV o XLSX |
+| `/research` | Investiga un lead nuevo en 4 bloques (industria, empresa, competidores, contacto) y crea el Doc en Drive |
+| `/create-company` | Crea la empresa en HubSpot y le adjunta la ficha como nota |
+| `/create-contact` | Crea el contacto en HubSpot y lo vincula a su empresa |
+| `/outreach` | Genera la secuencia de emails (Email 1 + Email 2 + break-up + LinkedIn) con loop Writer → Critic → Judge |
+| `/post-llamada` | Procesa el transcript de una llamada y acumula el expediente del cliente |
+| `/lead-brief` | Resumen ejecutivo de todo el contexto acumulado del lead antes de cotizar |
 
-```
-Input: tabla pegada del Excel con columnas:
-empresa | contacto | puesto | work email | linkedin
+**Agents** (en `agents/`):
 
-Máximo 10 leads por sesión.
-```
+- `gtm-agent` — copiloto principal, conoce el producto, ICP, personas y pipeline
+- `writer-agent` — escribe el primer draft del outreach
+- `critic-agent` — revisa el draft y da recomendaciones
+- `judge-agent` — califica del 1-10 simulando ser el prospecto (mínimo 8.5 para aprobar)
 
-### `create-company`
-Crea la empresa en HubSpot con los datos de la ficha. Agrega la ficha completa como nota en el registro. Actualiza el Google Doc con el link de HubSpot.
+**MCP servers** — el setup hace merge de `.mcp.json` con tu `~/.claude.json` global. Servicios configurados: HubSpot, Granola, Google Calendar, Gmail y Google Drive.
 
-```
-Input: fichas del contexto de la sesión (después de research)
-```
+## Requirements
 
-### `create-contact`
-Crea el contacto en HubSpot y lo vincula a su empresa. Si el contacto llega sin empresa, pregunta antes de continuar.
+- Claude Code
+- `python3` (lo usa `setup` para hacer merge de `.mcp.json`)
+- Credenciales de los MCP servers — `.mcp.json` contiene los URLs de cada uno; la autenticación se completa en Claude Code la primera vez que se invoca cada servicio
 
-```
-Input: fichas del contexto de la sesión (después de create-company)
-Regla: siempre requiere empresa + contacto
-```
-
-### `outreach`
-Genera la secuencia completa de emails usando un loop de refinamiento entre 3 agentes. El email necesita mínimo 8.5/10 del Judge para llegar al chat. Máximo 3 iteraciones. Después del visto bueno crea los drafts en Gmail y actualiza HubSpot.
-
-```
-Input: nombre de empresa (toma la ficha del contexto)
-Output: Email 1 + Email 2 + Break-up + LinkedIn
-```
-
-**Loop de refinamiento:**
-```
-Writer → draft + autocrítica
-Critic → reporte + recomendaciones
-Writer → reescribe
-Judge  → califica (mínimo 8.5/10)
-  └── < 8.5 y loops < 3 → regresa al Critic
-  └── ≥ 8.5 o 3 iteraciones → muestra en chat para aprobación
-```
-
-### `post-demo`
-Procesa el transcript de cualquier llamada en Granola y agrega una entrada al expediente acumulativo del cliente en HubSpot y Drive. Nunca reemplaza información existente — siempre acumula.
-
-```
-Input: [Empresa] | [propósito de la llamada]
-Ejemplos:
-  Financiera ABC | llamada de mapeo
-  Distribuidora XYZ | demo
-  Retail Norte | revisión de piloto
-```
-
-### `lead-brief`
-Consolida todo el contexto acumulado del lead — HubSpot, Granola y Calendar — en un resumen ejecutivo para entrar preparado a la cotización.
-
-```
-Input: nombre de empresa
-```
-
----
-
-## Agentes
-
-| Agente | Rol |
-|--------|-----|
-| `gtm-agent` | Agente principal — se activa automáticamente al cargar el plugin |
-| `writer-agent` | Escribe el draft de outreach usando la ficha del lead |
-| `critic-agent` | Revisa el draft y da recomendaciones concretas |
-| `judge-agent` | Califica del 1-10 simulando ser el prospecto en su bandeja de entrada |
-
-Los agentes `writer`, `critic` y `judge` son invocados automáticamente por el skill `outreach`. No se llaman manualmente.
-
----
-
-## Integraciones (MCP)
-
-| Servicio | Uso |
-|----------|-----|
-| HubSpot | CRM — empresas, contactos, notas, pipeline |
-| Granola | Transcripts de llamadas y demos |
-| Google Calendar | Reuniones próximas y slots disponibles |
-| Gmail | Drafts de outreach |
-| Google Drive | Docs de investigación en carpeta "Leads activos" |
-
----
-
-## Estructura del repositorio
+## Repo layout
 
 ```
 reasoning-gtm/
-├── .claude-plugin/
-│   └── plugin.json
-├── agents/
-│   ├── gtm-agent.md
-│   ├── writer-agent.md
-│   ├── critic-agent.md
-│   └── judge-agent.md
-├── skills/
-│   ├── research/
-│   │   └── SKILL.md
-│   ├── create-company/
-│   │   └── SKILL.md
-│   ├── create-contact/
-│   │   └── SKILL.md
-│   ├── outreach/
-│   │   ├── SKILL.md
-│   │   └── references/
-│   │       └── outreach-rules.md
-│   ├── post-demo/
-│   │   └── SKILL.md
-│   └── lead-brief/
-│       └── SKILL.md
+├── gtm/SKILL.md            ← orquestador (entry point)
+├── research/SKILL.md
+├── create-company/SKILL.md
+├── create-contact/SKILL.md
+├── outreach/{SKILL.md, references/}
+├── post-llamada/SKILL.md
+├── lead-brief/SKILL.md
+├── agents/{gtm-agent.md, writer-agent.md, critic-agent.md, judge-agent.md}
 ├── .mcp.json
+├── setup
+├── CLAUDE.md
 └── README.md
 ```

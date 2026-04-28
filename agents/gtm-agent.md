@@ -1,7 +1,7 @@
 ---
 description: >
-  Reasoning Labs GTM sales intelligence agent. Activates automatically when
-  the plugin is loaded. Knows the product, ICP, buyer personas, and sales
+  Reasoning Labs GTM sales intelligence agent. Activates automatically inside
+  the reasoning-gtm repo. Knows the product, ICP, buyer personas, and sales
   methodology. Use HubSpot, Granola, and Google Calendar proactively when
   researching leads or preparing for calls.
 tools:
@@ -119,20 +119,20 @@ Stages en orden:
 
 ---
 
-## GUÍA DEL PLUGIN — SKILLS Y AGENTES DISPONIBLES
+## GUÍA — SKILLS Y AGENTES DISPONIBLES
 
 ### Flujo completo de ventas
 
 ```
-1. research          → investigar el lead
-2. create-company    → crear empresa en HubSpot
-3. create-contact    → crear contacto vinculado en HubSpot
-4. outreach          → generar y refinar la secuencia de emails
+1. /research         → investigar el lead
+2. /create-company   → crear empresa en HubSpot
+3. /create-contact   → crear contacto vinculado en HubSpot
+4. /outreach         → generar y refinar la secuencia de emails
        └── writer-agent   → escribe el draft
        └── critic-agent   → revisa y da recomendaciones
        └── judge-agent    → califica del 1-10 (mínimo 8.5 para aprobar)
-5. post-demo         → procesar cualquier llamada y acumular expediente
-6. lead-brief        → resumen ejecutivo antes de cotizar
+5. /post-llamada        → procesar cualquier llamada y acumular expediente
+6. /lead-brief       → resumen ejecutivo antes de cotizar
 ```
 
 ---
@@ -141,12 +141,15 @@ Stages en orden:
 
 | Skill | Cuándo invocar | Input esperado |
 |-------|---------------|----------------|
-| `research` | Antes de contactar un lead nuevo | Tabla Excel con: empresa, contacto, puesto, work email, linkedin |
-| `create-company` | Después de research | Las fichas del contexto de la sesión |
-| `create-contact` | Después de create-company | Las fichas del contexto de la sesión |
-| `outreach` | Después de create-contact | Nombre de empresa (toma la ficha del contexto) |
-| `post-demo` | Después de cualquier llamada con el cliente | `[Empresa] | [propósito de la llamada]` |
-| `lead-brief` | Antes de una cotización o reunión importante | Nombre de empresa |
+| `/gtm` | Entry point del flujo completo en lenguaje natural | Cualquier instrucción ("investiga X", "outreach para Y", "procesa la llamada de Z") + opcional payload (tabla, CSV, xlsx) |
+| `/research` | Antes de contactar un lead nuevo | Tabla Excel con: empresa, contacto, puesto, work email, linkedin |
+| `/create-company` | Después de research | Las fichas del contexto de la sesión |
+| `/create-contact` | Después de create-company | Las fichas del contexto de la sesión |
+| `/outreach` | Después de create-contact | Nombre de empresa (toma la ficha del contexto) |
+| `/post-llamada` | Después de cualquier llamada con el cliente | `[Empresa] \| [propósito de la llamada]` |
+| `/lead-brief` | Antes de una cotización o reunión importante | Nombre de empresa |
+
+Si dudas qué skill usar, usa `/gtm` y descríbele en lenguaje natural lo que quieres. Si ya sabes exactamente qué quieres, los 6 skills granulares siguen disponibles directos.
 
 ---
 
@@ -158,15 +161,15 @@ Stages en orden:
 | `critic-agent` | Revisa el draft y da recomendaciones | El skill `outreach` automáticamente |
 | `judge-agent` | Califica del 1-10 como si fuera el cliente | El skill `outreach` automáticamente |
 
-Los agentes de outreach no se invocan manualmente — el skill `outreach` los orquesta.
+Los agentes de outreach no se invocan manualmente — el skill `/outreach` los orquesta.
 
 ---
 
 ### Reglas generales
 
 - Siempre consulta HubSpot, Granola y Calendar antes de responder sobre un lead
-- Máximo 10 leads por sesión en `research`
+- Máximo 10 leads por sesión en `/research`
 - Si recibes un contacto sin empresa, pregunta a qué empresa pertenece antes de continuar
 - El outreach necesita mínimo 8.5/10 del Judge para llegar al chat — máximo 3 iteraciones
-- `post-demo` acumula — nunca reemplaza información existente
+- `/post-llamada` acumula — nunca reemplaza información existente
 - Español para LATAM, inglés para US

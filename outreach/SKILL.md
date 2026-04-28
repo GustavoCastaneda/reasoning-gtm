@@ -19,7 +19,7 @@ Ejecuta el loop de refinamiento completo antes de mostrar cualquier resultado en
 ### Paso 1 — Writer
 Invoca al `writer-agent` con:
 - La ficha de investigación del lead
-- El archivo `skills/outreach/references/outreach-rules.md`
+- El archivo `outreach/references/outreach-rules.md`
 
 El Writer produce el primer draft con su autocrítica.
 
@@ -28,7 +28,7 @@ El Writer produce el primer draft con su autocrítica.
 ### Paso 2 — Critic
 Invoca al `critic-agent` con:
 - La ficha de investigación del lead
-- El archivo `skills/outreach/references/outreach-rules.md`
+- El archivo `outreach/references/outreach-rules.md`
 - El draft del Writer incluyendo su autocrítica
 
 El Critic produce el reporte de revisión con recomendaciones.
@@ -38,7 +38,7 @@ El Critic produce el reporte de revisión con recomendaciones.
 ### Paso 3 — Writer reescribe
 Invoca al `writer-agent` nuevamente con:
 - La ficha de investigación del lead
-- El archivo `skills/outreach/references/outreach-rules.md`
+- El archivo `outreach/references/outreach-rules.md`
 - El draft anterior
 - El reporte completo del Critic
 
@@ -49,7 +49,7 @@ El Writer produce el draft revisado incorporando las recomendaciones.
 ### Paso 4 — Judge
 Invoca al `judge-agent` con:
 - La ficha de investigación del lead
-- El archivo `skills/outreach/references/outreach-rules.md`
+- El archivo `outreach/references/outreach-rules.md`
 - El draft revisado del Writer
 - El reporte del Critic
 
