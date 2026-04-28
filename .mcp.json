@@ -1,29 +1,24 @@
 {
   "mcpServers": {
     "hubspot": {
-      "type": "url",
-      "url": "https://mcp.hubspot.com/anthropic",
-      "description": "HubSpot CRM — deals, contacts, companies, notes, and pipeline management"
+      "type": "sse",
+      "url": "https://mcp.hubspot.com/anthropic"
     },
     "granola": {
-      "type": "url",
-      "url": "https://mcp.granola.ai/mcp",
-      "description": "Granola — meeting transcripts and notes from demos and discovery calls"
+      "type": "sse",
+      "url": "https://mcp.granola.ai/mcp"
     },
     "google_calendar": {
-      "type": "url",
-      "url": "https://calendarmcp.googleapis.com/mcp/v1",
-      "description": "Google Calendar — upcoming meetings and scheduling context"
+      "type": "sse",
+      "url": "https://calendarmcp.googleapis.com/mcp/v1"
     },
     "gmail": {
-      "type": "url",
-      "url": "https://gmailmcp.googleapis.com/mcp/v1",
-      "description": "Gmail — create outreach drafts and manage email sequences"
+      "type": "sse",
+      "url": "https://gmailmcp.googleapis.com/mcp/v1"
     },
     "google_drive": {
-      "type": "url",
-      "url": "https://drivemcp.googleapis.com/mcp/v1",
-      "description": "Google Drive — create and store lead research docs in Leads activos folder"
+      "type": "sse",
+      "url": "https://drivemcp.googleapis.com/mcp/v1"
     }
   }
 }
