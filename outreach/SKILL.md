@@ -1,14 +1,18 @@
 ---
 description: >
-  Genera la secuencia de outreach para un lead usando un loop de refinamiento
+  Genera el Email 1 de outreach para un lead usando un loop de refinamiento
   entre tres agentes especializados. Se activa cuando el usuario pide generar
-  el outreach o los emails para un lead después de que create-contact fue
+  el outreach o el email para un lead después de que create-contact fue
   ejecutado. Toma la ficha de investigación del contexto de la sesión.
+  Foco: un único email, no secuencia. Email 2/3 y LinkedIn se manejan después
+  según evolucione la conversación con el prospecto.
 ---
 
 # Outreach — $ARGUMENTS
 
 Toma la ficha de investigación del lead disponible en el contexto. Si se especifica un nombre de empresa en $ARGUMENTS, usa solo la ficha de ese lead — no proceses otros leads del contexto.
+
+**Foco: solo Email 1.** No generes Email 2, Email 3 ni mensaje de LinkedIn — esos se trabajan después, con contexto fresco según haya o no respuesta del prospecto.
 
 Ejecuta el loop de refinamiento completo antes de mostrar cualquier resultado en el chat. El founder solo ve el email cuando alcanza 8.5 o después de 3 iteraciones.
 
@@ -93,28 +97,8 @@ Subject: [subject]
 
 [cuerpo]
 
-─────────────────────────────────────────
-
-📧 EMAIL 2 — Día 3 (reply al hilo)
-Subject: Re: [subject]
-
-[cuerpo]
-
-─────────────────────────────────────────
-
-📧 EMAIL 3 — Break-up Día 14 (reply al hilo)
-Subject: Re: [subject]
-
-[cuerpo]
-
-─────────────────────────────────────────
-
-💼 LINKEDIN — Mensaje (después de aceptar conexión)
-
-[cuerpo]
-
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-¿Apruebas esta secuencia? Responde "sí" para crear los drafts en Gmail.
+¿Apruebas este email? Responde "sí" para crear el draft en Gmail.
 ```
 
 ---
@@ -124,16 +108,14 @@ Subject: Re: [subject]
 Cuando el usuario apruebe, ejecuta sin pedir más confirmación:
 
 **Gmail:**
-- Crea Email 1 como draft con destinatario: work email del contacto
-- Crea Email 2 como draft con subject "Re: [subject]"
-- Crea Email 3 como draft con subject "Re: [subject]"
+- Crea **un único draft** con el Email 1: destinatario = work email del contacto, subject + cuerpo aprobados.
 
 **HubSpot:**
 - Cambia `hs_lead_status` a `ATTEMPTED_TO_CONTACT`
-- Agrega nota: "Secuencia de outreach aprobada — [fecha]. Calificación final: [X.X]/10. Drafts en Gmail."
+- Agrega nota: "Email 1 de outreach aprobado — [fecha]. Calificación final: [X.X]/10. Draft en Gmail."
 
 **Confirmar en el chat:**
 
-| Empresa | Drafts en Gmail | HubSpot |
+| Empresa | Draft en Gmail | HubSpot |
 |---------|----------------|---------|
-| [nombre] | ✅ 3 emails | ✅ ATTEMPTED_TO_CONTACT |
+| [nombre] | ✅ Email 1 | ✅ ATTEMPTED_TO_CONTACT |

@@ -32,15 +32,16 @@ Lee `$ARGUMENTS` y todo lo que el usuario haya pegado o adjuntado en el mensaje.
 |---|---|
 | "investiga", "research", "haz research", "investígame este lead" | `/research` (stop) |
 | "mete a HubSpot", "crea empresas", "crea en HubSpot", "investiga + HubSpot" | `/research` → `/create-company` → `/create-contact` |
-| "outreach", "prepara secuencia", "manda outreach", "flujo completo", "hasta outreach", **"hasta el draft en mi gmail"**, "hasta gmail", "hasta el draft" | `/research` → `/create-company` → `/create-contact` → `/outreach` |
+| "outreach", "prepara el primer email", "manda outreach", "flujo completo", "hasta outreach", **"hasta el draft en mi gmail"**, "hasta gmail", "hasta el draft" | `/research` → `/create-company` → `/create-contact` → `/outreach` |
 | "procesa la llamada", "post-llamada", "actualiza con la demo", "guarda la llamada de X" | `/post-llamada` |
 | "brief", "prepárame para cotizar", "voy a cotizar X", "tengo reunión con X" | `/lead-brief` |
 
 Reglas de mapeo:
-- "hasta el draft en mi gmail" / "hasta gmail" / "hasta el draft" → equivale a llegar a `/outreach` (es el skill que produce los Gmail drafts).
+- "hasta el draft en mi gmail" / "hasta gmail" / "hasta el draft" → equivale a llegar a `/outreach` (es el skill que produce el Gmail draft del Email 1).
 - "flujo completo" sin contexto adicional → cadena `/research` → `/create-company` → `/create-contact` → `/outreach`.
+- `/outreach` solo genera **un** email (Email 1). Si el usuario pide "secuencia completa", "follow-ups" o "Email 2/3" → aclara que el flujo actual es solo Email 1 — los follow-ups se manejan después según evolucione la respuesta del prospecto.
 - Si el usuario nombra explícitamente un skill ("solo /research", "no quiero outreach todavía") → respeta el límite.
-- Si pide algo más allá del último skill ("manda los emails de verdad", "envía") → aclara que `/outreach` solo crea drafts en Gmail, no los envía.
+- Si pide algo más allá del último skill ("manda el email de verdad", "envía") → aclara que `/outreach` solo crea draft en Gmail, no lo envía.
 - Si la frase no mapea claro a ninguna fila → **brincar a Paso 3 (Confirmación)**.
 
 ### B) **Formato del payload**
@@ -114,7 +115,7 @@ Si la frase del usuario no mapea claro a una fila, o no hay payload cuando se re
 |---|---|
 | Investigar leads nuevos | `/research` desde tabla/CSV/xlsx — fichas de cada lead + Doc en Drive |
 | Investigar + crear en HubSpot | `/research` → `/create-company` → `/create-contact` |
-| Flujo completo hasta outreach | `/research` → empresas → contactos → drafts en Gmail |
+| Flujo completo hasta outreach | `/research` → empresas → contactos → Email 1 draft en Gmail |
 | Procesar una llamada | `/post-llamada` — agrega transcript de Granola al expediente |
 | Brief pre-cotización | `/lead-brief` — consolida HubSpot + Granola + Calendar para una empresa |
 
@@ -129,7 +130,7 @@ Para cada skill en la cadena, en orden estricto:
 1. Anuncia al usuario qué skill vas a invocar y por qué (1 línea cada uno).
 2. Invoca el skill via `Skill` tool. Para el primer skill, pasa el payload normalizado en `args`. Para los siguientes, NO pases args — leen las fichas del contexto de conversación que dejó el skill anterior.
 3. Espera a que termine y el output esté en el contexto antes de seguir.
-4. **No insertes confirmaciones entre skills.** Los sub-skills tienen sus propios gates donde importa: `/outreach` pide aprobación antes de crear los Gmail drafts; `/post-llamada` antes de actualizar HubSpot. Respeta esos gates pero no añadas extras.
+4. **No insertes confirmaciones entre skills.** Los sub-skills tienen sus propios gates donde importa: `/outreach` pide aprobación antes de crear el Gmail draft; `/post-llamada` antes de actualizar HubSpot. Respeta esos gates pero no añadas extras.
 
 ### Excepciones que cortan la cadena
 
@@ -150,10 +151,10 @@ Al terminar todos los skills de la cadena, presenta al usuario una tabla compact
 | /research | ✅ | 3 fichas + 3 Google Docs en "Leads activos" |
 | /create-company | ✅ | 3 empresas creadas en HubSpot |
 | /create-contact | ✅ | 3 contactos creados y vinculados |
-| /outreach | ✅ | 3 secuencias en Gmail drafts (scores: 9.0, 8.7, 8.5) |
+| /outreach | ✅ | 3 Email 1 en Gmail drafts (scores: 9.0, 8.7, 8.5) |
 ```
 
-Y un cierre de 1–2 líneas con qué falta por hacer manualmente (ej. "Los drafts están en tu Gmail — revísalos antes de mandar.").
+Y un cierre de 1–2 líneas con qué falta por hacer manualmente (ej. "Los drafts del Email 1 están en tu Gmail — revísalos antes de mandar.").
 
 ---
 

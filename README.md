@@ -55,7 +55,7 @@ Si ya sabes exactamente qué quieres, los 6 skills granulares están disponibles
 | `/research` | Investiga un lead nuevo en 4 bloques (industria, empresa, competidores, contacto) y crea el Doc en Drive |
 | `/create-company` | Crea la empresa en HubSpot y le adjunta la ficha como nota |
 | `/create-contact` | Crea el contacto en HubSpot y lo vincula a su empresa |
-| `/outreach` | Genera la secuencia de emails (Email 1 + Email 2 + break-up + LinkedIn) con loop Writer → Critic → Judge |
+| `/outreach` | Genera **el Email 1** con loop Writer → Critic → Judge (mínimo 8.5/10). Email 2/3 y LinkedIn se manejan después según evolucione la respuesta |
 | `/post-llamada` | Procesa el transcript de una llamada y acumula el expediente del cliente |
 | `/lead-brief` | Resumen ejecutivo de todo el contexto acumulado del lead antes de cotizar |
 
@@ -66,7 +66,7 @@ Si ya sabes exactamente qué quieres, los 6 skills granulares están disponibles
 /gtm flujo completo hasta gmail
 [adjuntar leads.xlsx]
 ```
-→ Investiga → crea empresas en HubSpot → crea contactos → genera 3 emails + LinkedIn refinados → drafts en Gmail.
+→ Investiga → crea empresas en HubSpot → crea contactos → genera el Email 1 refinado → draft en Gmail.
 
 **Después de una demo:**
 ```
@@ -91,7 +91,7 @@ Los skills son symlinks, así que `git pull` los actualiza solo. `./setup` solo 
 ## Agents (en `agents/`)
 
 - `gtm-agent` — copiloto principal, conoce el producto, ICP, personas y pipeline
-- `writer-agent` — escribe el primer draft del outreach
+- `writer-agent` — escribe el draft del Email 1
 - `critic-agent` — revisa el draft y da recomendaciones
 - `judge-agent` — califica del 1-10 simulando ser el prospecto (mínimo 8.5 para aprobar)
 

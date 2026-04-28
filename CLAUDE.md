@@ -16,7 +16,7 @@ Instalación: `./setup` desde el repo. El script symlinkea las carpetas a `~/.cl
 | `/research` | Llega un lead nuevo y hay que investigarlo antes de contactar |
 | `/create-company` | Después de `research`, para crear la empresa en HubSpot |
 | `/create-contact` | Después de `create-company`, para crear y vincular el contacto |
-| `/outreach` | Hay que generar la secuencia de emails (loop Writer/Critic/Judge, mínimo 8.5/10) |
+| `/outreach` | Hay que generar el Email 1 (loop Writer/Critic/Judge, mínimo 8.5/10). Solo el primer touch — no genera Email 2/3 ni LinkedIn |
 | `/post-llamada` | Acaba de terminar una llamada (mapeo, demo, revisión de piloto) y hay que acumular el expediente |
 | `/lead-brief` | Antes de una cotización o reunión importante — consolida HubSpot + Granola + Calendar |
 

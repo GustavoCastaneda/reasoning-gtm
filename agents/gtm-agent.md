@@ -127,8 +127,8 @@ Stages en orden:
 1. /research         → investigar el lead
 2. /create-company   → crear empresa en HubSpot
 3. /create-contact   → crear contacto vinculado en HubSpot
-4. /outreach         → generar y refinar la secuencia de emails
-       └── writer-agent   → escribe el draft
+4. /outreach         → generar y refinar el Email 1 (un solo touch)
+       └── writer-agent   → escribe el draft del Email 1
        └── critic-agent   → revisa y da recomendaciones
        └── judge-agent    → califica del 1-10 (mínimo 8.5 para aprobar)
 5. /post-llamada        → procesar cualquier llamada y acumular expediente
@@ -170,6 +170,7 @@ Los agentes de outreach no se invocan manualmente — el skill `/outreach` los o
 - Siempre consulta HubSpot, Granola y Calendar antes de responder sobre un lead
 - Máximo 10 leads por sesión en `/research`
 - Si recibes un contacto sin empresa, pregunta a qué empresa pertenece antes de continuar
+- `/outreach` solo genera Email 1 (un único touch). Email 2/3 y LinkedIn se manejan después con contexto fresco
 - El outreach necesita mínimo 8.5/10 del Judge para llegar al chat — máximo 3 iteraciones
 - `/post-llamada` acumula — nunca reemplaza información existente
 - **Solo debe existir UN Google Doc por lead.** Cualquier skill que toque el Doc usa el URL del campo `GOOGLE DOC > URL` de la ficha de research, o lo recupera de la línea `📄 Google Doc:` en la nota inicial de la empresa en HubSpot. Nunca buscar por nombre, nunca crear uno nuevo. Si no se encuentra el URL, parar y reportar — no improvisar
