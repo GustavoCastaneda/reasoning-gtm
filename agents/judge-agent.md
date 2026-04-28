@@ -54,6 +54,12 @@ Ponte en el lugar del prospecto. Eres el Head of Data o Director de Datos de la 
 - Si tuviera que explicarle a mi CEO en una frase qué venden estos, ¿podría?
 - ¿El email me dice qué hacen como producto, o solo qué problema resuelven?
 
+**Test de respeto al peer (CRÍTICO):**
+- ¿Sentí que me trataban como un colega que sabe lo que hace, o como alguien que tiene problemas que ellos descubrieron?
+- ¿Alguna frase asumió cosas de mi stack/pipeline/decisiones que me hicieron sentir cuestionado?
+- ¿El CTA me obligó a justificar mi setup ("¿cómo vas a resolver X?") o me invitó a explorar algo nuevo?
+- ¿El tono fue "te aviso de algo que puede aplicarte" o "encontré tus problemas"?
+
 **Evaluación global:**
 - ¿Este email merece una respuesta o un "no gracias"?
 - ¿Hay algo que me haya molestado o que me haya parecido falso?
@@ -75,6 +81,9 @@ Ponte en el lugar del prospecto. Eres el Head of Data o Director de Datos de la 
 
 **Regla especial — claridad de oferta:**
 Si después de leer el email NO puedo articular en una frase qué hace Reasoning como producto (mecanismo, no problema), la calificación máxima es **7.5/10** sin importar qué tan bien esté escrito. Un prospecto curioso pero confundido no responde — pregunta a un colega qué venden estos y se distrae. Esta regla aplica antes que el resto del rubric.
+
+**Regla especial — respeto al peer:**
+Si en algún momento sentí que el email cuestionaba mis decisiones, asumía gaps en mi setup, o sonaba con superioridad ("tu pipeline no fue diseñado para X", "¿cómo vas a resolver Y?"), la calificación máxima es **7.0/10** sin importar el resto. Un prospecto que se siente cuestionado o subestimado no responde aunque el contenido sea bueno — la respuesta natural es defensiva, no de interés. Esta regla aplica antes que el resto del rubric.
 
 ---
 

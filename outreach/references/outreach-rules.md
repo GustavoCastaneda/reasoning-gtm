@@ -68,6 +68,9 @@ El Email 1 **debe contener una frase explícita** que enuncie qué hace Reasonin
 - "Tú" más que "nosotros"
 - El champion de datos responde a alguien que entiende su problema, no a un vendedor
 - Sonar como suposición educada, no como reporte de stalking
+- **Empático, nunca presuntuoso.** Asume que el prospecto sabe lo que hace. La info de la ficha sirve para **entender** al cliente, no como **arma** para decirle que algo en su setup está mal
+- **Frame de oportunidad, no de diagnóstico.** Presentamos lo que NOSOTROS hacemos bien, no lo que ELLOS hacen mal. El email debe sentirse como "te aviso de algo que puede aplicarte" — no como "encontré tus problemas y te los expongo"
+- Hipótesis sobre patrones de la industria > diagnóstico específico del prospecto. "La mayoría de equipos de ML que conocemos todavía…" > "tu pipeline no está diseñado para…"
 
 ---
 
@@ -82,16 +85,16 @@ Siempre de interés, **nunca pedir reunión**: "¿Te haría sentido verlo?" o "�
 El Email 1 sigue esta estructura:
 
 **T1 — Trigger (líneas 1–2)**
-Observación específica sobre el prospecto o su empresa. Usa el trigger de la ficha de investigación. Tono de suposición educada, no de reporte de stalking. Nunca exhibir que lo investigaste — usarlo para informar el mensaje.
+Observación específica sobre un cambio, crecimiento o señal positiva del prospecto/empresa. Usa el trigger de la ficha de investigación. Tono de reconocimiento educado, no de stalking ni de "encontré tu problema". Nunca exhibir que lo investigaste — usarlo para informar el mensaje. Ejemplos válidos: "vi el ramp-up para licencia bancaria — escala interesante" / "vi que cerraron Serie B este trimestre".
 
-**T2 — Think (línea 3)**
-Pregunta o afirmación que genere tensión sobre cómo hacen las cosas hoy. Apuntar al dolor del 80% manual.
+**T2 — Hipótesis general sobre la industria (línea 3)**
+**Hipótesis general** — no diagnóstico — sobre un patrón común en equipos como el suyo. Apunta al dolor del 80% manual, pero formulado como observación de la industria, no como acusación al prospecto. Ejemplos válidos: "la mayoría de equipos de ML que conocemos todavía dedican una buena parte del tiempo a preparar y orquestar datos manualmente" / "muchos equipos en esta etapa siguen haciendo limpieza y deduplicación a mano". **Nunca**: "tu pipeline no fue diseñado para X", "tu stack actual no soporta Y", "¿cómo vas a resolver Z?". El cliente sabe lo que hace; el email solo nombra el patrón.
 
 **T3 — Third-party + Mecanismo (líneas 4–5)**
 Caso de referencia con resultado **Y mecanismo** — debe responder a "qué cambió" y "cómo lo logramos". Ejemplo válido: "trabajamos con una financiera de 8 sucursales — automatizando la preparación de datos, lo que les tomaba 3 semanas por ciclo bajó a 4 días". El "cómo" no es opcional: sin él, el prospecto no sabe qué le estás vendiendo. Solo usar el caso si aplica al contexto del prospecto; no forzarlo, pero el mecanismo siempre va.
 
 **T4 — Talk (línea 5)**
-CTA suave basado en interés.
+CTA suave basado en interés, **enmarcado como oportunidad de explorar** — no como pregunta cuestionadora. Ejemplos válidos: "¿te hace sentido explorarlo?" / "¿vale la pena platicarlo?" / "si te interesa ver cómo aplica, te muestro". **Nunca**: "¿cómo vas a resolver eso?", "¿cómo tienes pensado cubrirlo?" — eso obliga al prospecto a justificarse, lo pone defensivo.
 
 ---
 
@@ -121,6 +124,13 @@ CTA suave basado en interés.
 - No pedir reunión en el Email 1 (CTA = interés, no calendar)
 - Enunciar resultados sin mecanismo ("lo bajamos a 4 días", "lo aceleramos 5x") sin decir CÓMO
 - Implicar el producto en lugar de declararlo — "ayudamos con esto" no es enunciar el mecanismo
+
+**Tono — diagnóstico al cliente (PROHIBIDO):**
+- Decirle al prospecto que su pipeline/stack/setup actual está mal o no fue diseñado para X
+- Asumir gaps específicos en su infraestructura basándose en research ("seguro que con Spark/Kafka tienen problemas con Y")
+- Preguntarle cómo va a resolver algo, como si lo estuviéramos cuestionando ("¿cómo tienes pensado cubrirlo?")
+- Cualquier frase que implique "yo sé más de tu negocio que tú" — superioridad o egocentrismo
+- Usar la info de research como exhibición ("vi que…", "noté que…") en lugar de para informar el mensaje internamente
 
 ---
 

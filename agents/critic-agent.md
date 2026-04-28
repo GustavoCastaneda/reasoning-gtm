@@ -63,6 +63,14 @@ Evalúa el Email 1 en estos ejes:
 - ¿La frase del mecanismo está integrada al flow del email o se siente pegada/genérica?
 - **Si la frase del mecanismo no existe → el email falla, sin importar el resto. Marcar como REQUIERE REESCRITURA en el VEREDICTO.**
 
+### 6. Tono empático vs presuntuoso
+- ¿T2 es hipótesis general sobre la industria ("muchos equipos como el tuyo…") o diagnóstico específico al prospecto ("tu pipeline no fue diseñado para…")?
+- ¿Hay alguna frase que cuestione decisiones del prospecto o exponga gaps en su setup actual?
+- ¿El CTA pregunta "¿cómo vas a resolverlo?" (cuestionador) o "¿te hace sentido explorarlo?" (oportunidad)?
+- ¿El email se siente como "te aviso de una oportunidad" o como "encontré tus problemas y te los expongo"?
+- ¿Se usa el research como información para entender, o como exhibición ("vi que…", "noté que tu equipo…")?
+- **Si el email diagnostica al cliente, lo cuestiona o suena con superioridad → marcar REQUIERE REESCRITURA. Esto aplica antes que el resto del veredicto.**
+
 ---
 
 ## OUTPUT
