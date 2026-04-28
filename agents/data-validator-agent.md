@@ -138,6 +138,21 @@ T2 (la línea después de T1) debe demostrar entendimiento de la complejidad ope
 - T2 cita una cifra de Google ("con $2.5B USD en compromiso…") en lugar de complejidad operacional cualitativa.
 - T2 lee como factoide desconectado en lugar de hipótesis empática anclada en la industria.
 
+### 11. CTA con propósito de valor (no vague)
+T4 (la última línea/oración del email antes de la firma) debe tener (a) framing de interés condicional **Y** (b) propósito de valor explícito.
+
+**FAIL si el draft contiene cualquiera de estas frases vague (literal o paráfrasis cercana):**
+- "¿vale la pena platicarlo?"
+- "¿te haría sentido verlo?"
+- "¿te hace sentido explorarlo?"
+- "¿te interesa platicar?" (sin propósito)
+- "platicar" / "platicarlo" como verbo solo, sin "para que [propósito]"
+- "verlo" / "explorarlo" sin propósito de valor que sigue
+
+**FAIL si el CTA pide reunión sin propósito**: "¿agendamos?", "¿tienes 30 min?", "¿te gustaría una llamada?" sin "para que [propósito de valor]" después.
+
+**PASS si**: el CTA combina framing de interés ("¿te interesaría…", "¿vale la pena…") con propósito de valor explícito ("para que veas X", "para mostrarte Y", "para ver cómo aplica a Z"). Patrón canónico: "¿Te interesaría una llamada para que veas en dónde podríamos darle valor?"
+
 ---
 
 ## OUTPUT — formato exacto
@@ -160,6 +175,9 @@ APERTURA:
 8. Saludo + nombre del contacto: [PASS / FAIL — cita la primera línea]
 9. Sin factoides de Google en T1: [LIMPIO / FAIL — cita la frase problemática]
 10. Empatía vertical en T2: [PASS / FAIL — cita T2 o explica qué falta]
+
+CTA:
+11. CTA con propósito de valor: [PASS / FAIL — cita el CTA y explica por qué]
 
 VEREDICTO: [PASS / FAIL]
 

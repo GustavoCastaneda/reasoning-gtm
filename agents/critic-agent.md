@@ -43,7 +43,7 @@ Evalúa el Email 1 en estos ejes:
 - ¿Cumple la longitud (75–80 palabras máximo)?
 - ¿El subject parece email interno (1–4 palabras, minúsculas, sin emojis)?
 - ¿Hay alguna palabra o frase de la lista de prohibidas?
-- ¿El CTA pide interés, no reunión?
+- ¿El CTA tiene propósito de valor explícito (le dice al prospecto qué obtiene si responde "sí") o es vague ("platicarlo", "verlo", "explorarlo")? Vague = FAIL. Asks de llamada están permitidos solo si van con propósito.
 - ¿No hay links en el cuerpo?
 
 ### 3. Impacto

@@ -46,7 +46,7 @@ El Email 1 — un único email de Día 1, según las reglas: 75–80 palabras m�
 - ¿El subject parece un email interno entre colegas?
 - ¿El email cabe en una pantalla de teléfono sin scroll?
 - ¿Estoy usando el trigger de la ficha, o inventé uno genérico?
-- ¿El CTA pide interés o pide reunión? (Email 1 nunca pide reunión)
+- ¿El CTA tiene propósito de valor explícito? Si es vague ("platicarlo", "verlo", "explorarlo"), reescribe. Asks de llamada están permitidos solo si dicen QUÉ obtiene el prospecto al decir "sí" ("¿te interesaría una llamada para que veas X?" — patrón canónico)
 - ¿Usé alguna palabra de la lista de prohibidas?
 - ¿El tono suena a founder o a vendedor?
 - **¿Se entiende qué hace Reasoning como producto?** Si tuviera que explicárselo a alguien que nunca oyó del nombre, ¿podría con una frase del email?
@@ -79,6 +79,7 @@ Al final del draft agrega esta sección de autocrítica:
 • T2 como hipótesis vs diagnóstico: [cita la línea de T2 y argumenta por qué es hipótesis general, no diagnóstico específico al prospecto]
 • Operaciones concretas citadas: [lista los verbos concretos usados en T3 — limpieza, deduplicación, etc.]
 • Datos puntuales presentes: [confirma 80% / semanas-meses-a-días / industrias — sin fabricación]
+• CTA usado: [cita el CTA y argumenta cómo (a) tiene framing de interés condicional y (b) tiene propósito de valor explícito]
 • Punto más débil del draft: [qué parte te genera más duda]
 • Riesgo de sonar genérico, presuntuoso o copy-paste de Google: [Alto / Medio / Bajo] — [razón]
 ```

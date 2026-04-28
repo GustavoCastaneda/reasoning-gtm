@@ -85,7 +85,24 @@ El Email 1 **debe contener una frase explícita** que enuncie qué hace Reasonin
 
 ## CTA — Email 1
 
-Siempre de interés, **nunca pedir reunión**: "¿Te haría sentido verlo?" o "¿Vale la pena platicarlo?". El objetivo del primer touch es abrir conversación, no agendar.
+CTA conditional + **propósito de valor concreto**. Puede pedir llamada/reunión SI va con propósito explícito de qué obtiene el prospecto.
+
+**Patrón canónico:**
+> "¿Te interesaría una llamada para que veas en dónde podríamos darle valor a tu equipo?"
+
+**Patrones válidos** (mantienen "interés condicional + propósito de valor"):
+- "¿Te interesaría una llamada [breve / de 15 min] para [ver cómo aplica / mostrarte el detalle]?"
+- "¿Vale la pena una conversación de 15 min para que veas si encaja con [tu situación específica]?"
+- "Si te interesa, te muestro en una llamada cómo aplicaría a [vertical/empresa]"
+
+**Patrones PROHIBIDOS — vague sin propósito:**
+- ❌ "¿Vale la pena platicarlo?" — ambiguo: ni pide interés concreto ni propone valor
+- ❌ "¿Te haría sentido verlo?" / "¿Te hace sentido explorarlo?" — vague, sin propósito
+- ❌ "¿Tienes 30 min esta semana?" — presume interés, sin propósito
+- ❌ "¿Te gustaría agendar una llamada?" — sin propósito de valor concreto
+- ❌ "Platicar" / "platicarlo" como verbo solo — sin propósito
+
+**Por qué importa**: CTA vague deja al prospecto sin saber qué pasa si responde — alta fricción mental. CTA con propósito de valor le dice exactamente qué obtiene si dice sí — baja fricción + alto interés. **Asks de llamada SÍ pueden ir en Email 1 si están bien enmarcados** — la regla es "no vague", no "no llamada".
 
 ---
 
@@ -149,8 +166,8 @@ Reglas duras:
 - **Industrias reales** (fintech, manufactura, retail), no peers anónimos con N modelos.
 - Si el caso no se puede anclar a datos reales, omite el caso y deja el bloque concreto del producto. **Es preferible un T3 sin peer que un T3 con peer fabricado.**
 
-**T4 — Talk (línea 5)**
-CTA suave basado en interés, **enmarcado como oportunidad de explorar** — no como pregunta cuestionadora. Ejemplos válidos: "¿te hace sentido explorarlo?" / "¿vale la pena platicarlo?" / "si te interesa ver cómo aplica, te muestro". **Nunca**: "¿cómo vas a resolver eso?", "¿cómo tienes pensado cubrirlo?" — eso obliga al prospecto a justificarse, lo pone defensivo.
+**T4 — Talk: CTA value-framed (línea 5)**
+CTA conditional anclado en propósito de valor concreto. Ver sección "CTA — Email 1" arriba para reglas completas y patrón canónico ("¿Te interesaría una llamada para que veas en dónde podríamos darle valor?"). El CTA debe tener (a) interés condicional ("¿te interesaría…", "¿vale la pena…") **Y** (b) propósito de valor explícito ("para que veas X", "para mostrarte Y"). Sin ambos, falla. **Nunca cuestionador** ("¿cómo vas a resolverlo?") y **nunca vague** ("platicarlo", "verlo", "explorarlo" como verbos solos).
 
 ---
 
@@ -177,7 +194,8 @@ CTA suave basado en interés, **enmarcado como oportunidad de explorar** — no 
 - Porcentajes o cifras que no vengan de la ficha o de las estadísticas de respaldo
 
 **Estructura:**
-- No pedir reunión en el Email 1 (CTA = interés, no calendar)
+- CTA vague sin propósito de valor ("¿vale la pena platicarlo?", "¿te haría sentido verlo?", "¿te hace sentido explorarlo?")
+- Asks de reunión sin propósito explícito ("¿tienes 30 min?", "¿agendamos una llamada?") — válidos solo si dicen QUÉ obtiene el prospecto
 - Enunciar resultados sin mecanismo ("lo bajamos a 4 días", "lo aceleramos 5x") sin decir CÓMO
 - Implicar el producto en lugar de declararlo — "ayudamos con esto" no es enunciar el mecanismo
 
