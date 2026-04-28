@@ -92,6 +92,7 @@ Los skills son symlinks, así que `git pull` los actualiza solo. `./setup` solo 
 
 - `gtm-agent` — copiloto principal, conoce el producto, ICP, personas y pipeline
 - `writer-agent` — escribe el draft del Email 1
+- `data-validator-agent` — guardrail determinístico: verifica datos puntuales (operaciones concretas, 80%, semanas/meses → días, industrias) y bloquea fabricaciones
 - `critic-agent` — revisa el draft y da recomendaciones
 - `judge-agent` — califica del 1-10 simulando ser el prospecto (mínimo 8.5 para aprobar)
 

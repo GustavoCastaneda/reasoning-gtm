@@ -29,17 +29,35 @@ El Writer produce el primer draft con su autocrítica.
 
 ---
 
-### Paso 2 — Critic
+### Paso 2 — Data Validator (guardrail determinístico)
+Invoca al `data-validator-agent` con:
+- El draft del Writer
+- El archivo `outreach/references/outreach-rules.md`
+
+El Validator verifica que los **datos puntuales obligatorios** estén presentes (operaciones concretas, 80%, semanas/meses → días, industrias) y que NO haya datos fabricados (peer cases inventados, métricas no autorizadas).
+
+```
+¿VEREDICTO del Validator?
+    PASS → continuar al Paso 3 (Critic)
+    FAIL → regresar al Paso 1 con la lista de gaps. El Writer reescribe corrigiendo
+           específicamente los datos faltantes. Después del rewrite, vuelve al Paso 2.
+           Máximo 2 retries por iteración antes de continuar a Critic con warning.
+```
+
+---
+
+### Paso 3 — Critic
 Invoca al `critic-agent` con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/outreach-rules.md`
 - El draft del Writer incluyendo su autocrítica
+- El reporte del Validator (PASS — para que el Critic confíe en presencia de datos y se enfoque en calidad)
 
-El Critic produce el reporte de revisión con recomendaciones.
+El Critic produce el reporte de revisión con recomendaciones de tono, integración, hook.
 
 ---
 
-### Paso 3 — Writer reescribe
+### Paso 4 — Writer reescribe
 Invoca al `writer-agent` nuevamente con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/outreach-rules.md`
@@ -50,32 +68,45 @@ El Writer produce el draft revisado incorporando las recomendaciones.
 
 ---
 
-### Paso 4 — Judge
+### Paso 5 — Data Validator (segundo gate)
+Invoca al `data-validator-agent` otra vez con el draft revisado.
+
+```
+¿VEREDICTO?
+    PASS → continuar al Paso 6 (Judge)
+    FAIL → regresar al Paso 4 con la lista de gaps. Máximo 2 retries.
+```
+
+Esto evita que el Critic introduzca cambios que rompen la presencia de datos puntuales.
+
+---
+
+### Paso 6 — Judge
 Invoca al `judge-agent` con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/outreach-rules.md`
 - El draft revisado del Writer
 - El reporte del Critic
 
-El Judge produce la calificación y el veredicto.
+El Judge produce la calificación y el veredicto desde la perspectiva del prospecto.
 
 ---
 
-### Paso 5 — Decisión del loop
+### Paso 7 — Decisión del loop
 
 ```
 ¿Calificación ≥ 8.5?
-    Sí → ir a Paso 6
+    Sí → ir a Paso 8
     No → ¿iteraciones < 3?
-              Sí → regresar al Paso 2 con el feedback del Judge
-              No → ir al Paso 6 con el mejor draft alcanzado
+              Sí → regresar al Paso 3 con el feedback del Judge (Critic vuelve a revisar)
+              No → ir al Paso 8 con el mejor draft alcanzado
 ```
 
-El loop máximo es 3 iteraciones. Si después de 3 iteraciones no se alcanza 8.5, se entrega el mejor draft con nota de calificación.
+El loop máximo es 3 iteraciones (cada iteración = Critic → Writer reescribe → Validator → Judge). Si después de 3 iteraciones no se alcanza 8.5, se entrega el mejor draft con nota de calificación.
 
 ---
 
-### Paso 6 — Mostrar en el chat
+### Paso 8 — Mostrar en el chat
 
 Muestra el progreso y el resultado final:
 
@@ -103,7 +134,7 @@ Subject: [subject]
 
 ---
 
-### Paso 7 — Después del visto bueno
+### Paso 9 — Después del visto bueno
 
 Cuando el usuario apruebe, ejecuta sin pedir más confirmación:
 

@@ -7,25 +7,34 @@
 
 ## PRODUCTO — QUÉ HACE REASONING
 
-Reasoning **automatiza la preparación, estructuración y orquestación de datos** para equipos de datos / ML que hoy gastan el 80% de su tiempo en plomería manual.
+**Datos puntuales que anclan el email** (son la fuente de verdad — no fabricar números, no inventar casos peer):
 
-**Mecanismo en 4 capas:**
+- **Operaciones concretas que automatizamos**: limpieza, deduplicación, homologación, gobernanza, estructuración. Estos son los verbos que debe ver el prospecto — no abstracciones como "preparación" u "orquestación".
+- **Fracción del pipeline**: 80% del trabajo manual de los equipos de datos (limpiar/homologar/deduplicar/gobernar). Esa cifra está autorizada.
+- **Compresión de tiempo**: flujos que tomarían **semanas o meses**, los hacemos en **un par de días**.
+- **Industrias activas**: fintech, manufactura, retail. Ese es el ground truth — no inventar peers anónimos con N modelos.
+
+**Frases ancla válidas** (úsalas como bloque concreto en el email — varía la redacción pero respeta los datos):
+- "nuestra plataforma automatiza limpieza, deduplicación, homologación y gobernanza — el 80% del pipeline manual"
+- "lo que hoy toma semanas o meses, lo hacemos en un par de días"
+- "trabajamos con equipos en fintech, manufactura y retail"
+
+**Mecanismo en 4 capas (contexto largo, no para el email — solo para que el writer entienda):**
 1. **Conexión** — Conecta fuentes tal como están (PostgreSQL, SQL Server, Excel, CSV, APIs). Sin requerir limpieza previa.
 2. **Estructuración** — Agentes que deduplican, estandarizan formatos, unifican fuentes y construyen una ontología viva. 80% automático, 20% confirmado con humano.
 3. **Análisis** — Detección de anomalías y diagnóstico continuos.
 4. **Acción** — Entrega proactiva por Slack/email/Teams + Q&A en lenguaje natural.
-
-**Frases válidas para el email** (úsalas para enunciar el mecanismo — no son las únicas, son ejemplos):
-- "automatizamos la preparación y orquestación de datos"
-- "agentes que reemplazan la plomería manual del pipeline"
-- "la capa que convierte el pipeline manual en automático"
-- "automatizamos lo que hoy es trabajo manual: limpiar, deduplicar, estructurar"
 
 **Lo que Reasoning NO es** (nunca implicar esto):
 - No es un dashboard ni reemplazo de Power BI/Looker
 - No es una consultora de MDM ni implementación
 - No es "AI genérico" ni un LLM wrapper
 - No es un orquestador de Spark/Kafka — es la capa que elimina ese trabajo
+
+**NO inventes nunca:**
+- Casos de referencia con detalles fabricados ("trabajamos con un equipo de scoring con 15+ modelos en producción", "una financiera con N sucursales") — hoy hay **un piloto activo** y los datos puntuales reales son los de arriba. No fabriques peers.
+- Cifras de resultado fuera de las autorizadas (semanas/meses → días). Nada de "5x más rápido", "85% más eficiente", "3 semanas a 4 días".
+- Verbos abstractos cuando hay verbos concretos ("preparación de datos" debe ser "limpieza, deduplicación, homologación").
 
 ---
 
@@ -90,8 +99,17 @@ Observación específica sobre un cambio, crecimiento o señal positiva del pros
 **T2 — Hipótesis general sobre la industria (línea 3)**
 **Hipótesis general** — no diagnóstico — sobre un patrón común en equipos como el suyo. Apunta al dolor del 80% manual, pero formulado como observación de la industria, no como acusación al prospecto. Ejemplos válidos: "la mayoría de equipos de ML que conocemos todavía dedican una buena parte del tiempo a preparar y orquestar datos manualmente" / "muchos equipos en esta etapa siguen haciendo limpieza y deduplicación a mano". **Nunca**: "tu pipeline no fue diseñado para X", "tu stack actual no soporta Y", "¿cómo vas a resolver Z?". El cliente sabe lo que hace; el email solo nombra el patrón.
 
-**T3 — Third-party + Mecanismo (líneas 4–5)**
-Caso de referencia con resultado **Y mecanismo** — debe responder a "qué cambió" y "cómo lo logramos". Ejemplo válido: "trabajamos con una financiera de 8 sucursales — automatizando la preparación de datos, lo que les tomaba 3 semanas por ciclo bajó a 4 días". El "cómo" no es opcional: sin él, el prospecto no sabe qué le estás vendiendo. Solo usar el caso si aplica al contexto del prospecto; no forzarlo, pero el mecanismo siempre va.
+**T3 — Producto concreto + escala + industrias (líneas 4–5)**
+Bloque concreto del producto: **operaciones específicas + fracción + tiempo + industrias**. Anclado en los datos puntuales de la sección "PRODUCTO — QUÉ HACE REASONING" arriba. **No inventar casos peer.** Ejemplo válido:
+
+> "Nuestra plataforma automatiza limpieza, deduplicación, homologación y gobernanza — el 80% del pipeline manual — y baja flujos de semanas o meses a un par de días. Hoy lo usan equipos en fintech, manufactura y retail."
+
+Reglas duras:
+- **Verbos concretos** (limpieza, deduplicación, homologación, gobernanza), no abstracciones ("preparación", "orquestación").
+- **Fracción real** (80% manual), no inventada.
+- **Tiempo real** (semanas/meses → días), no inventado ("3 semanas a 4 días" = fabricación).
+- **Industrias reales** (fintech, manufactura, retail), no peers anónimos con N modelos.
+- Si el caso no se puede anclar a datos reales, omite el caso y deja el bloque concreto del producto. **Es preferible un T3 sin peer que un T3 con peer fabricado.**
 
 **T4 — Talk (línea 5)**
 CTA suave basado en interés, **enmarcado como oportunidad de explorar** — no como pregunta cuestionadora. Ejemplos válidos: "¿te hace sentido explorarlo?" / "¿vale la pena platicarlo?" / "si te interesa ver cómo aplica, te muestro". **Nunca**: "¿cómo vas a resolver eso?", "¿cómo tienes pensado cubrirlo?" — eso obliga al prospecto a justificarse, lo pone defensivo.

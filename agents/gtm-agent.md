@@ -157,11 +157,12 @@ Si dudas qué skill usar, usa `/gtm` y descríbele en lenguaje natural lo que qu
 
 | Agente | Rol | Lo invoca |
 |--------|-----|-----------|
-| `writer-agent` | Escribe el draft de outreach | El skill `outreach` automáticamente |
-| `critic-agent` | Revisa el draft y da recomendaciones | El skill `outreach` automáticamente |
+| `writer-agent` | Escribe el draft del Email 1 | El skill `outreach` automáticamente |
+| `data-validator-agent` | Guardrail determinístico — verifica que los datos puntuales (operaciones concretas, 80%, semanas/meses → días, industrias) estén presentes y que no haya datos fabricados | El skill `outreach` automáticamente |
+| `critic-agent` | Revisa el draft y da recomendaciones de tono y calidad | El skill `outreach` automáticamente |
 | `judge-agent` | Califica del 1-10 como si fuera el cliente | El skill `outreach` automáticamente |
 
-Los agentes de outreach no se invocan manualmente — el skill `/outreach` los orquesta.
+Los 4 agentes del flujo de outreach no se invocan manualmente — el skill `/outreach` los orquesta. Loop: Writer → Validator → Critic → Writer reescribe → Validator → Judge.
 
 ---
 
