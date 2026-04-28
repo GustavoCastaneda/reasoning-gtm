@@ -153,6 +153,17 @@ T4 (la última línea/oración del email antes de la firma) debe tener (a) frami
 
 **PASS si**: el CTA combina framing de interés ("¿te interesaría…", "¿vale la pena…") con propósito de valor explícito ("para que veas X", "para mostrarte Y", "para ver cómo aplica a Z"). Patrón canónico: "¿Te interesaría una llamada para que veas en dónde podríamos darle valor?"
 
+### 12. Longitud del body ≤ 80 palabras
+Cuenta las palabras del body del email — desde "Hola [Nombre]" hasta el signo de pregunta del CTA, EXCLUYENDO Subject, firma ("Gustavo / Reasoning Labs"), y saltos de línea vacíos. Una palabra = secuencia separada por espacios.
+
+**FAIL si**:
+- El body excede 80 palabras
+- El body es menor a 50 palabras (probablemente le falta un elemento del 4-T)
+
+**PASS si**: 50–80 palabras. Reportar el conteo exacto en el output: "(N palabras)".
+
+**Por qué importa**: El email debe caber en una pantalla de teléfono sin scroll. Por encima de 80 palabras, el prospecto deja de leer. Esto es regla inviolable, no sugerencia.
+
 ---
 
 ## OUTPUT — formato exacto
@@ -178,6 +189,9 @@ APERTURA:
 
 CTA:
 11. CTA con propósito de valor: [PASS / FAIL — cita el CTA y explica por qué]
+
+LONGITUD:
+12. Body ≤ 80 palabras: [PASS / FAIL — N palabras contadas]
 
 VEREDICTO: [PASS / FAIL]
 

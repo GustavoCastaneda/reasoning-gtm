@@ -85,7 +85,8 @@ Evalúa el Email 1 en estos ejes:
 - ¿La frase de cierre menciona qué **trabajo manual concreto** deja de hacer el equipo, anclado a la realidad operacional del prospecto (no genérica del vertical)?
 - ¿La frase del análisis de alto valor está **descubierta para ESTE prospecto** basándose en su ficha (rol, contexto, dolor específico), o es un cierre que aplicaría idénticamente a cualquier persona del mismo vertical?
 - **Detector de template**: si T3 cierra con un phrasing genérico del vertical ("análisis de riesgo y compliance" para todo lending, "costos y proveedores" para todo manufactura) en lugar de una frase descubierta para este prospecto, eso es señal de template — los ejemplos de la sección T3 en outreach-rules.md son inspiración de dirección, NO phrasings canónicos a copiar.
-- **Si T3 termina en NL Q&A, cierre genérico sin anclaje, o phrasing copiado verbatim de los ejemplos del vertical → REQUIERE REESCRITURA. El loop existe para descubrir el cierre, no para aplicar template.**
+- **Detector de workflow inventado**: ¿el closer describe un proceso interno específico del equipo del prospecto que solo sabríamos si trabajáramos ahí? Ejemplos: "aprobación de deals que aceleran tu pipeline de financiamiento", "evaluación de margen por SKU y planning de surtido", "monitoreo de calidad por línea y respuesta a non-conformance". Eso es **invención**. El closer debe quedar al nivel de **categoría** del rol/vertical, no de workflow específico inventado.
+- **Si T3 termina en NL Q&A, cierre genérico sin anclaje, phrasing copiado verbatim de los ejemplos del vertical, O workflow inventado que asume conocimiento del proceso interno → REQUIERE REESCRITURA. El loop existe para descubrir el cierre al nivel correcto (categoría, no workflow), no para aplicar template ni para fabricar detalle.**
 
 ---
 

@@ -124,11 +124,12 @@ Patrón válido (saludo + reconocimiento natural de la persona):
 - ✅ "tu trayectoria me parece interesante" / "viendo tu rol en…" / "como [Puesto] en…"
 - ❌ "tu perfil es impresionante" / "eres un líder excepcional" / "admiro tu trabajo" — adulación = se siente falso, pierde autoridad
 
-**Anti-patrones PROHIBIDOS (factoides de Google):**
+**Anti-patrones PROHIBIDOS (factoides de Google — incluyendo los camuflados):**
 - ❌ "El compromiso de Konfio para Plan México — $2.5B USD en 24 meses — es uno de los movimientos más ambiciosos…"
 - ❌ "Vi el anuncio de la Serie B…" / "Konfio anunció X…"
 - ❌ Cualquier apertura con $XYZ, % de crecimiento, número de PyMEs, cifras de press release
 - ❌ Cualquier sentence sin saludo previo (empezar con un hecho descontextualizado)
+- ❌ **Factoide camuflado de role recognition**: "Vi que estás liderando la expansión a Brasil", "Vi que están abriendo nuevo mercado en…", "Viendo que estás liderando [evento reciente]". Esto suena a role recognition pero está anclado en una **noticia reciente** que el prospecto sabe que es googleable. La diferencia: "Como Director IT en Anáhuac desde hace 3 años" (tenure puro, OK) vs "Vi que estás liderando la expansión a Brasil" (anclado en noticia, NO OK). Si el reconocimiento implica que leíste su press release, es factoide camuflado.
 
 **Por qué importa**: arrancar con un factoide de Google genera dos problemas. (1) El prospecto sabe que ese dato está disponible públicamente — no demuestra que lo conoces a él. (2) El factoide queda desconectado del resto del email, se siente copy-paste y se rompe el flow. Reconocer su rol/trayectoria sí lo personaliza; reconocer su comunicado de prensa no.
 
@@ -196,6 +197,21 @@ El loop writer→critic→judge debe **descubrir la frase específica** para cad
 - ❌ Copiar verbatim los ejemplos de inspiración — son guía, no template. El cierre tiene que ser descubierto, no replicado
 - ❌ Mismo cierre exacto en dos emails de prospectos distintos del mismo vertical → señal de template, no de descubrimiento
 - ❌ Resultados fabricados ("3 semanas a 4 días", "5x más rápido")
+- ❌ **Inventar workflows específicos del prospecto**: el closer debe quedar al **nivel de categoría** del rol/vertical, no al nivel de proceso interno que no conoces. Test: si el closer requiere que sepas el flujo de trabajo interno del equipo, es invención.
+
+**Nivel correcto del closer — categoría, no workflow:**
+
+✅ **Category-level** (anclado en el role/vertical, defendible):
+- "se enfoca en evaluación de viabilidad y aprobación de proyectos" (rol de inversión solar — categoría)
+- "se enfoca en estrategia de scoring y decisiones de crédito" (Director ML lending — categoría)
+- "se enfoca en análisis estratégico y priorización" (Director IT educación — categoría)
+
+❌ **Workflow-level** (inventado, no podemos saberlo):
+- "se enfoca en scoring de riesgo y aprobación de deals que aceleran tu pipeline de financiamiento" (asume el workflow exacto)
+- "se enfoca en evaluación de margen por SKU y planning de surtido" (inventa proceso)
+- "se enfoca en monitoreo de calidad por línea y respuesta a non-conformance" (inventa pasos)
+
+La diferencia: **categoría** = lo que su rol/vertical implica que hace en alto nivel. **Workflow** = pasos específicos del proceso interno que solo sabríamos si trabajáramos ahí. Cuando dudes, mantente en categoría.
 
 **T4 — Talk: CTA value-framed (línea 5)**
 CTA conditional anclado en propósito de valor concreto. Ver sección "CTA — Email 1" arriba para reglas completas y patrón canónico ("¿Te interesaría una llamada para que veas en dónde podríamos darle valor?"). El CTA debe tener (a) interés condicional ("¿te interesaría…", "¿vale la pena…") **Y** (b) propósito de valor explícito ("para que veas X", "para mostrarte Y"). Sin ambos, falla. **Nunca cuestionador** ("¿cómo vas a resolverlo?") y **nunca vague** ("platicarlo", "verlo", "explorarlo" como verbos solos).
