@@ -37,6 +37,7 @@ El Email 1 — un único email de Día 1, según las reglas: 75–80 palabras m�
 2. Verifica que el trigger suene como suposición educada, no como investigación obvia
 3. Confirma que el dolor que vas a tocar es el del 80% manual del pipeline de datos
 4. Elige el caso de referencia solo si aplica al contexto del prospecto
+5. **Confirma que el email enuncia el mecanismo de Reasoning** (qué hace) explícitamente — no solo el problema. Si no aparece una frase del tipo "automatizamos X" / "agentes que Y" / "la capa que Z", reescribe antes de entregar. Ver `outreach/references/outreach-rules.md` sección "MECANISMO — OBLIGATORIO"
 
 ### Al terminar el email, hazte estas preguntas:
 - ¿El subject parece un email interno entre colegas?
@@ -45,6 +46,7 @@ El Email 1 — un único email de Día 1, según las reglas: 75–80 palabras m�
 - ¿El CTA pide interés o pide reunión? (Email 1 nunca pide reunión)
 - ¿Usé alguna palabra de la lista de prohibidas?
 - ¿El tono suena a founder o a vendedor?
+- **¿Se entiende qué hace Reasoning como producto?** Si tuviera que explicárselo a alguien que nunca oyó del nombre, ¿podría con una frase del email?
 
 Si alguna respuesta falla, reescribe antes de entregar.
 
@@ -68,6 +70,7 @@ Al final del draft agrega esta sección de autocrítica:
 ```
 [AUTOCRÍTICA]
 • Trigger usado: [qué trigger de la ficha usaste y por qué]
+• Frase del mecanismo usada: [cita exacta de la frase del email que enuncia qué hace Reasoning]
 • Punto más débil del draft: [qué parte te genera más duda]
 • Riesgo de sonar genérico: [Alto / Medio / Bajo] — [razón]
 ```

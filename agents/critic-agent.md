@@ -57,6 +57,12 @@ Evalúa el Email 1 en estos ejes:
 - ¿Hay claims que no tienen respaldo en la ficha o en las estadísticas autorizadas?
 - ¿Algo suena demasiado agresivo o demasiado pasivo?
 
+### 5. Claridad del mecanismo de producto
+- ¿El email enuncia qué hace Reasoning (mecanismo concreto: automatización, agentes, capa que reemplaza X) o solo lo implica?
+- ¿Un prospecto que nunca oyó de Reasoning podría articular en una frase qué hacen, basado solo en este email?
+- ¿La frase del mecanismo está integrada al flow del email o se siente pegada/genérica?
+- **Si la frase del mecanismo no existe → el email falla, sin importar el resto. Marcar como REQUIERE REESCRITURA en el VEREDICTO.**
+
 ---
 
 ## OUTPUT

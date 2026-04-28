@@ -5,6 +5,48 @@
 
 ---
 
+## PRODUCTO — QUÉ HACE REASONING
+
+Reasoning **automatiza la preparación, estructuración y orquestación de datos** para equipos de datos / ML que hoy gastan el 80% de su tiempo en plomería manual.
+
+**Mecanismo en 4 capas:**
+1. **Conexión** — Conecta fuentes tal como están (PostgreSQL, SQL Server, Excel, CSV, APIs). Sin requerir limpieza previa.
+2. **Estructuración** — Agentes que deduplican, estandarizan formatos, unifican fuentes y construyen una ontología viva. 80% automático, 20% confirmado con humano.
+3. **Análisis** — Detección de anomalías y diagnóstico continuos.
+4. **Acción** — Entrega proactiva por Slack/email/Teams + Q&A en lenguaje natural.
+
+**Frases válidas para el email** (úsalas para enunciar el mecanismo — no son las únicas, son ejemplos):
+- "automatizamos la preparación y orquestación de datos"
+- "agentes que reemplazan la plomería manual del pipeline"
+- "la capa que convierte el pipeline manual en automático"
+- "automatizamos lo que hoy es trabajo manual: limpiar, deduplicar, estructurar"
+
+**Lo que Reasoning NO es** (nunca implicar esto):
+- No es un dashboard ni reemplazo de Power BI/Looker
+- No es una consultora de MDM ni implementación
+- No es "AI genérico" ni un LLM wrapper
+- No es un orquestador de Spark/Kafka — es la capa que elimina ese trabajo
+
+---
+
+## MECANISMO — OBLIGATORIO
+
+El Email 1 **debe contener una frase explícita** que enuncie qué hace Reasoning como mecanismo (no solo qué problema resuelve). Sin esa frase, el email falla aunque cumpla todo lo demás.
+
+**Test de validez**: si un prospecto al terminar de leer no puede articular en una sola oración "estos automatizan X", el email no sirve.
+
+**Dónde colocar el mecanismo**: la sede natural es el segmento T3 del framework 4-T (caso de referencia + cómo se logró), pero también puede vivir en T2 si es más natural ahí. Lo crítico es que esté.
+
+**Ejemplos del mismo email con y sin mecanismo:**
+
+❌ Sin mecanismo (falla — no se sabe qué venden):
+> "trabajamos con un equipo de crédito con 17 modelos en prod — 3 semanas por ciclo bajaron a 4 días."
+
+✅ Con mecanismo (sirve — se entiende qué hacen):
+> "trabajamos con un equipo de crédito con 17 modelos en prod — **automatizando la preparación y orquestación de datos**, sus 3 semanas por ciclo bajaron a 4 días."
+
+---
+
 ## FORMATO — INVIOLABLE (Email 1)
 
 - **75–80 palabras máximo.** Debe caber en pantalla de teléfono sin scroll.
@@ -45,8 +87,8 @@ Observación específica sobre el prospecto o su empresa. Usa el trigger de la f
 **T2 — Think (línea 3)**
 Pregunta o afirmación que genere tensión sobre cómo hacen las cosas hoy. Apuntar al dolor del 80% manual.
 
-**T3 — Third-party (línea 4)**
-Caso de referencia: financiera con 8 sucursales, 8 líneas de crédito, equipo de 4 personas — el 80% de su tiempo era plomería. Solo usarlo si aplica al contexto del prospecto. No forzarlo.
+**T3 — Third-party + Mecanismo (líneas 4–5)**
+Caso de referencia con resultado **Y mecanismo** — debe responder a "qué cambió" y "cómo lo logramos". Ejemplo válido: "trabajamos con una financiera de 8 sucursales — automatizando la preparación de datos, lo que les tomaba 3 semanas por ciclo bajó a 4 días". El "cómo" no es opcional: sin él, el prospecto no sabe qué le estás vendiendo. Solo usar el caso si aplica al contexto del prospecto; no forzarlo, pero el mecanismo siempre va.
 
 **T4 — Talk (línea 5)**
 CTA suave basado en interés.
@@ -77,6 +119,8 @@ CTA suave basado en interés.
 
 **Estructura:**
 - No pedir reunión en el Email 1 (CTA = interés, no calendar)
+- Enunciar resultados sin mecanismo ("lo bajamos a 4 días", "lo aceleramos 5x") sin decir CÓMO
+- Implicar el producto en lugar de declararlo — "ayudamos con esto" no es enunciar el mecanismo
 
 ---
 

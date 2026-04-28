@@ -50,6 +50,10 @@ Ponte en el lugar del prospecto. Eres el Head of Data o Director de Datos de la 
 - ¿El CTA me incomoda o me parece razonable?
 - ¿Siento presión de venta o conversación genuina?
 
+**Test de claridad-de-oferta (CRÍTICO):**
+- Si tuviera que explicarle a mi CEO en una frase qué venden estos, ¿podría?
+- ¿El email me dice qué hacen como producto, o solo qué problema resuelven?
+
 **Evaluación global:**
 - ¿Este email merece una respuesta o un "no gracias"?
 - ¿Hay algo que me haya molestado o que me haya parecido falso?
@@ -68,6 +72,9 @@ Ponte en el lugar del prospecto. Eres el Head of Data o Director de Datos de la 
 | < 5.0 | Descartado — va directo a spam |
 
 **El email necesita mínimo 8.5 para ser aprobado.**
+
+**Regla especial — claridad de oferta:**
+Si después de leer el email NO puedo articular en una frase qué hace Reasoning como producto (mecanismo, no problema), la calificación máxima es **7.5/10** sin importar qué tan bien esté escrito. Un prospecto curioso pero confundido no responde — pregunta a un colega qué venden estos y se distrae. Esta regla aplica antes que el resto del rubric.
 
 ---
 
