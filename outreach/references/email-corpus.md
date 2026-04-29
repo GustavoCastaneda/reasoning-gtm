@@ -345,6 +345,84 @@ en X") es asunción aunque X sea plausible.
 
 ---
 
+## #8 — Caso aprobado con T2 enriquecido manualmente (retail multi-país)
+
+**Prospecto**: Líder de gobernanza de datos en **Nestlé LATAM** (retail
+multi-país, multi-mercado).
+
+**Email aprobado por el usuario** (versión final con T2 mejorado a mano):
+
+> Subject: proveedores e inventarios entre mercados
+>
+> Hola [Contacto], viendo tu rol liderando gobernanza de datos en Nestlé.
+>
+> En retail multi-país, nuevos mercados traen formatos de POS, ERPs
+> múltiples (SAP, locales) y productos con códigos distintos en cada
+> sistema — el equipo homologa y limpia los datos a mano por semanas o
+> meses, el 80% del tiempo del área de datos se dedica a plomería manual.
+>
+> Nuestra plataforma corre agentes que hacen ese 80% — limpieza,
+> deduplicación, homologación, gobernanza. Lo que toma semanas se
+> resuelve en días sin cruzarlos a mano.
+>
+> ¿Te interesaría una llamada para que veas dónde liberas semanas en
+> cada mercado nuevo?
+
+(102 palabras — el usuario autorizó exceder el límite de 85 para
+preservar la riqueza operacional de T2.)
+
+**✅ Lo que funcionó (todo el email)**:
+- **Subject anclado**: "proveedores e inventarios entre mercados" —
+  específico a la realidad multi-país de retail, no genérico
+- **T1 limpio**: saludo + role recognition con tenure ("liderando
+  gobernanza de datos en Nestlé"), sin factoide de noticias
+- **T2 con riqueza operacional**: nombra los sistemas reales (POS, ERPs
+  múltiples, SAP, locales, códigos distintos por sistema) y cuantifica
+  el dolor explícitamente con la cifra del 80% — el prospecto reconoce
+  exactamente su día a día
+- **T3 closer descriptivo**: "Lo que toma semanas se resuelve en días
+  sin cruzarlos a mano" — describe disappearance, no prescribe refocus
+  (nada de "y se enfoca en X")
+- **CTA value-framed**: "para que veas dónde liberas semanas en cada
+  mercado nuevo" — propósito específico anclado a su realidad de
+  expansión
+
+**⚠️ Donde el writer llegó vs. donde tu craft humano lo elevó**:
+
+El loop writer/critic/judge automatizado entregó el draft en 8.8/10
+con T2 más comprimido:
+
+> "el equipo homologa semanas a mano" (versión del writer — concreto
+> pero sin la cifra del 80% explícita ni el verbo "plomería manual")
+
+El usuario reescribió T2 manualmente para incorporar **dos cosas que
+el writer no había encontrado**:
+1. Cuantificación explícita: "el 80% del tiempo del área de datos se
+   dedica a plomería manual"
+2. Vocabulario emocional: "plomería manual" (cosechado del producto
+   canónico de Reasoning) en lugar de un verbo neutral
+
+Esto subió la calificación esperada a ~9.1 — territorio que el loop
+solo no estaba alcanzando.
+
+**📝 Lección**: el writer encontró la mayor parte (subject anclado,
+T1 limpio, T3 descriptivo, CTA value-framed) pero le faltó **anclar
+el dolor con la cifra del 80% dentro del email mismo**. El framework
+declara el 80% en T3 (la propuesta), pero T2 puede ganar fuerza si
+también cita el 80% como espejo del dolor del prospecto. Cuando el
+loop entregue 8.5–8.8 y se sienta "bien pero corto", probablemente
+es porque T2 está describiendo el dolor sin cuantificarlo. Mover el
+anchor del 80% también a T2 (no solo en T3) es una palanca para subir
+de 8.8 a 9+.
+
+También válido: cuando T2 merece riqueza operacional adicional, el
+usuario puede autorizar exceder el cap de 85 palabras. El validator
+debería respetar esa autorización vía override explícito — el límite
+es regla por defecto, no inviolable cuando hay justificación de
+contenido.
+
+---
+
 ## Cómo se agregan entradas nuevas
 
 Cuando se rechace un email con feedback útil, agregar una entrada
