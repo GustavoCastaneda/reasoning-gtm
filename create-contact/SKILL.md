@@ -31,7 +31,22 @@ Busca la empresa por nombre o dominio.
 - **Existe** → usa ese registro para vincular el contacto
 - **No existe** → avisa: "La empresa [nombre] no está en HubSpot. Corre primero `create-company` y luego regresa aquí."
 
-### 2. Crear el contacto
+### 2. Verificar si el contacto ya existe en HubSpot
+
+Antes de crear, busca el contacto para evitar duplicados:
+
+**Si tienes email:**
+- Busca el contacto por email en HubSpot
+- **Encontrado** → no creas un contacto nuevo. Informa: "El contacto [nombre] ya existe en HubSpot con ese email → [link al contacto]". Continúa al paso 3 (vincular) y 4 (nota) usando el registro existente.
+- **No encontrado** → continúa al paso 3 de creación.
+
+**Si no tienes email:**
+- Busca por nombre completo (firstname + lastname) filtrado por empresa
+- **Match exacto** → trata igual que "Encontrado" arriba
+- **Match parcial** (mismo nombre, empresa diferente) → muestra el resultado y pregunta: "Encontré a [nombre] en HubSpot vinculado a [empresa distinta]. ¿Es la misma persona o creo un contacto nuevo?"
+- **Sin match** → continúa al paso 3 de creación.
+
+### 3. Crear el contacto
 
 Mapea los datos de la ficha a estas propiedades:
 
@@ -47,10 +62,10 @@ Mapea los datos de la ficha a estas propiedades:
 >
 > **¿Por qué no `hs_linkedin_ad_last_used_date`?** Esa es una propiedad built-in de HubSpot para registrar la última vez que se usó un anuncio de LinkedIn — es un timestamp, no un campo de texto para URLs. Los valores guardados ahí no aparecen como links en el perfil del contacto.
 
-### 3. Vincular el contacto a la empresa
-Asocia el contacto recién creado al registro de la empresa en HubSpot.
+### 4. Vincular el contacto a la empresa
+Asocia el contacto (nuevo o existente) al registro de la empresa en HubSpot. Si ya estaba vinculado, omite este paso.
 
-### 4. Agregar nota en el contacto
+### 5. Agregar nota en el contacto
 Crea una nota con los datos del contacto de la ficha de investigación:
 - Responsabilidades reales
 - Tiempo en el puesto
@@ -58,7 +73,7 @@ Crea una nota con los datos del contacto de la ficha de investigación:
 - Señal de dolor identificada
 - Trigger para outreach
 
-### 5. Actualizar el Google Doc en Drive
+### 6. Actualizar el Google Doc en Drive
 
 Toma el URL del Doc del campo `GOOGLE DOC > URL` de la ficha que dejó `/research`. **Abre ese Doc específico (por URL/ID, no por nombre)** y agrega al inicio, justo debajo del bloque de empresa que dejó `/create-company`:
 
