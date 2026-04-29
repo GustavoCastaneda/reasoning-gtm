@@ -423,6 +423,85 @@ contenido.
 
 ---
 
+## #9 — Término ambiguo detectado post-aprobación del judge (retail multi-país)
+
+**Prospecto**: Líder de gobernanza de datos en **Nestlé** (retail multi-país,
+multi-mercado — segunda sesión de outreach, vertical idéntico a #8).
+
+**Email aprobado por el Judge (9.2/10)**:
+
+> Subject: códigos de productos entre mercados
+>
+> Hola [Contacto], viendo tu rol liderando gobernanza de datos en Nestlé.
+>
+> En retail multi-país, nuevos mercados traen formatos de POS, ERPs múltiples
+> (SAP, locales) y productos con códigos distintos en cada sistema — el equipo
+> homologa y limpia los datos a mano por semanas o meses, el 80% del tiempo del
+> área de datos se dedica a plomería manual.
+>
+> Nuestra plataforma corre agentes que hacen ese 80% — limpieza, deduplicación,
+> homologación, gobernanza. El equipo deja de dedicar semanas a homologar
+> códigos entre SAP, POS y múltiples locales — semanas se vuelven días sin
+> cruzarlos a mano.
+>
+> ¿Te interesaría una llamada para que veas dónde liberas semanas en cada
+> mercado nuevo?
+
+**✅ Lo que funcionó**:
+- Subject "códigos de productos entre mercados" — anclado al trabajo concreto
+  del prospecto, no genérico al vertical
+- T1 limpio: saludo + role recognition sin factoide de noticias
+- T2 con riqueza operacional (POS, ERPs múltiples, SAP, códigos distintos por
+  sistema) y cuantificación explícita del 80%
+- T3 closer descriptivo — describe disappearance, no prescribe refocus
+- CTA value-framed con propósito específico al contexto del prospecto
+  ("liberas semanas en cada mercado nuevo")
+
+**❌ Lo que el usuario corrigió post-aprobación**:
+- "múltiples locales" en T2 y T3 era ambiguo: "local" puede leerse como tienda
+  física, oficina, o sistema informático. El término era coherente en contexto
+  técnico interno pero confuso para el prospecto en lectura rápida
+- Ningún agente del loop lo detectó — el judge aprobó 9.2/10 sin flaggear la
+  ambigüedad léxica
+- Cita del usuario: "múltiples locales esta palabra no se entiende"
+
+**✅ Versión final aprobada (con corrección del usuario, Opción B)**:
+
+> Subject: códigos de productos entre mercados
+>
+> Hola [Contacto], viendo tu rol liderando gobernanza de datos en Nestlé.
+>
+> En retail multi-país, nuevos mercados traen formatos de POS distintos,
+> ERP corporativo (SAP) y ERPs locales de cada mercado, productos con
+> códigos distintos en cada uno — el equipo homologa y limpia los datos a mano
+> por semanas o meses, el 80% del tiempo del área de datos se dedica a
+> plomería manual.
+>
+> Nuestra plataforma corre agentes que hacen ese 80% — limpieza, deduplicación,
+> homologación, gobernanza. El equipo deja de dedicar semanas a homologar
+> códigos entre SAP, POS y ERPs de cada mercado — semanas se vuelven días sin
+> cruzarlos a mano.
+>
+> ¿Te interesaría una llamada para que veas dónde liberas semanas en cada
+> mercado nuevo?
+
+(114 palabras — el usuario autorizó exceder el límite de 85 para preservar
+la especificidad operacional de T2 con la corrección de la ambigüedad.)
+
+**📝 Lección**: los agentes del loop validan coherencia interna y criterios
+de calidad, pero no siempre detectan ambigüedad léxica para el lector externo.
+Términos que son claros en contexto técnico ("locales" = sistemas ERP locales)
+pueden ser confusos al leer un email en modo rápido. El founder es el último
+filtro de claridad antes de enviar — vale leer el email una vez como si fuera
+el prospecto.
+
+Cuando el sistema ofrece opciones para reemplazar un término ambiguo, debe
+mostrar el texto completo afectado con cada opción (no solo la palabra, sino
+la frase en contexto) para que el founder pueda elegir por resonancia
+operacional, no por preferencia abstracta.
+
+---
+
 ## Cómo se agregan entradas nuevas
 
 Cuando se rechace un email con feedback útil, agregar una entrada

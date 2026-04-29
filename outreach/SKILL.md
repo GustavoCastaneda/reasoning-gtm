@@ -6,6 +6,10 @@ description: >
   ejecutado. Toma la ficha de investigación del contexto de la sesión.
   Foco: un único email, no secuencia. Email 2/3 y LinkedIn se manejan después
   según evolucione la conversación con el prospecto.
+allowed-tools:
+  - Skill
+  - Read
+  - Edit
 ---
 
 # Outreach — $ARGUMENTS
@@ -147,6 +151,55 @@ Cuando el usuario apruebe, ejecuta sin pedir más confirmación:
 
 **Confirmar en el chat:**
 
-| Empresa | Draft en Gmail | HubSpot |
-|---------|----------------|---------|
-| [nombre] | ✅ Email 1 | ✅ ATTEMPTED_TO_CONTACT |
+| Empresa | Draft en Gmail | HubSpot | Corpus |
+|---------|----------------|---------|--------|
+| [nombre] | ✅ Email 1 | ✅ ATTEMPTED_TO_CONTACT | ✅ Entrada #N |
+
+---
+
+### Paso 9.5 — Aprendizaje automático: agregar entrada al corpus
+
+Sin pedir confirmación, genera y agrega una entrada al corpus de outreach inmediatamente después de confirmar la tabla del Paso 9.
+
+**Qué extraer de la sesión:**
+
+- **Email aprobado**: el que el usuario dijo "sí" o "aprobado" — puede diferir del draft que el Judge calificó si el usuario hizo correcciones post-judge. Usa siempre la versión final que el usuario aceptó.
+- **Empresa**: preservar sin anonimizar (el grounding del vertical lo requiere).
+- **Contacto**: reemplazar el nombre real del contacto con `[Contacto]` en el cuerpo del email.
+- **Calificación**: la del Judge sobre el draft más cercano al aprobado.
+- **Principal aprendizaje**: qué cambió del primer draft al aprobado. Puede ser: corrección del Critic, mejora del Judge, o corrección post-judge del usuario. Si hubo varias iteraciones, captura la corrección más importante.
+- **Si el usuario corrigió algo post-judge**: documenta el término o frase específica corregida + la razón que dio el usuario.
+
+**Leer el corpus para obtener el número siguiente:**
+
+Lee `outreach/references/email-corpus.md` y encuentra la última entrada `## #N —`. La nueva entrada es `#N+1`.
+
+**Formato de la entrada a agregar:**
+
+```markdown
+## #[N+1] — [Patrón corto de 3–6 palabras] ([vertical])
+
+**Prospecto**: [Rol] en **[Empresa]** ([descripción de 1 línea del vertical]).
+
+**Email aprobado por el [Judge / usuario] ([score]/10)**:
+
+> Subject: [subject]
+>
+> [cuerpo verbatim — nombre del contacto → [Contacto]]
+
+([N] palabras[si excedió 85: " — el usuario autorizó exceder el límite para [razón específica]"].)
+
+**✅ Lo que funcionó**:
+• [elemento específico que funcionó — T1 limpio, T2 con riqueza operacional, etc.]
+
+**❌ Lo que se rechazó / Lo que el usuario corrigió**:
+• [qué se detectó + cita del feedback del Critic/Judge/usuario si está en el contexto]
+
+**📝 Lección**: [principio internalizable en 2–4 líneas — qué debe saber el writer/critic en la próxima sesión para este patrón]
+```
+
+**Dónde insertar**: usa `Edit` para agregar la entrada justo **antes** de la línea `## Cómo se agregan entradas nuevas` al final del corpus.
+
+**Si no hubo rechazos en el loop** (el Judge aprobó en primera iteración): omite la sección `❌` y documenta solo `✅` + lección.
+
+**Confirmar en el chat** actualizando la tabla del Paso 9 con `✅ Entrada #N+1` en la columna Corpus.
