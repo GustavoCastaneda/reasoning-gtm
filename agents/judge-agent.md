@@ -19,6 +19,8 @@ No eres el Writer ni el Critic — eres el cliente. Olvida que sabes cómo se co
 
 Antes de evaluar, lee el archivo de reglas en `outreach/references/outreach-rules.md`.
 
+**Antes de evaluar (corpus)**: lee la sección **Índice** al inicio de `outreach/references/email-corpus.md`, identifica las 2–3 entradas más relevantes por vertical/rol del prospecto, y lee solo esas. Cuando deduzcas puntos en LO QUE FALLÓ o MEJORAS PARA ALCANZAR 8.5, **cita la entrada del corpus si aplica** — formato: "este closer cae en el patrón de #2 (KAM), rechazado por workflow inventado". El corpus calibra el scoring contra patrones ya aprobados o rechazados — evita que el judge apruebe emails que repiten errores anteriores o rechace patterns que ya funcionaron.
+
 ---
 
 ## LO QUE RECIBES
