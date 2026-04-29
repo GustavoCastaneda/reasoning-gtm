@@ -43,8 +43,18 @@ El Validator verifica que los **datos puntuales obligatorios** estén presentes 
 ```
 ¿VEREDICTO del Validator?
     PASS → continuar al Paso 3 (Critic)
-    FAIL → regresar al Paso 1 con la lista de gaps. El Writer reescribe corrigiendo
-           específicamente los datos faltantes. Después del rewrite, vuelve al Paso 2.
+    FAIL — ¿el único chequeo fallido es el #12 (longitud)?
+        SÍ (solo falló longitud) → Gate de longitud:
+              Mostrar al founder:
+              "⚠️ El email tiene [N] palabras (límite: 85). Todos los demás chequeos pasaron.
+               A) Recortamos a ≤85 palabras — el Writer lo compacta
+               B) Autorizas [N] palabras — el contenido operacional justifica la excepción"
+              Si elige A → regresar al Paso 1 con gap de longitud. Máximo 2 retries.
+              Si elige B → agregar [OVERRIDE-LENGTH: autorizado] al contexto y re-invocar
+                           el Validator (ahora pasa Chequeo 12 como PASS override) →
+                           continuar al Paso 3 (Critic)
+        NO (hay otros FAILs además de longitud) → regresar al Paso 1 con la lista de gaps.
+           El Writer reescribe corrigiendo los datos faltantes. Después del rewrite, vuelve al Paso 2.
            Máximo 2 retries por iteración antes de continuar a Critic con warning.
 ```
 
@@ -78,7 +88,13 @@ Invoca al `data-validator-agent` otra vez con el draft revisado.
 ```
 ¿VEREDICTO?
     PASS → continuar al Paso 6 (Judge)
-    FAIL → regresar al Paso 4 con la lista de gaps. Máximo 2 retries.
+    FAIL — ¿el único chequeo fallido es el #12 (longitud)?
+        SÍ (solo falló longitud) → Gate de longitud:
+              Si [OVERRIDE-LENGTH: autorizado] ya está activo en el contexto → continuar
+              al Paso 6 (Judge) directamente — el founder ya autorizó la longitud.
+              Si no está activo → mostrar al founder el mismo gate que en Paso 2 y aplicar
+              la misma lógica (A: recortar / B: autorizar).
+        NO (hay otros FAILs) → regresar al Paso 4 con la lista de gaps. Máximo 2 retries.
 ```
 
 Esto evita que el Critic introduzca cambios que rompen la presencia de datos puntuales.

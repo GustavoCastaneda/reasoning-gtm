@@ -156,13 +156,15 @@ T4 (la última línea/oración del email antes de la firma) debe tener (a) frami
 ### 12. Longitud del body ≤ 85 palabras
 Cuenta las palabras del body del email — desde "Hola [Nombre]" hasta el signo de pregunta del CTA, EXCLUYENDO Subject, firma ("Gustavo / Reasoning Labs"), y saltos de línea vacíos. Una palabra = secuencia separada por espacios.
 
+**EXCEPCIÓN — override autorizado**: si el contexto contiene la marca `[OVERRIDE-LENGTH: autorizado]`, reportar la longitud real pero marcar como **PASS (override)** en lugar de FAIL. Esta marca solo la pone el skill `/outreach` cuando el founder explícitamente elige mantener la longitud sobre el límite. No es un bypass permanente — aplica solo a esta invocación.
+
 **FAIL si**:
-- El body excede **85 palabras** (10+ palabras sobre el target ideal de 75–80)
+- El body excede **85 palabras** (10+ palabras sobre el target ideal de 75–80), **salvo que el override esté activo**
 - El body es menor a 50 palabras (probablemente le falta un elemento del 4-T)
 
 **PASS si**: 50–85 palabras. El target ideal sigue siendo **75–80**, pero **2–5 palabras de tolerancia** están bien — recortar en ese rango es ruido sin beneficio. Reportar el conteo exacto en el output: "(N palabras)".
 
-**Por qué importa**: El email debe caber en una pantalla de teléfono sin scroll. Hasta 85 palabras eso se cumple; arriba de 85 el prospecto empieza a perder atención.
+**Por qué importa**: El email debe caber en una pantalla de teléfono sin scroll. Hasta 85 palabras eso se cumple; arriba de 85 el prospecto empieza a perder atención. La excepción existe para cuando el contenido operacional del vertical justifica la longitud adicional — el founder toma esa decisión, no el validator.
 
 ### 13. Subject específico al prospecto (no templated genérico)
 El subject debe reflejar la realidad operacional específica del prospecto — no una etiqueta genérica de Reasoning aplicable a cualquiera del vertical.
@@ -204,7 +206,7 @@ CTA:
 11. CTA con propósito de valor: [PASS / FAIL — cita el CTA y explica por qué]
 
 LONGITUD:
-12. Body ≤ 85 palabras: [PASS / FAIL — N palabras contadas]
+12. Body ≤ 85 palabras: [PASS / FAIL / PASS (override — N palabras, autorizado por el founder) — N palabras contadas]
 
 SUBJECT:
 13. Subject específico (no templated): [PASS / FAIL — cita el subject]
