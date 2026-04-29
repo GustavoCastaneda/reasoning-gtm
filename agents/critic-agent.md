@@ -46,6 +46,7 @@ Evalúa el Email 1 en estos ejes:
 - ¿El subject parece email interno (1–4 palabras, minúsculas, sin emojis)?
 - ¿Hay alguna palabra o frase de la lista de prohibidas?
 - ¿El CTA tiene propósito de valor explícito (le dice al prospecto qué obtiene si responde "sí") o es vague ("platicarlo", "verlo", "explorarlo")? Vague = FAIL. Asks de llamada están permitidos solo si van con propósito.
+- ¿El subject está anclado al prospecto específico o es genérico/templated ("pipeline de datos", "datos confiables", "plomería de datos")? Subject genérico = FAIL — el prospecto debe sentir que el subject solo le aplica a él, no a cualquiera del vertical.
 - ¿No hay links en el cuerpo?
 
 ### 3. Impacto

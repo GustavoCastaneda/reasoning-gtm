@@ -64,10 +64,23 @@ El Email 1 **debe contener una frase explícita** que enuncie qué hace Reasonin
 - Subject: 1–4 palabras en minúsculas — que parezca email interno, no marketing.
 - Sin Title Case, sin emojis, sin signos de exclamación en el subject.
 
-**Ejemplos de subject válidos:**
-- "pipeline de datos"
-- "equipo de data en [empresa]"
-- "plomería de datos"
+- **Anclado al trabajo concreto del prospecto, no genérico al producto.** El subject refleja la realidad operacional específica del prospecto (lo que su equipo cruza/concilia/homologa a mano), no una etiqueta de Reasoning.
+
+**Ejemplos de subject válidos** (anclados al vertical específico — varía por prospecto):
+- Para vales/tarjetas B2B: "transacciones y liquidaciones", "cruce de comercios", "comercios y redes"
+- Para fintech crédito: "modelos y regulador", "datos para scoring", "cnbv y modelos"
+- Para educación multi-campus: "datos entre campus", "campus en brasil", "consolidación entre países"
+- Para manufactura solar: "evaluación de proyectos", "compilar viabilidad", "datos de planta"
+- Para retail: "datos cross-sucursal", "inventarios y skus", "personalización"
+
+**Anti-patrones PROHIBIDOS — subjects genéricos/templated:**
+- ❌ "pipeline de datos" (genérico — aplica a cualquier prospecto, se vuelve template)
+- ❌ "pipelines de datos"
+- ❌ "datos confiables"
+- ❌ "plomería de datos" (interno de Reasoning, no del prospecto)
+- ❌ Cualquier subject que aplicaría idénticamente a otros 3 prospectos del mismo vertical
+
+**Test rápido**: si tu subject podría aparecer en el inbox de cualquiera con el mismo título/empresa que tu prospecto, es genérico. Tiene que sonar a algo que ESTE prospecto específico podría haber recibido de un colega.
 
 ---
 

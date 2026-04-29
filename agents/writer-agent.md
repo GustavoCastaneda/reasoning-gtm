@@ -62,6 +62,8 @@ Lee `outreach/references/email-corpus.md` y revisa **2–3 entradas que matcheen
 - **¿Se entiende qué hace Reasoning como producto?** Si tuviera que explicárselo a alguien que nunca oyó del nombre, ¿podría con una frase del email?
 - **¿El email presenta oportunidad o expone problemas?** Si Pablo recibe esto, ¿se siente entendido como peer, o cuestionado como si lo estuvieran auditando? Cualquier frase que diga "tu X no funciona para Y" o "¿cómo vas a resolver Z?" → reescribe
 - **¿El lenguaje es plano o cae en jerga técnica para sonar conocedor?** Si T2 usa sustantivos arquitectónicos ("event streams", "feature stores", "data lakes", "embedding pipelines", "real-time inference", "engagement signals consistency"), reescribe en plano. Aunque el prospecto sea técnico, los buzzwords pesan en contra — lenguaje plano demuestra que entendemos el problema, jerga demuestra que conocemos las palabras. Lo segundo no vende.
+- **¿El subject está anclado al trabajo concreto de ESTE prospecto, o cae en genérico?** Si el subject es "pipeline de datos", "datos confiables", "plomería de datos" o cualquier etiqueta que aplicaría idénticamente a otros 3 prospectos del mismo vertical, reescríbelo a algo específico (transacciones/liquidaciones/cruces/campus/inventarios/proyectos/etc., según la realidad operacional del prospecto).
+- **¿La longitud está dentro de 75–85 palabras?** Target ideal es 75–80; hasta 85 está bien. Solo recorta si pasas de 85 — recortar de 83 a 80 es ruido sin beneficio.
 
 Si alguna respuesta falla, reescribe antes de entregar.
 

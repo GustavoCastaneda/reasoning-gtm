@@ -153,16 +153,29 @@ T4 (la última línea/oración del email antes de la firma) debe tener (a) frami
 
 **PASS si**: el CTA combina framing de interés ("¿te interesaría…", "¿vale la pena…") con propósito de valor explícito ("para que veas X", "para mostrarte Y", "para ver cómo aplica a Z"). Patrón canónico: "¿Te interesaría una llamada para que veas en dónde podríamos darle valor?"
 
-### 12. Longitud del body ≤ 80 palabras
+### 12. Longitud del body ≤ 85 palabras
 Cuenta las palabras del body del email — desde "Hola [Nombre]" hasta el signo de pregunta del CTA, EXCLUYENDO Subject, firma ("Gustavo / Reasoning Labs"), y saltos de línea vacíos. Una palabra = secuencia separada por espacios.
 
 **FAIL si**:
-- El body excede 80 palabras
+- El body excede **85 palabras** (10+ palabras sobre el target ideal de 75–80)
 - El body es menor a 50 palabras (probablemente le falta un elemento del 4-T)
 
-**PASS si**: 50–80 palabras. Reportar el conteo exacto en el output: "(N palabras)".
+**PASS si**: 50–85 palabras. El target ideal sigue siendo **75–80**, pero **2–5 palabras de tolerancia** están bien — recortar en ese rango es ruido sin beneficio. Reportar el conteo exacto en el output: "(N palabras)".
 
-**Por qué importa**: El email debe caber en una pantalla de teléfono sin scroll. Por encima de 80 palabras, el prospecto deja de leer. Esto es regla inviolable, no sugerencia.
+**Por qué importa**: El email debe caber en una pantalla de teléfono sin scroll. Hasta 85 palabras eso se cumple; arriba de 85 el prospecto empieza a perder atención.
+
+### 13. Subject específico al prospecto (no templated genérico)
+El subject debe reflejar la realidad operacional específica del prospecto — no una etiqueta genérica de Reasoning aplicable a cualquiera del vertical.
+
+**FAIL si el subject es exactamente o paráfrasis cercana de:**
+- "pipeline de datos" / "pipelines de datos"
+- "datos confiables"
+- "plomería de datos"
+- "datos en [empresa]" sin más anclaje
+
+**PASS si**: el subject menciona el trabajo concreto del prospecto (transacciones/liquidaciones/cruces/campus/proyectos/inventarios/etc.) anclado a su vertical, en 1–4 palabras minúsculas.
+
+**Test rápido**: si el subject podría aparecer en el inbox de cualquiera con el mismo título/empresa, es genérico. Tiene que sonar a algo que ESTE prospecto podría haber recibido de un colega.
 
 ---
 
@@ -191,7 +204,10 @@ CTA:
 11. CTA con propósito de valor: [PASS / FAIL — cita el CTA y explica por qué]
 
 LONGITUD:
-12. Body ≤ 80 palabras: [PASS / FAIL — N palabras contadas]
+12. Body ≤ 85 palabras: [PASS / FAIL — N palabras contadas]
+
+SUBJECT:
+13. Subject específico (no templated): [PASS / FAIL — cita el subject]
 
 VEREDICTO: [PASS / FAIL]
 
