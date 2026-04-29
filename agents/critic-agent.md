@@ -82,14 +82,14 @@ Evalúa el Email 1 en estos ejes:
 - ¿El tono del saludo es cálido sin ser adulador? "Tu trayectoria me parece interesante" pasa; "tu perfil es impresionante" suena falso.
 - **Si T1 es un factoide de Google sin saludo previo, o T2 es un dato desconectado en lugar de empatía vertical → marcar REQUIERE REESCRITURA.**
 
-### 8. T3 muestra el moat (80% manual desaparece) o se queda en superficie
-- ¿T3 cierra mostrando que el 80% manual del equipo **desaparece** y se libera para análisis de alto valor del prospecto?
+### 8. T3 muestra el moat (80% manual desaparece) — descriptivo, no prescriptivo
+- ¿T3 cierra mostrando que el 80% manual del equipo **desaparece**?
 - ¿O cierra apuntando a la **superficie** del producto (NL Q&A, "imagina preguntar X y tener Y en segundos")?
-- ¿La frase de cierre menciona qué **trabajo manual concreto** deja de hacer el equipo, anclado a la realidad operacional del prospecto (no genérica del vertical)?
-- ¿La frase del análisis de alto valor está **descubierta para ESTE prospecto** basándose en su ficha (rol, contexto, dolor específico), o es un cierre que aplicaría idénticamente a cualquier persona del mismo vertical?
-- **Detector de template**: si T3 cierra con un phrasing genérico del vertical ("análisis de riesgo y compliance" para todo lending, "costos y proveedores" para todo manufactura) en lugar de una frase descubierta para este prospecto, eso es señal de template — los ejemplos de la sección T3 en outreach-rules.md son inspiración de dirección, NO phrasings canónicos a copiar.
-- **Detector de workflow inventado**: ¿el closer describe un proceso interno específico del equipo del prospecto que solo sabríamos si trabajáramos ahí? Ejemplos: "aprobación de deals que aceleran tu pipeline de financiamiento", "evaluación de margen por SKU y planning de surtido", "monitoreo de calidad por línea y respuesta a non-conformance". Eso es **invención**. El closer debe quedar al nivel de **categoría** del rol/vertical, no de workflow específico inventado.
-- **Si T3 termina en NL Q&A, cierre genérico sin anclaje, phrasing copiado verbatim de los ejemplos del vertical, O workflow inventado que asume conocimiento del proceso interno → REQUIERE REESCRITURA. El loop existe para descubrir el cierre al nivel correcto (categoría, no workflow), no para aplicar template ni para fabricar detalle.**
+- ¿La frase de cierre describe **qué trabajo manual se va**, anclado a la realidad operacional del prospecto, o **prescribe qué debería hacer el equipo después** ("se enfoca en fraude/costos/planning/segmentación/etc.")? Lo segundo es asunción presuntuosa — no sabemos qué debe priorizar el equipo del prospecto.
+- **Detector de prescripción de refocus**: cualquier frase tipo "...y se enfoca en [X]" / "...y dedica tiempo a [Y]" / "...para que se enfoque en [Z]" donde X/Y/Z sea un área de trabajo asumida — REQUIERE REESCRITURA. Aplica incluso si la categoría es plausible (fraude para lending, costos para manufactura) — la regla es que el closer queda en descripción de la disappearance, no en prescripción del refocus.
+- **Detector de template**: si T3 cierra con un phrasing genérico del vertical en lugar de una frase descubierta para este prospecto, eso es señal de template.
+- **Detector de workflow inventado**: ¿el closer describe un proceso interno específico del equipo que solo sabríamos si trabajáramos ahí? Ejemplos: "aprobación de deals que aceleran tu pipeline", "evaluación de margen por SKU y planning de surtido". Eso es invención.
+- **Si T3 termina en NL Q&A, prescripción de refocus, workflow inventado, o phrasing copiado verbatim → REQUIERE REESCRITURA. El closer queda en describir qué desaparece; lo que el equipo haga después es decisión del prospecto, no nuestra.**
 
 ---
 

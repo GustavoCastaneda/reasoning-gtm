@@ -287,6 +287,64 @@ Science o un readme de un repo de ML, es jerga performativa.
 
 ---
 
+## #7 — T3 closer prescribiendo el refocus del equipo (lending / vales corporativos)
+
+**Prospecto**: líder de datos en **Sivale** (vales corporativos y tarjetas
+B2B, México).
+
+**Email original (rechazado)**:
+
+> Subject: pipeline de datos
+>
+> Hola [Contacto], viendo tu trayectoria liderando datos en Sivale. En
+> vales corporativos y tarjetas B2B, el equipo cruza a mano transacciones
+> de comercios afiliados con liquidaciones de redes como Mastercard,
+> Carnet y Visa.
+>
+> Nuestra plataforma automatiza ese 80% — limpieza, deduplicación,
+> homologación y gobernanza. Semanas o meses se vuelven días, **para que
+> tu equipo se enfoque en fraude, segmentación de comercios y
+> cumplimiento.**
+>
+> ¿Te interesaría una llamada de 15 min para que veas dónde podríamos
+> liberar a tu equipo de datos?
+
+**✅ Lo que funcionó**:
+- T1 saludo + tenure recognition limpio ("viendo tu trayectoria liderando
+  datos en Sivale")
+- T2 con empatía vertical real y anclada a la operación concreta — "el
+  equipo cruza a mano transacciones de comercios afiliados con
+  liquidaciones de redes como Mastercard, Carnet y Visa". Sin jerga
+  arquitectónica
+- T3 producto + compresión declarados correctamente
+
+**❌ Lo que se rechazó**:
+- T3 closer prescribió en qué debía enfocarse el equipo después: "fraude,
+  segmentación de comercios y cumplimiento". Aunque son áreas plausibles
+  del rol, **asumir** que el equipo debe enfocarse en eso es presuntuoso
+- Cita textual del rechazo: "no le tenemos que decir a que se debe
+  dedicar su equipo, esto es una asupcion, cambia el final"
+- Patrón distinto a #2 (KAM workflow inventado): aquí las categorías SÍ
+  son plausibles a nivel del rol — pero la regla se tightena: incluso a
+  nivel de categoría defendible, prescribir refocus es asumir
+
+**✅ Versión aprobada después de iterar**:
+
+> Nuestra plataforma automatiza ese 80% — limpieza, deduplicación,
+> homologación y gobernanza. **Semanas o meses se vuelven días, sin que
+> el equipo siga cruzándolos a mano.**
+
+**📝 Lección**: el closer **describe qué desaparece**, NO **prescribe qué
+hacer después**. Decir "fraude, segmentación, cumplimiento" para Sivale
+es plausible — pero no sabemos qué debe priorizar el líder del equipo. La
+versión aprobada ("sin que el equipo siga cruzándolos a mano") describe
+exactamente qué desaparece, anclado al trabajo concreto del vertical
+(cruzar transacciones), sin asumir nada del refocus. Quedarse en
+descripción es defendible siempre; cualquier prescripción ("y se enfoca
+en X") es asunción aunque X sea plausible.
+
+---
+
 ## Cómo se agregan entradas nuevas
 
 Cuando se rechace un email con feedback útil, agregar una entrada

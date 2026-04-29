@@ -169,20 +169,23 @@ Tres elementos en este orden:
 2. **Compresión temporal** (semanas/meses → días)
    "Lo que hoy toma semanas queda listo en días."
 
-3. **Liberación del equipo, anclada al análisis de alto valor del prospecto** — el moat real
+3. **Liberación del equipo: descripción de qué desaparece, NO prescripción de qué hacer después** — el moat real
 
-**Principio del cierre**: la frase final debe responder dos preguntas, en una sola línea natural:
-- ¿De qué **trabajo manual** se libera el equipo? (el dolor que desaparece)
-- ¿En qué **análisis de alto valor** se enfoca ahora? (la ganancia anclada a la realidad operacional del prospecto — su rol, vertical, contexto específico de la ficha)
+**Principio del cierre**: la frase final responde **UNA sola pregunta** — ¿de qué trabajo manual se libera el equipo? La frase **NUNCA** prescribe en qué se debería enfocar después. Asumir el refocus es presuntuoso aunque sea a nivel de categoría defendible: no sabemos qué debe priorizar el equipo del prospecto, y suponerlo cae en el mismo patrón que diagnosticar lo que hacen mal.
 
-El loop writer→critic→judge debe **descubrir la frase específica** para cada prospecto basándose en su ficha. **No hay phrasing canónico**. Cada email merece un cierre que aplique únicamente a ese prospecto.
+El loop writer→critic→judge debe **descubrir la frase específica** sobre la disappearance para cada prospecto basándose en su ficha. **No hay phrasing canónico**.
 
-**Ejemplos de inspiración por vertical** (NO copiar verbatim — son guía de la dirección, no plantilla):
+**Ejemplos de inspiración por vertical** (NO copiar verbatim — son guía de la dirección descriptiva, no plantilla):
 
-- En **lending**: el equipo se libera del trabajo de homologar buró, ERP y feeds regulatorios; se enfoca en el análisis de alto valor de su rol — modelos de riesgo, respuesta a regulador, scoring, decisión de crédito, etc. La frase específica depende de qué hace ESTE prospecto y qué dolor concreto se va.
-- En **manufactura**: el equipo se libera de unificar SKUs y conciliar catálogos a mano; se enfoca en análisis de costos, proveedores, planning de producción, calidad, etc.
-- En **retail**: el equipo se libera de conciliar inventarios cross-canal y deduplicar SKUs; se enfoca en análisis cross-sucursal, customer-360, planning de surtido, attribution, etc.
-- En **telecom / logística / otros**: aplica el mismo principio — qué trabajo manual desaparece y qué análisis de alto valor se desbloquea.
+- En **lending**: el equipo se libera del trabajo de homologar buró, ERP y feeds regulatorios. Frase descriptiva — qué se va, sin asumir el refocus.
+- En **manufactura**: el equipo se libera de unificar SKUs y conciliar catálogos a mano. Solo qué desaparece.
+- En **retail**: el equipo se libera de conciliar inventarios cross-canal y deduplicar SKUs.
+- En **telecom / logística / otros**: aplica el mismo principio — qué trabajo manual desaparece, sin prescribir qué hacer después.
+
+**Patrones válidos (descriptivos):**
+- "El cruce manual de transacciones desaparece — lo que tomaba semanas queda automatizado"
+- "Tu equipo se libera de homologar fuentes a mano, semanas o meses se vuelven días"
+- "El 80% del trabajo manual del equipo se va"
 
 **Por qué importa**: el moat de Reasoning es que **el 80% manual desaparece** — no que se puedan hacer queries en lenguaje natural. El equipo de datos celebra liberarse de la plomería, no la superficie del producto. T3 debe cerrar con esa liberación, **descubierta** por el loop para cada prospecto, no aplicada como template.
 
