@@ -40,8 +40,12 @@ Mapea los datos de la ficha a estas propiedades:
 | `firstname` / `lastname` | Nombre del contacto |
 | `jobtitle` | Puesto |
 | `email` | Work email |
-| `hs_linkedin_ad_last_used_date` | URL de LinkedIn |
+| `linkedin_profile_url` | URL de LinkedIn (custom property — ver nota abajo) |
 | `lifecyclestage` | Siempre `lead` al crear |
+
+> **Nota sobre LinkedIn URL**: `linkedin_profile_url` es la custom property estándar para URLs de perfil en HubSpot. Si el portal 51399355 no tiene esta propiedad creada, el API call devolverá error en ese campo — en ese caso omite el campo LinkedIn y continúa con el resto (no detener el flujo). La propiedad se crea en HubSpot → Configuración → Propiedades → Contactos → Nueva propiedad → tipo Texto de una línea, nombre interno `linkedin_profile_url`.
+>
+> **¿Por qué no `hs_linkedin_ad_last_used_date`?** Esa es una propiedad built-in de HubSpot para registrar la última vez que se usó un anuncio de LinkedIn — es un timestamp, no un campo de texto para URLs. Los valores guardados ahí no aparecen como links en el perfil del contacto.
 
 ### 3. Vincular el contacto a la empresa
 Asocia el contacto recién creado al registro de la empresa en HubSpot.
