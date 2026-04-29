@@ -79,28 +79,44 @@ TRIGGER PARA OUTREACH
 • [1 línea con el dato más específico y accionable para personalizar el email]
 
 GOOGLE DOC
-• URL: [URL completo del Doc creado en Drive — ID resoluble]
+• URL: [URL del archivo en Drive si la subida fue exitosa; "⚠️ Drive no disponible" si falló]
+• Path local: leads/[empresa-slug]/ficha.md
 • Título: [Empresa] — Lead Research YYYY-MM-DD
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 Al final de todos los leads, entrega una tabla resumen:
 
-| Empresa | Contacto | Trigger principal | FOMO |
-|---------|----------|-------------------|------|
-| [nombre] | [nombre] | [1 línea] | 🔥 / — |
+| Empresa | Contacto | Trigger principal | FOMO | Local | Drive |
+|---------|----------|-------------------|------|-------|-------|
+| [nombre] | [nombre] | [1 línea] | 🔥 / — | ✅ | ✅ / ⚠️ |
 
 ---
 
 ## DESPUÉS DE ENTREGAR LAS FICHAS
 
-Ejecuta estas dos acciones por cada lead sin pedir confirmación:
+Ejecuta estas acciones por cada lead sin pedir confirmación:
 
-### 1. Crear Google Doc en Drive
-- Crea un Doc con el contenido completo de la ficha
-- Título exacto: `[Empresa] — Lead Research YYYY-MM-DD` (fecha en formato ISO)
-- Guárdalo en la carpeta **"Leads activos"** en Drive (si no existe, créala)
-- **Captura el URL del Doc** y agrégalo a la ficha en la sección `GOOGLE DOC`. Esto es crítico: los skills downstream (`/create-company`, `/create-contact`) usan ese URL para actualizar el Doc — no buscan por nombre. Si el URL no queda en la ficha, los skills siguientes crearían un Doc nuevo en vez de actualizar este.
+### 1. Escribir ficha local (siempre, primero)
 
-### 2. Pasar las fichas al siguiente skill
-Las fichas quedan disponibles en el chat para que el siguiente skill (`create-company`) las consuma directamente. No hace falta que el usuario las copie — están en el contexto de la sesión.
+Escribe el contenido completo de la ficha en `leads/[empresa-slug]/ficha.md`:
+- **empresa-slug**: nombre de la empresa en minúsculas, espacios → guiones, sin acentos
+  (ejemplos: "Fibra Uno" → `fibra-uno`, "Universidad Anáhuac" → `universidad-anahuac`, "Banorte" → `banorte`)
+- Contenido: el texto completo de la ficha con el formato de separadores ━━━, en UTF-8
+- Si el archivo ya existe (lead investigado antes), sobreescríbelo
+- Incluye la línea `Path local: leads/[empresa-slug]/ficha.md` en la sección GOOGLE DOC
+
+Esta escritura es siempre la primera — es el respaldo confiable de la sesión independientemente de Drive.
+
+### 2. Subir a Drive como archivo .md (intento, no bloqueante)
+
+Sube el archivo como texto plano (`.md`), **no como Google Doc**:
+- Nombre en Drive: `[Empresa] — Lead Research YYYY-MM-DD.md`
+- Carpeta destino: **"Leads activos"** (busca por nombre; si no existe, créala)
+- **Formato crítico**: sube como `text/plain` — NO como `application/vnd.google-apps.document`. Esto evita el encoding corrompido (`â€¢` en lugar de `•`) que ocurre cuando Drive convierte texto a formato Google Docs internamente
+- Si la subida tiene éxito: captura el URL y agrégalo a la ficha en `GOOGLE DOC > URL`
+- Si la subida falla: registra `⚠️ Drive: [razón del error]` en el OUTPUT y continúa — el archivo local es suficiente para la sesión
+
+### 3. Pasar las fichas al siguiente skill
+
+Las fichas quedan disponibles en el chat para que el siguiente skill (`/create-company`) las consuma directamente. Si el contexto de sesión se pierde, los skills downstream pueden leer la ficha desde `leads/[empresa-slug]/ficha.md`.

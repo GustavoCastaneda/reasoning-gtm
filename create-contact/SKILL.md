@@ -84,8 +84,10 @@ Toma el URL del Doc del campo `GOOGLE DOC > URL` de la ficha que dejó `/researc
 
 **Reglas estrictas:**
 - NO crees un Doc nuevo bajo ninguna circunstancia.
-- Si no tienes el URL en el contexto pero la empresa ya existe en HubSpot, busca la empresa en HubSpot y lee la línea `📄 Google Doc: ...` de la nota inicial — ese es el URL.
-- Si después de eso aún no tienes URL, detente y reporta: "No encuentro el Google Doc del lead [empresa]. Confirma con el usuario antes de continuar."
+- Si no tienes el URL en el contexto, sigue este orden de búsqueda:
+  1. Lee `leads/[empresa-slug]/ficha.md` — el campo `GOOGLE DOC > URL` tiene el link de Drive si la subida fue exitosa
+  2. Busca la empresa en HubSpot y lee la línea `📄 Google Doc: ...` de la nota inicial
+- Si después de ambos pasos aún no tienes URL, detente y reporta: "No encuentro el Google Doc del lead [empresa]. Confirma con el usuario antes de continuar."
 - No busques por nombre en Drive como fallback.
 
 ---

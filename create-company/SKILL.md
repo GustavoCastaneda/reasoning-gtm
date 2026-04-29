@@ -10,6 +10,8 @@ description: >
 
 Toma las fichas de investigación disponibles en el contexto de esta sesión y crea una empresa en HubSpot por cada lead. No pidas confirmación entre leads — procesa todos de corrido.
 
+Si una ficha no está en el contexto de la sesión, busca su archivo local: `leads/[empresa-slug]/ficha.md` (slug = nombre de la empresa en minúsculas, espacios → guiones, sin acentos). Si el archivo tampoco existe, reporta el lead como pendiente y continúa con los demás.
+
 Portal ID: **51399355**
 Object type: **Company**
 
@@ -52,8 +54,9 @@ Toma el URL del Doc del campo `GOOGLE DOC > URL` de la ficha que dejó `/researc
 
 **Reglas estrictas:**
 - NO crees un Doc nuevo bajo ninguna circunstancia.
-- Si el campo `GOOGLE DOC > URL` no está en la ficha o el URL no resuelve, **detente y reporta**: "No encuentro el Google Doc del lead [empresa]. Corre primero `/research` o pásame el URL del Doc."
-- No busques por nombre como fallback — eso es lo que generaba duplicados.
+- Si el campo `GOOGLE DOC > URL` no está en la ficha o el URL no resuelve, busca la línea `Path local:` en la ficha — ese archivo `.md` tiene el URL de Drive en su sección GOOGLE DOC. Lee el archivo con `leads/[empresa-slug]/ficha.md` y extrae el URL de ahí.
+- Si después de eso aún no tienes URL, **detente y reporta**: "No encuentro el Google Doc del lead [empresa]. Corre primero `/research` o pásame el URL del Doc."
+- No busques por nombre en Drive — eso generaba duplicados.
 
 ---
 

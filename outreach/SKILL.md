@@ -16,6 +16,8 @@ allowed-tools:
 
 Toma la ficha de investigación del lead disponible en el contexto. Si se especifica un nombre de empresa en $ARGUMENTS, usa solo la ficha de ese lead — no proceses otros leads del contexto.
 
+Si la ficha no está en el contexto de la sesión, busca el archivo local: `leads/[empresa-slug]/ficha.md` (slug = nombre de la empresa en minúsculas, espacios → guiones, sin acentos). Si el archivo tampoco existe, detente: "No encuentro la ficha de [empresa]. Corre primero `/research` o pega la ficha en el chat."
+
 **Foco: solo Email 1.** No generes Email 2, Email 3 ni mensaje de LinkedIn — esos se trabajan después, con contexto fresco según haya o no respuesta del prospecto.
 
 Ejecuta el loop de refinamiento completo antes de mostrar cualquier resultado en el chat. El founder solo ve el email cuando alcanza 8.5 o después de 3 iteraciones.
