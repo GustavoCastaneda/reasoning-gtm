@@ -58,7 +58,7 @@ El Email 1 **debe contener una frase explícita** que enuncie qué hace Reasonin
 
 ## FORMATO — INVIOLABLE (Email 1)
 
-- **75–80 palabras máximo.** Debe caber en pantalla de teléfono sin scroll.
+- **75–80 palabras (target ideal); hasta 85 el validator lo acepta.** Recorta solo si superas 85 — recortar de 83 a 80 es ruido sin beneficio. Debe caber en pantalla de teléfono sin scroll.
 - Texto plano únicamente — sin HTML, imágenes, logos, adjuntos.
 - Sin links en el cuerpo.
 - Subject: 1–4 palabras en minúsculas — que parezca email interno, no marketing.
