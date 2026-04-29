@@ -80,6 +80,7 @@ El Email 1 **debe contener una frase explícita** que enuncie qué hace Reasonin
 - **Empático, nunca presuntuoso.** Asume que el prospecto sabe lo que hace. La info de la ficha sirve para **entender** al cliente, no como **arma** para decirle que algo en su setup está mal
 - **Frame de oportunidad, no de diagnóstico.** Presentamos lo que NOSOTROS hacemos bien, no lo que ELLOS hacen mal. El email debe sentirse como "te aviso de algo que puede aplicarte" — no como "encontré tus problemas y te los expongo"
 - Hipótesis sobre patrones de la industria > diagnóstico específico del prospecto. "La mayoría de equipos de ML que conocemos todavía…" > "tu pipeline no está diseñado para…"
+- **Lenguaje plano, no jerga técnica para sonar conocedor.** El prospecto valora MÁS que entendamos su problema en simple, que demostrar que conocemos la jerga arquitectónica de su industria. Decir "homologar datos de eventos y perfiles" supera a "event stream consistency" o "feature store synchronization". Aunque el prospecto sea técnico (Data Scientist, ML Engineer, Data Architect), la jerga se siente performativa — entre técnicos los buzzwords pesan más en contra, no a favor. Las operaciones concretas (limpieza, deduplicación, homologación, gobernanza) ya son específicas sin recurrir a sustantivos arquitectónicos (event streams, feature stores, data lakes, embedding pipelines, real-time inference).
 
 ---
 
@@ -156,6 +157,7 @@ Las fuentes mencionadas son **lo obvio** del vertical — lo que cualquier perso
 - ❌ Cifra específica de Google ("con $2.5B USD en compromiso…") como sustituto de empatía vertical
 - ❌ Frase desconectada que no encadena con el dolor del 80% manual
 - ❌ Hedging vague ("la mayoría de equipos como el tuyo…") cuando se puede ser específico al vertical
+- ❌ **Jerga técnica/arquitectónica para sonar como insider**: "event streams, feature stores, and engagement signals consistency", "data lakes, embedding pipelines, real-time inference". Aunque el prospecto sea técnico, esto suena a name-dropping, no a empatía. Lenguaje plano siempre supera: "homologar datos de eventos, perfiles y señales de uso" > "event stream consistency"
 
 **T3 — Producto + Compresión temporal + Liberación del equipo (líneas 3–5)**
 

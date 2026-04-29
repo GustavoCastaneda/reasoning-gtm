@@ -71,7 +71,8 @@ Evalúa el Email 1 en estos ejes:
 - ¿El CTA pregunta "¿cómo vas a resolverlo?" (cuestionador) o "¿te hace sentido explorarlo?" (oportunidad)?
 - ¿El email se siente como "te aviso de una oportunidad" o como "encontré tus problemas y te los expongo"?
 - ¿Se usa el research como información para entender, o como exhibición ("vi que…", "noté que tu equipo…")?
-- **Si el email diagnostica al cliente, lo cuestiona o suena con superioridad → marcar REQUIERE REESCRITURA. Esto aplica antes que el resto del veredicto.**
+- ¿El email usa **lenguaje plano y accesible** para describir el problema, o se apoya en **jerga técnica/arquitectónica** para sonar conocedor ("event streams", "feature stores", "data lakes", "embedding pipelines", "real-time inference", "engagement signals consistency")? Aunque el prospecto sea Data Scientist o ML Engineer, los buzzwords se sienten performativos — entre técnicos pesan más en contra. Lenguaje plano demuestra entendimiento; jerga demuestra vocabulario.
+- **Si el email diagnostica al cliente, lo cuestiona, suena con superioridad, o usa jerga técnica para sonar conocedor → marcar REQUIERE REESCRITURA. Esto aplica antes que el resto del veredicto.**
 
 ### 7. Apertura natural y empatía vertical
 - ¿El email empieza con saludo + reconocimiento del **contacto** (puesto, trayectoria, expertise) o con un factoide de la **empresa** copy-pasteable de Google?

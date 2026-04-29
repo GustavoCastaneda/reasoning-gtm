@@ -236,6 +236,57 @@ del rechazo.
 
 ---
 
+## #6 — Jerga técnica para sonar conocedor (retail personalization / ML)
+
+**Prospecto**: Full-stack Data Scientist en **Audience Science** (retail
+personalization, ML en producción).
+
+**Email original (rechazado)**:
+
+> Subject: production feature pipelines
+>
+> Hi [Contacto], as a full-stack DS shipping production ML in Audience
+> Science, you know the ratio well.
+>
+> In retail personalization, the team still spends significant time
+> **keeping event streams, feature stores, and engagement signals
+> consistent.**
+>
+> Our platform automates that 80% — cleaning, deduplication, homologation,
+> and governance. Weeks or months become days. Your team moves off
+> signal hygiene and onto feature engineering and decision logic per
+> user.
+>
+> Would a short call make sense to walk you through how it fits your
+> stack?
+
+**❌ Lo que se rechazó**:
+- T2 usó jerga arquitectónica de ML ("event streams", "feature stores",
+  "engagement signals consistency") para sonar como insider del campo
+- Aunque el prospecto sea Data Scientist (técnico), los buzzwords se
+  sintieron performativos — name-dropping en lugar de empatía con el
+  problema
+- Cita textual del rechazo: "no pongas este tipo de jerga ni de palabras
+  para sonar que sabemos, los clientes valoran más que puedan entender
+  de manera simple su problema sin tener que sonar 'intelectuales'"
+
+**✅ Versión equivalente sin jerga**:
+
+> In retail personalization, the team still spends significant time
+> **homologating event data, customer profiles, and behavior signals by
+> hand** before any model can ship.
+
+**📝 Lección**: lenguaje plano siempre supera a la jerga técnica,
+**INCLUSO cuando el prospecto es técnico**. Decir "homologar datos de
+eventos, perfiles y señales" supera a "event stream consistency / feature
+store synchronization". La empatía se expresa en simple; la jerga se
+siente como performance. Aplica también a Data Scientist, ML Engineer,
+Data Architect — entre técnicos los buzzwords pesan más en contra, no a
+favor. Si la frase aparecería natural en un blog post de Towards Data
+Science o un readme de un repo de ML, es jerga performativa.
+
+---
+
 ## Cómo se agregan entradas nuevas
 
 Cuando se rechace un email con feedback útil, agregar una entrada

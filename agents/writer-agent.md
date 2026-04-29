@@ -61,6 +61,7 @@ Lee `outreach/references/email-corpus.md` y revisa **2–3 entradas que matcheen
 - ¿El tono suena a founder o a vendedor?
 - **¿Se entiende qué hace Reasoning como producto?** Si tuviera que explicárselo a alguien que nunca oyó del nombre, ¿podría con una frase del email?
 - **¿El email presenta oportunidad o expone problemas?** Si Pablo recibe esto, ¿se siente entendido como peer, o cuestionado como si lo estuvieran auditando? Cualquier frase que diga "tu X no funciona para Y" o "¿cómo vas a resolver Z?" → reescribe
+- **¿El lenguaje es plano o cae en jerga técnica para sonar conocedor?** Si T2 usa sustantivos arquitectónicos ("event streams", "feature stores", "data lakes", "embedding pipelines", "real-time inference", "engagement signals consistency"), reescribe en plano. Aunque el prospecto sea técnico, los buzzwords pesan en contra — lenguaje plano demuestra que entendemos el problema, jerga demuestra que conocemos las palabras. Lo segundo no vende.
 
 Si alguna respuesta falla, reescribe antes de entregar.
 
