@@ -13,14 +13,30 @@
 
 ## Cómo usar este corpus
 
-- **writer-agent**: antes de escribir, lee 2–3 entradas que matcheen el
-  vertical o el rol del prospecto. Si no hay match exacto, lee 2–3
-  generales para calibrar el sistema. NO copies frases — el corpus es
+- **writer-agent**: lee el **Índice** de abajo, identifica las 2–3 entradas
+  más relevantes por vertical y/o rol, y salta directo a esas secciones
+  (`## #N`). No leas el archivo completo. NO copies frases — el corpus es
   inspiración de patrones, no template de phrasings.
 - **critic-agent**: cuando flagees un eje, **cita la entrada del corpus
   si aplica** ("este closer cae en el patrón de #2, rechazado por
-  workflow inventado"). El feedback se vuelve concreto y memorable
-  para la siguiente iteración del writer.
+  workflow inventado"). Usa el índice para encontrar la entrada sin
+  escanear el archivo entero.
+
+## Índice — búsqueda rápida
+
+| ID | Vertical | Rol | Patrón documentado | Estado |
+|----|----------|-----|--------------------|--------|
+| #1 | fintech / lending | Director ML | T1 con factoide de Google (cifra de funding pública) | ❌ → ✅ corregido |
+| #2 | fintech solar | VP Expansión | T3 closer con workflow inventado (nivel de proceso interno) | ❌ → ✅ corregido |
+| #3 | educación / IT | Director IT | Email ~2× sobre el límite de palabras (145 vs 75–80) | ❌ → ✅ corregido |
+| #4 | manufactura solar | Líder de expansión | T1 con factoide de noticias camuflado como role recognition | ❌ rechazado |
+| #5 | manufactura masiva | Líder de Datos | T2 sin mecanismo + closer con outcome económico inventado | ❌ rechazado |
+| #6 | retail / ML | Data Scientist (técnico) | T2 con jerga técnica arquitectónica para sonar conocedor | ❌ → ✅ corregido |
+| #7 | fintech / vales B2B | Líder de datos | T3 closer prescribiendo refocus del equipo (categoría plausible, igual asunción) | ❌ → ✅ corregido |
+| #8 | retail multi-país | Líder de gobernanza | Email aprobado, T2 enriquecido manualmente por el founder (cuantificación + vocabulario emocional) | ✅ aprobado |
+| #9 | retail multi-país | Líder de gobernanza | Término ambiguo ("múltiples locales") detectado post-aprobación del judge | ✅ aprobado |
+
+> **Cómo leer el índice**: busca el vertical más cercano al prospecto actual. Si hay varios candidatos, prioriza los que matcheen también el rol. Lee solo esas entradas completas — el resto del corpus puedes ignorarlo en esta sesión.
 
 ---
 

@@ -34,7 +34,12 @@ El Email 1 — un único email de Día 1, según las reglas: 75–80 palabras m�
 
 ### Antes de empezar (paso 0): consulta el corpus
 
-Lee `outreach/references/email-corpus.md` y revisa **2–3 entradas que matcheen el vertical o rol del prospecto**. Si no hay match exacto, lee 2–3 generales para calibrar el sistema. Cada entrada captura un patrón real con su corrección — sirve para internalizar qué funciona y qué se rechaza.
+1. Lee la sección **Índice** al inicio de `outreach/references/email-corpus.md` (las primeras ~30 líneas). El índice tiene una fila por entrada con: ID, vertical, rol, patrón y estado.
+2. Identifica las 2–3 entradas más relevantes para el prospecto actual por vertical y/o rol.
+3. Lee solo esas entradas completas saltando directo a `## #N`. No leas el archivo entero.
+4. Si no hay match de vertical, elige 2–3 entradas generales para calibrar el sistema.
+
+Cada entrada captura un patrón real con su corrección — sirve para internalizar qué funciona y qué se rechaza.
 
 **No copies frases.** El corpus es inspiración de **patrones**, no template de **phrasings**. El loop existe para descubrir la frase específica para cada prospecto; el corpus solo te dice qué NO hacer y qué dirección sí funciona.
 
