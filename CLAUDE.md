@@ -44,3 +44,14 @@ Responde en **español**. El usuario opera ventas en LATAM y trabaja en español
 - Agentes: edita los `.md` en `agents/`
 - MCP servers: edita `.mcp.json` y vuelve a correr `./setup` para propagar el merge
 - No agregues `.claude-plugin/`, `plugin.json` ni un manifiesto de marketplace — el formato es gstack-style skills, no plugin
+
+### Regla de sincronización — routing table
+
+`agents/gtm-agent.md` y `gtm/SKILL.md` tienen información relacionada que debe mantenerse en sincronía:
+
+| Archivo | Qué contiene |
+|---------|-------------|
+| `agents/gtm-agent.md` | Tabla de skills disponibles (qué hace cada skill, cuándo invocarlo, input esperado) + tabla de agentes |
+| `gtm/SKILL.md` | Tabla de routing de intenciones (qué frase del usuario mapea a qué cadena de skills) |
+
+**Regla**: cada vez que agregues, renombres o elimines un skill o agente, actualiza **ambos archivos en el mismo commit**. Si solo actualizas uno, el otro queda desincronizado y `/gtm` puede rutear mal o el `gtm-agent` puede referenciar skills que no existen.

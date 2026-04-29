@@ -171,4 +171,4 @@ Estas reglas vienen de `agents/gtm-agent.md` y aplican a todo lo que `/gtm` orqu
 
 ## Nota de mantenimiento
 
-La tabla de routing y las reglas anteriores son un **mirror compacto** de `agents/gtm-agent.md` líneas 122–172. Si se agrega un skill nuevo o se cambia una regla allá, hay que actualizar este SKILL.md en paralelo.
+La tabla de routing de este archivo y la tabla de skills de `agents/gtm-agent.md` deben mantenerse en sincronía. Ver la regla en `CLAUDE.md` sección "Regla de sincronización — routing table".
