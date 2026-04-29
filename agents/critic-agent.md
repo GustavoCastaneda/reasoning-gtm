@@ -32,6 +32,8 @@ Un reporte de revisión con observaciones y recomendaciones sobre Email 1. Sin r
 
 ## CRITERIOS DE REVISIÓN
 
+**Antes de evaluar**: lee `outreach/references/email-corpus.md` y revisa las entradas que matcheen el vertical/rol del prospecto. Cuando flagees un eje, **cita la entrada del corpus si aplica** — formato: "este closer cae en el patrón de #2 (KAM), rechazado por workflow inventado". La cita hace el feedback más concreto y memorable para la siguiente iteración del writer.
+
 Evalúa el Email 1 en estos ejes:
 
 ### 1. Uso de la ficha

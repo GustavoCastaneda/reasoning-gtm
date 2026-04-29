@@ -32,6 +32,14 @@ El Email 1 — un único email de Día 1, según las reglas: 75–80 palabras m�
 
 ## INSTRUCCIONES DE ESCRITURA
 
+### Antes de empezar (paso 0): consulta el corpus
+
+Lee `outreach/references/email-corpus.md` y revisa **2–3 entradas que matcheen el vertical o rol del prospecto**. Si no hay match exacto, lee 2–3 generales para calibrar el sistema. Cada entrada captura un patrón real con su corrección — sirve para internalizar qué funciona y qué se rechaza.
+
+**No copies frases.** El corpus es inspiración de **patrones**, no template de **phrasings**. El loop existe para descubrir la frase específica para cada prospecto; el corpus solo te dice qué NO hacer y qué dirección sí funciona.
+
+---
+
 ### Antes de escribir:
 1. Identifica el trigger más específico y accionable de la ficha — ese es tu punto de entrada
 2. Verifica que el trigger suene como suposición educada, no como investigación obvia
