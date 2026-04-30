@@ -113,14 +113,37 @@ Pregunta abierta que invita a responder sin presión de agendar. No pidas reuni�
 
 ## CTA — LINKEDIN DM
 
-El primer DM **nunca pide reunión directamente** — eso es para el segundo mensaje si responde. El CTA es una pregunta que invita a continuar la conversación con mínima fricción.
+Hay dos patrones válidos:
+
+### Patrón A — Pregunta conversacional (bajo compromiso)
+Invita a continuar la conversación sin presión. Útil cuando hay incertidumbre sobre el fit.
 
 **Patrón canónico**: `¿Aplica a lo que estás construyendo en [empresa]?`
 
-El CTA debe:
-1. Invitar respuesta sin comprometer (sí/no + una línea es suficiente)
-2. Nombrar la empresa o el contexto del prospecto (personalizador)
-3. No exigir ni pedir favor — solo preguntar si aplica
+Variantes válidas:
+- `¿Tiene sentido que te cuente cómo aplicaría a tu equipo?`
+- `¿Es algo que vale explorar en el contexto de [empresa]?`
+
+### Patrón B — Demo/reunión con escape hatch (validado en campo)
+Pide directamente la demo o reunión, **pero incluye dos ingredientes obligatorios**:
+1. **Límite de tiempo explícito** ("son 15 min", "demo rápida de 20 min")
+2. **Escape hatch** ("si no aplica para lo que haces, sin tema" / "si no es el momento, sin problema")
+
+Sin ambos ingredientes, es presión. Con ambos, es invitación de bajo riesgo. Este patrón funciona porque le da al prospecto permiso explícito de decir no — paradójicamente aumenta la tasa de respuesta.
+
+**Patrón canónico validado**: `¿Te haría sentido verlo? Son 15 min y si no aplica para lo que haces, sin tema.`
+
+### Patrón C — Feedback angle (para prospectos muy senior)
+Repositiona la solicitud: en lugar de pedir una demo, pides su criterio como experto.
+
+**Patrón canónico**: `Incluso de no ser así, tu feedback nos sería muy valioso dada tu experiencia. ¿Tendrás un espacio para una demo rápida?`
+
+Funciona porque convierte "dame 15 min para venderte" en "quiero tu opinión como referente". Solo usar cuando el prospecto es genuinamente senior y el founder realmente querría su feedback — si suena a truco retórico, pesa en contra.
+
+### Lo que está PROHIBIDO (independientemente del patrón):
+- CTA vague sin propósito ("¿te haría sentido verlo?" sin decir qué verían)
+- "¿Tienes 30 min esta semana?" sin escape hatch — presume interés y presiona
+- Pedir la reunión SIN límite de tiempo ni escape hatch en el primer DM
 
 ---
 

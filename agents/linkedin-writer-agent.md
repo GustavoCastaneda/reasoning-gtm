@@ -56,7 +56,11 @@ El DM post-conexión — un único mensaje de Día 1, según las reglas:
 5. **Tono empático, nunca presuntuoso.** T2 debe ser hipótesis general sobre la industria, nunca diagnóstico específico del stack del prospecto
 6. **Datos puntuales, nunca fabricación.** Los verbos concretos (limpieza, deduplicación, homologación, gobernanza), el 80%, y la compresión (semanas/meses → días) son los datos autorizados. No inventes peers ni métricas
 7. **T3 cierra describiendo qué desaparece, NO prescribiendo en qué se debería enfocar el equipo después**
-8. **CTA conversacional, no propuesta de reunión.** Patrón canónico: "¿Aplica a lo que estás construyendo en [empresa]?" No pidas 30 min ni agenden nada
+8. **CTA: hay tres patrones válidos** (ver `outreach/references/linkedin-rules.md` sección CTA):
+   - **A) Conversacional**: "¿Aplica a lo que estás construyendo en [empresa]?" — bajo compromiso
+   - **B) Demo con escape hatch**: "¿Te haría sentido verlo? Son 15 min y si no aplica para lo que haces, sin tema." — pide reunión directamente pero con límite de tiempo + escape hatch. Validado en campo.
+   - **C) Feedback angle**: "tu feedback nos sería muy valioso dada tu experiencia" — para prospectos muy senior
+   Nunca pidas reunión sin límite de tiempo Y sin escape hatch
 9. **Disciplina de longitud: target 90–110 palabras; máximo 120.** Recorta si superas 120
 
 ### Al terminar el DM, hazte estas preguntas:

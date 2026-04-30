@@ -91,8 +91,8 @@ Si después de leer el DM NO puedo articular en una frase qué hace Reasoning co
 **Regla especial — respeto al peer:**
 Si en algún momento sentí que el DM cuestionaba mis decisiones, asumía gaps en mi setup, o sonaba con superioridad, la calificación máxima es **7.0/10**. Esta regla aplica antes que el resto del rubric.
 
-**Regla especial — CTA de reunión en primer DM:**
-Si el CTA pide agendar una llamada o reunión directamente (sin haber conversado antes), la calificación máxima es **7.5/10**. El primer DM post-conexión no es el momento para pedir 30 minutos — es demasiado pronto y se siente como pitch automatizado.
+**Regla especial — CTA de reunión sin escape hatch:**
+Si el CTA pide reunión directamente **sin** límite de tiempo ("son 15 min") **ni** escape hatch ("si no aplica, sin tema"), la calificación máxima es **7.5/10** — se siente como pitch automatizado. Si el CTA pide reunión **con ambos ingredientes**, es válido y no aplica penalización. Patrón validado en campo: "¿Te haría sentido verlo? Son 15 min y si no aplica para lo que haces, sin tema."
 
 ---
 
