@@ -146,6 +146,7 @@ Stages en orden:
 | `/create-company` | Después de research | Las fichas del contexto de la sesión |
 | `/create-contact` | Después de create-company | Las fichas del contexto de la sesión |
 | `/outreach` | Después de create-contact | Nombre de empresa (toma la ficha del contexto) |
+| `/linkedin-outreach` | Después de que el prospecto aceptó la conexión en LinkedIn | Nombre de empresa (toma la ficha del contexto) |
 | `/post-llamada` | Después de cualquier llamada con el cliente | `[Empresa] \| [propósito de la llamada]` |
 | `/lead-brief` | Antes de una cotización o reunión importante | Nombre de empresa |
 
@@ -162,7 +163,15 @@ Si dudas qué skill usar, usa `/gtm` y descríbele en lenguaje natural lo que qu
 | `critic-agent` | Revisa el draft y da recomendaciones de tono y calidad | El skill `outreach` automáticamente |
 | `judge-agent` | Califica del 1-10 como si fuera el cliente | El skill `outreach` automáticamente |
 
-Los 4 agentes del flujo de outreach no se invocan manualmente — el skill `/outreach` los orquesta. Loop: Writer → Validator → Critic → Writer reescribe → Validator → Judge.
+Los 4 agentes del flujo de email outreach no se invocan manualmente — el skill `/outreach` los orquesta. Loop: Writer → Validator → Critic → Writer reescribe → Validator → Judge.
+
+Los 3 agentes del flujo de LinkedIn no se invocan manualmente — el skill `/linkedin-outreach` los orquesta. Loop: LinkedIn Writer → LinkedIn Critic → LinkedIn Writer (si reescribe) → LinkedIn Judge.
+
+| Agente | Rol | Lo invoca |
+|--------|-----|-----------|
+| `linkedin-writer-agent` | Escribe el DM de LinkedIn post-conexión (Día 1) | El skill `linkedin-outreach` automáticamente |
+| `linkedin-critic-agent` | Revisa el DM y da recomendaciones de hook, tono y calidad | El skill `linkedin-outreach` automáticamente |
+| `linkedin-judge-agent` | Califica del 1-10 como si fuera el prospecto en LinkedIn | El skill `linkedin-outreach` automáticamente |
 
 ---
 

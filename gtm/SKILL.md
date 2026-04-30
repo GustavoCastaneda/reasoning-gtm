@@ -33,6 +33,7 @@ Lee `$ARGUMENTS` y todo lo que el usuario haya pegado o adjuntado en el mensaje.
 | "investiga", "research", "haz research", "investígame este lead" | `/research` (stop) |
 | "mete a HubSpot", "crea empresas", "crea en HubSpot", "investiga + HubSpot" | `/research` → `/create-company` → `/create-contact` |
 | "outreach", "prepara el primer email", "manda outreach", "flujo completo", "hasta outreach", **"hasta el draft en mi gmail"**, "hasta gmail", "hasta el draft" | `/research` → `/create-company` → `/create-contact` → `/outreach` |
+| "linkedin", "DM de linkedin", "mensaje de linkedin", "outreach por linkedin", "manda el linkedin", "primer mensaje de linkedin" | `/linkedin-outreach` (stop) |
 | "procesa la llamada", "post-llamada", "actualiza con la demo", "guarda la llamada de X" | `/post-llamada` |
 | "brief", "prepárame para cotizar", "voy a cotizar X", "tengo reunión con X" | `/lead-brief` |
 
