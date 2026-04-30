@@ -33,70 +33,78 @@ El DM **debe contener una frase explícita** que enuncie qué hace Reasoning com
 
 - **Sin subject.** LinkedIn DMs no tienen línea de asunto.
 - **80–120 palabras.** Target 90–110. Sin data-validator — el judge valida inline. Recorta si pasas de 120.
-- **Hook en primera línea (≤100 caracteres).** LinkedIn muestra ~100 chars antes del "Ver más". Si el hook no engancha antes de ese corte, el prospecto no abre. Esa primera línea debe funcionar sola.
+- **Apertura con saludo cálido.** "Hola [Nombre]! ¿Cómo estás?" es el tono correcto — founder colega, no vendedor. El prospecto ya vio la cara del founder y aceptó la conexión; el saludo establece que esto es peer-to-peer, no un pitch automatizado.
 - **Sin links en el cuerpo.** LinkedIn penaliza el algoritmo y se siente como spam.
 - **Sin bullet points, sin párrafos de más de 2 líneas.**
 - **Texto plano.** Sin HTML, sin emojis por default (usar solo si el prospecto los usa frecuentemente en su perfil).
-- **Sin "Hola [nombre],"** como apertura — ese es el patrón de email. En LinkedIn DM la primera línea va directo al hook.
+- **Self-intro como Founder & CEO es válido y esperado.** "Soy Founder & CEO de reasoning.so" o "Soy Gustavo, Founder & CEO de reasoning.so" — establece credibilidad y contexto. El prospecto ve la foto y el título, pero la self-intro en el mensaje confirma el tono directo de founder.
 
 ---
 
-## HOOK — REGLA CRÍTICA
+## TRIGGER — EL GANCHO REAL
 
-La primera línea del DM es el hook. Debe:
+El saludo ("Hola [Nombre]! ¿Cómo estás?") es el opener, no el gancho. El gancho real es la **observación específica** que viene después del saludo y la self-intro — la razón por la que escribes a esta persona en particular.
 
-1. **Ser ≤100 caracteres** para caber en el preview antes de "Ver más"
-2. **Ser específico al prospecto** — referencia su rol, su vertical, o un post reciente suyo. En LinkedIn es ESPERADO que hayas visto su perfil; no se siente como stalking.
-3. **Generar el "eso aplica a lo que yo hago"** — el prospecto debe reconocer su realidad
-4. **No ser un cumplido ni un agradecimiento** — "gracias por conectar" o "me pareció muy interesante tu perfil" es template, pesa en contra
+El trigger debe:
 
-**Patrones válidos de hook:**
-- `[Nombre], llevas [N] años en datos en [empresa] — supongo que [dolor del vertical] no es novedad.`
-- `[Nombre], vi tu post sobre [tema] — exactamente el patrón que vemos en [vertical].`
-- `[Nombre], como [puesto] en [empresa], el [dolor específico del vertical] probablemente es constante.`
+1. **Ser específico al prospecto** — referencia su rol, su empresa, algo que construyen, un contexto observable. "Vi que lideras IT en FUNO" / "Vi lo que están construyendo en KAM con energía solar" / "Vi que llevas el revenue analytics en Church & Dwight"
+2. **Generar el "eso aplica a lo que yo hago"** — el prospecto debe reconocer por qué llegas a él
+3. **No ser un cumplido** — "me pareció muy interesante tu perfil" es template. El trigger nombra algo concreto del prospecto, no evalúa su perfil
 
-**Anti-patrones PROHIBIDOS:**
-- ❌ `Hola [Nombre], gracias por aceptar mi solicitud de conexión.` — template, todos lo hacen
+**Estructura del inicio del DM (validada en campo):**
+```
+Hola [Nombre]! ¿Cómo estás?
+
+Soy [Gustavo / Founder & CEO] de reasoning.so. [Trigger específico — vi que lideras X en [empresa] / lo que construyen en [empresa] / tu experiencia en X].
+```
+
+**Anti-patrones PROHIBIDOS en el inicio:**
+- ❌ `Gracias por aceptar mi solicitud de conexión.` — template, pesa en contra
 - ❌ `Me pareció muy interesante tu perfil.` — genérico, no dice nada
-- ❌ `Hola [Nombre], soy [nombre], CEO de Reasoning Labs.` — pitch de ventas, no hook
 - ❌ `Vi tu perfil y quería conectar.` — explica lo que ya pasó, sin valor
+- ❌ Trigger genérico que aplicaría a cualquiera del vertical sin nombrar empresa/rol específico
 
 ---
 
-## FRAMEWORK DM (4-T adaptado)
+## FRAMEWORK DM (5-T validado en campo)
 
-**T1 — Hook** (primera línea, ≤100 chars)
-Abre con el hook. Sin saludo previo. Directo al grano. Ver sección HOOK arriba.
+**T0 — Saludo** (primera línea)
+`Hola [Nombre]! ¿Cómo estás?`
+Siempre presente. Tono de founder colega. El prospecto ya vio el perfil — el saludo confirma que esto es peer-to-peer, no pitch automatizado.
+
+**T1 — Self-intro + Trigger** (1–2 líneas)
+`Soy [Gustavo / Founder & CEO] de reasoning.so. [Trigger específico — vi que lideras X en [empresa] / lo que construyen en [empresa]]`
+La self-intro como founder establece credibilidad. El trigger nombra empresa + rol + contexto observable. Ver sección TRIGGER arriba.
 
 **T2 — Empatía vertical** (1–2 líneas)
-Reto del sector como **hipótesis general**, no diagnóstico específico del prospecto. Mismo principio que en email: demuestra que entiendes la realidad operacional del equipo de datos en ese vertical. Teje 2-3 sistemas/fuentes obvias del vertical naturalmente. Nunca cuestionador, siempre oportunidad.
+Reto del sector como **hipótesis general**, no diagnóstico específico del prospecto. Demuestra que entiendes la realidad operacional del equipo en ese vertical. Teje 2–3 sistemas/fuentes obvias del vertical naturalmente. Nunca cuestionador, siempre oportunidad.
 
 Anti-patrón: "Tu equipo seguro tiene problemas con X." → Patrón válido: "En [vertical] con [sistemas obvios del sector], el equipo pasa la mayor parte del tiempo [dolor del 80% manual]."
 
-**T3 — Mecanismo + Compresión + Liberación** (2–3 líneas)
+**T3 — Mecanismo + Compresión + Liberación** (2 líneas)
 Los tres elementos en orden:
-1. Qué hace Reasoning (explícito, con verbos concretos)
+1. Qué hace Reasoning (explícito, con verbos concretos: limpieza, deduplicación, homologación, gobernanza)
 2. Compresión temporal (semanas/meses → días)
 3. Qué trabajo manual desaparece — descriptivo, **nunca prescriptivo** sobre en qué se debería enfocar el equipo después
 
 El cierre responde UNA sola pregunta: ¿de qué trabajo manual se libera el equipo? No prescribe el refocus — eso es decisión del prospecto.
 
-**T4 — CTA conversacional** (1 línea)
-Pregunta abierta que invita a responder sin presión de agendar. No pidas reunión en el primer DM — ese es el siguiente paso si responde.
+**T4 — CTA con tiempo acotado + escape hatch** (1 línea)
+Pide la demo directamente con dos ingredientes obligatorios: límite de tiempo explícito + escape hatch.
 
-**Patrón canónico:**
-> `¿Aplica a lo que estás construyendo en [empresa]?`
+**Patrón canónico validado en campo:**
+> `¿Te haría sentido verlo aplicado a [empresa] en una demo rápida de 15 min? Si no aplica, sin tema.`
 
-**Patrones válidos:**
-- `¿Tiene sentido que te cuente cómo aplicaría a tu equipo?`
-- `¿Es algo que vale explorar en el contexto de [empresa]?`
-- `¿Lo que describes aplica directamente a lo que vemos con equipos como el tuyo?`
+**Variantes válidas:**
+- `¿Te haría sentido verlo? Son 15 min y si no aplica para lo que haces, sin tema.`
+- `¿Te haría sentido verlo aplicado a [empresa] en una llamada de 15 min?`
+- Feedback angle (prospectos muy senior): `Incluso de no ser así, tu feedback nos sería muy valioso dada tu experiencia. ¿Tendrás un espacio para una demo rápida?`
 
 **Patrones PROHIBIDOS:**
-- ❌ `¿Tienes 30 min esta semana?` — presume interés, presiona a agendar
-- ❌ `¿Agendamos una llamada?` — demasiado pronto, sin CTA de interés previo
+- ❌ `¿Tienes 30 min esta semana?` — sin límite razonable ni escape hatch
+- ❌ `¿Agendamos una llamada?` — vague, sin tiempo ni escape hatch
 - ❌ `¿Te interesaría platicarlo?` — vague, sin propósito de valor
-- ❌ `¿Podrías dedicarme 15 minutos?` — pide favor, no ofrece valor
+- ❌ CTA sin nombrar la empresa del prospecto — impersonal
 
 ---
 
@@ -150,9 +158,9 @@ Funciona porque convierte "dame 15 min para venderte" en "quiero tu opinión com
 ## PROHIBIDO — NUNCA USAR
 
 **Apertura del DM:**
-- "Gracias por aceptar mi solicitud de conexión"
-- "Hola [Nombre]," como primera línea (patrón de email — en LinkedIn va directo al hook)
+- "Gracias por aceptar mi solicitud de conexión" — template vacío
 - Cumplidos genéricos ("me pareció muy interesante tu perfil", "eres un líder excepcional")
+- Trigger genérico sin empresa/rol específico ("vi tu perfil y quería conectar")
 
 **En el cuerpo:**
 - Links
@@ -169,8 +177,8 @@ Funciona porque convierte "dame 15 min para venderte" en "quiero tu opinión com
 - Porcentajes o cifras no autorizadas
 
 **Estructura:**
-- CTA vague sin propósito ("¿te haría sentido verlo?", "¿te hace sentido explorarlo?")
-- Pedirle que agende en el primer DM
+- CTA vague sin propósito ("¿te haría sentido verlo?" sin decir qué verían)
+- CTA sin límite de tiempo ni escape hatch — se siente como presión
 - Implicar el producto en lugar de declararlo
 
 **Tono:**

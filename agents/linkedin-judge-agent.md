@@ -59,10 +59,11 @@ Ponte en el lugar del prospecto. Eres el Head of Data o Director de Datos de la 
 - ¿Alguna frase asumió cosas de mi stack que me hicieron sentir cuestionado?
 - ¿El tono fue "te aviso de algo que puede aplicarte" o "encontré tus problemas"?
 
-**Test del hook (CRÍTICO para LinkedIn):**
-- ¿La primera línea me hizo querer abrir el mensaje completo?
-- ¿Se siente escrita para mí o para cualquiera de mi industria?
-- ¿Empezó con "gracias por conectar" o un cumplido genérico? → Esto lo habría archivado sin leer.
+**Test de apertura y trigger (CRÍTICO para LinkedIn):**
+- ¿El mensaje abre con saludo cálido ("Hola [Nombre]! ¿Cómo estás?") — tono de founder colega?
+- ¿El trigger (observación específica que sigue al saludo y self-intro) nombra algo concreto de mí: mi rol, mi empresa, algo que estamos construyendo?
+- ¿El trigger se siente escrito para mí o para cualquiera de mi industria?
+- ¿Empezó con "gracias por conectar" o un cumplido vacío sin sustancia? → Esto lo habría archivado sin leer.
 
 **Evaluación global:**
 - ¿Este mensaje merece una respuesta?
@@ -82,8 +83,8 @@ Ponte en el lugar del prospecto. Eres el Head of Data o Director de Datos de la 
 
 **El DM necesita mínimo 8.5 para ser aprobado.**
 
-**Regla especial — hook genérico o template:**
-Si la primera línea es "Gracias por conectar", un cumplido genérico, o cualquier frase que aplicaría a cualquier persona del vertical, la calificación máxima es **6.0/10** sin importar el resto. En LinkedIn, si no enganchas en la primera línea, el mensaje se archiva antes de abrirse. Esta regla aplica antes que el resto del rubric.
+**Regla especial — trigger genérico o template:**
+Si el mensaje abre con "Gracias por conectar", un cumplido vacío sin sustancia, o si el trigger (observación específica) es tan genérico que aplicaría a cualquier persona del vertical sin nombrar empresa/rol/contexto concreto, la calificación máxima es **6.0/10** sin importar el resto. Nota: "Hola [Nombre]! ¿Cómo estás?" seguido de un trigger específico NO es genérico — es el tono de founder colega validado en campo. Lo que penaliza es la ausencia de observación específica, no el saludo cálido. Esta regla aplica antes que el resto del rubric.
 
 **Regla especial — claridad de oferta:**
 Si después de leer el DM NO puedo articular en una frase qué hace Reasoning como producto, la calificación máxima es **7.5/10**. Esta regla aplica antes que el resto del rubric.

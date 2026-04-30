@@ -33,35 +33,34 @@ Un reporte de revisión con observaciones y recomendaciones sobre el DM. Sin ree
 
 **Antes de evaluar**: lee la sección **Índice** al inicio de `outreach/references/linkedin-corpus.md`, identifica las entradas relevantes por vertical/rol del prospecto, y lee solo esas. Cuando flagees un eje, **cita la entrada del corpus si aplica** — formato: "este hook cae en el patrón de #2 (KAM), rechazado por ser genérico". La cita hace el feedback más concreto y memorable.
 
-### 1. Hook (T1)
+### 1. Apertura y trigger (T0–T1)
 
-- ¿El hook cabe en ≤100 caracteres? Cuenta los caracteres.
-- ¿Es específico al prospecto o es genérico (aplicaría a cualquiera del vertical)?
-- ¿Abre con "Hola [nombre]," o "Gracias por conectar"? → FAIL obligatorio, reescritura requerida
-- ¿Genera el "eso aplica a lo que yo hago"?
-- ¿Es un cumplido o agradecimiento disfrazado de hook?
+- ¿Abre con saludo cálido ("Hola [Nombre]! ¿Cómo estás?" o equivalente)? → Si no, reescritura requerida
+- ¿Incluye self-intro como Founder & CEO de reasoning.so? → Si no, flag como mejora (no FAIL crítico)
+- ¿El trigger (observación específica) nombra empresa + rol + contexto concreto? Si es genérico ("vi tu perfil"), FAIL
+- ¿Abre con "Gracias por aceptar mi solicitud" o cumplido vacío? → FAIL obligatorio, reescritura requerida
+- ¿El trigger genera el "eso aplica a lo que yo hago" o es obvio para cualquiera del vertical?
 
 ### 2. Uso de la ficha
 
-- ¿El trigger es específico o genérico?
-- ¿Se está usando el FOMO de competidores si existía en la ficha?
-- ¿El dolor corresponde a lo que se encontró del contacto?
+- ¿El trigger usa información específica de la ficha (empresa, rol, contexto observable)?
+- ¿El dolor en T2 corresponde a la realidad del vertical del contacto?
 
 ### 3. Adherencia a las reglas de LinkedIn DM
 
 - ¿Cumple la longitud (80–120 palabras)?
 - ¿Hay links en el cuerpo?
 - ¿Hay bullet points?
-- ¿El CTA pide reunión en el primer mensaje? → FAIL — en primer DM solo pregunta conversacional
-- ¿El CTA es vague ("platicarlo", "verlo", "explorarlo") o nombra la empresa + propósito? Vague = FAIL
+- ¿El CTA incluye tiempo acotado (15 min, demo rápida)? → Sin tiempo = flag
+- ¿El CTA incluye escape hatch ("sin tema" / "si no aplica")? → Sin escape hatch = flag
+- ¿El CTA nombra la empresa del prospecto? → Genérico sin empresa = flag
 - ¿El subject está ausente (correcto) o alguien lo incluyó por error?
 
 ### 4. Impacto
 
-- ¿La primera línea engancha antes del corte de "Ver más"?
 - ¿El DM cabe en pantalla de teléfono?
 - ¿El tono suena a founder colega o a vendedor?
-- ¿La transición Hook → Empatía → Mecanismo → CTA fluye naturalmente?
+- ¿La transición Saludo → Trigger → Empatía vertical → Mecanismo → CTA fluye naturalmente?
 
 ### 5. Claridad del mecanismo de producto
 
