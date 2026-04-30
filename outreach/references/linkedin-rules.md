@@ -32,7 +32,7 @@ El DM **debe contener una frase explícita** que enuncie qué hace Reasoning com
 ## FORMATO — LINKEDIN DM
 
 - **Sin subject.** LinkedIn DMs no tienen línea de asunto.
-- **80–120 palabras.** Target 90–110. Sin data-validator — el judge valida inline. Recorta si pasas de 120.
+- **90–140 palabras.** Target 100–120. Sin data-validator — el judge valida inline. Recorta si pasas de 140.
 - **Apertura con saludo cálido.** "Hola [Nombre]! ¿Cómo estás?" es el tono correcto — founder colega, no vendedor. El prospecto ya vio la cara del founder y aceptó la conexión; el saludo establece que esto es peer-to-peer, no un pitch automatizado.
 - **Sin links en el cuerpo.** LinkedIn penaliza el algoritmo y se siente como spam.
 - **Sin bullet points, sin párrafos de más de 2 líneas.**
@@ -112,7 +112,9 @@ Pide la demo directamente con dos ingredientes obligatorios: límite de tiempo e
 
 - **Peer-to-peer en red social.** Más conversacional que email; menos formal que un pitch.
 - **Empático, nunca presuntuoso.** El research sirve para entender al prospecto, no como arma. Nunca diagnosticar lo que hacen mal.
-- **Frame de oportunidad, no de problema.** "Te aviso de algo que puede aplicarte" — no "encontré tus gaps".
+- **Nombra el problema primero, no la solución.** La self-intro de Reasoning no abre con "ayudamos a empresas a…" — abre nombrando el problema concreto que resuelve. "Estamos resolviendo un problema muy concreto: los equipos de datos pasan el 80% de su tiempo limpiando datos antes de poder analizarlos." El prospecto se reconoce en el problema antes de escuchar la propuesta.
+- **Certeza sin arrogancia.** Frases afirmativas concretas: "estamos resolviendo un problema muy concreto", "esta capa suele consumir semanas", "el trabajo sigue siendo manual". Evitar hedges que suenan inseguros: "creo que tal vez", "me imagino que quizá", "estamos explorando si podría aplicar".
+- **Sin "reducción en nómina" en frío.** Para C-level y directores, las consecuencias de negocio en términos de headcount suenan transaccionales y pueden ofender. Usar en su lugar: "menos carga manual", "menos trabajo operativo", "más capacidad para el equipo", "más trazabilidad".
 - **Hipótesis de industria > diagnóstico específico.** "La mayoría de equipos en [vertical] todavía…" > "Tu pipeline no fue diseñado para…"
 - **Lenguaje plano, no jerga técnica.** "Homologar datos de eventos y perfiles" > "event stream consistency". El prospecto valora que entiendas su problema en simple, no que conozcas los buzzwords arquitectónicos.
 - **Saber que ya te conocen.** El prospecto aceptó la conexión, vio tu cara, tu título, tu empresa. Puedes asumir un baseline de legitimidad — no necesitas presentarte largo.
@@ -168,13 +170,16 @@ Funciona porque convierte "dame 15 min para venderte" en "quiero tu opinión com
 - Párrafos de más de 2 líneas
 - Más de un tema por mensaje
 
-**Palabras y frases prohibidas (igual que en email):**
+**Palabras y frases prohibidas:**
 - "Solución integral", "Transformación digital", "Sinergia"
 - "Espero que este mensaje te encuentre bien"
 - "Me permito contactarte"
 - "Inteligencia artificial" o "AI" — el champion quiere resultado, no tecnología
 - "Revolucionario", "Best-in-class", "Líder en"
 - Porcentajes o cifras no autorizadas
+- "Ayudamos a empresas a…" como apertura de la self-intro — primero el problema, luego la solución
+- "Creo que tal vez", "me imagino que quizá", "estamos explorando" — hedges que suenan inseguros
+- "Reducción en nómina" — en su lugar: "menos carga manual", "menos trabajo operativo", "más capacidad para el equipo"
 
 **Estructura:**
 - CTA vague sin propósito ("¿te haría sentido verlo?" sin decir qué verían)

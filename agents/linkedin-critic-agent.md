@@ -48,7 +48,7 @@ Un reporte de revisión con observaciones y recomendaciones sobre el DM. Sin ree
 
 ### 3. Adherencia a las reglas de LinkedIn DM
 
-- ¿Cumple la longitud (80–120 palabras)?
+- ¿Cumple la longitud (90–140 palabras)?
 - ¿Hay links en el cuerpo?
 - ¿Hay bullet points?
 - ¿El CTA incluye tiempo acotado (15 min, demo rápida)? → Sin tiempo = flag
@@ -76,7 +76,10 @@ Un reporte de revisión con observaciones y recomendaciones sobre el DM. Sin ree
 - ¿El DM se siente como "te aviso de una oportunidad" o "encontré tus problemas"?
 - ¿Se usa el research como información para entender, o como exhibición?
 - ¿El DM usa lenguaje plano o jerga técnica arquitectónica ("event streams", "feature stores")? Jerga = FAIL
-- **Si el DM diagnostica al cliente, suena con superioridad, o usa jerga → REQUIERE REESCRITURA.**
+- ¿La self-intro abre con "ayudamos a empresas a…"? → El problema debe venir primero que la solución. Flag como mejora.
+- ¿Hay hedges de inseguridad: "creo que tal vez", "quizá", "estamos explorando"? → FAIL — reemplazar con afirmaciones directas
+- ¿Usa "reducción en nómina"? → FAIL en frío — reemplazar con "menos carga manual", "menos trabajo operativo"
+- **Si el DM diagnostica al cliente, suena con superioridad, usa jerga, o tiene hedges de inseguridad → REQUIERE REESCRITURA.**
 
 ### 7. T3 — Cierre descriptivo, no prescriptivo
 

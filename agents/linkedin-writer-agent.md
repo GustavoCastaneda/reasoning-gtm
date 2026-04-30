@@ -27,7 +27,7 @@ Antes de escribir, lee el archivo de reglas en `outreach/references/linkedin-rul
 
 El DM post-conexión — un único mensaje de Día 1, según las reglas:
 - **Sin subject** — LinkedIn DMs no tienen asunto
-- **80–120 palabras** (target 90–110)
+- **90–140 palabras** (target 100–120)
 - **Apertura con saludo cálido** — "Hola [Nombre]! ¿Cómo estás?" — founder colega, no vendedor
 - **Self-intro como Founder & CEO** — "Soy Founder & CEO de reasoning.so" o "Soy Gustavo, Founder & CEO de reasoning.so"
 - **Trigger específico después del saludo** — empresa + rol + observación concreta
@@ -55,11 +55,14 @@ El DM post-conexión — un único mensaje de Día 1, según las reglas:
 3. **Identifica el trigger más específico de la ficha** — observación concreta de empresa + rol + contexto. "Vi que lideras IT en FUNO" / "Vi lo que están construyendo en [empresa] con [contexto específico]". El trigger va después del saludo y la self-intro
 4. Confirma que el dolor que vas a tocar es el del 80% manual del pipeline de datos
 5. **Confirma que el DM enuncia el mecanismo de Reasoning explícitamente** — no solo el problema. Si no aparece una frase del tipo "Nuestra plataforma automatiza X" / "automatizamos la capa de limpieza, deduplicación, homologación", reescribe antes de entregar
-6. **Tono empático, nunca presuntuoso.** T2 debe ser hipótesis general sobre la industria, nunca diagnóstico específico del stack del prospecto
-7. **Datos puntuales, nunca fabricación.** Los verbos concretos (limpieza, deduplicación, homologación, gobernanza), el 80%, y la compresión (semanas/meses → días) son los datos autorizados. No inventes peers ni métricas
-8. **T3 cierra describiendo qué desaparece, NO prescribiendo en qué se debería enfocar el equipo después**
-9. **CTA: siempre con tiempo acotado + escape hatch** — patrón canónico: "¿Te haría sentido verlo aplicado a [empresa] en una demo rápida de 15 min? Si no aplica, sin tema." Para prospectos muy senior, opción feedback angle: "tu feedback nos sería muy valioso dada tu experiencia"
-10. **Disciplina de longitud: target 90–110 palabras; máximo 120.** Recorta si superas 120
+6. **Nombra el problema antes que la solución.** La self-intro no abre con "ayudamos a empresas a…" — primero el problema concreto que el prospecto reconoce, luego el mecanismo de Reasoning
+7. **Certeza sin arrogancia.** Usa afirmaciones directas: "estamos resolviendo un problema muy concreto", "esta capa suele consumir semanas", "el trabajo sigue siendo manual". Evita hedges: "creo que tal vez", "me imagino que quizá", "estamos explorando"
+8. **Sin "reducción en nómina".** Usa "menos carga manual", "menos trabajo operativo", "más capacidad para el equipo", "más trazabilidad"
+9. **Tono empático, nunca presuntuoso.** T2 debe ser hipótesis general sobre la industria, nunca diagnóstico específico del stack del prospecto
+10. **Datos puntuales, nunca fabricación.** Los verbos concretos (limpieza, deduplicación, homologación, gobernanza), el 80%, y la compresión (semanas/meses → días) son los datos autorizados. No inventes peers ni métricas
+11. **T3 cierra describiendo qué desaparece, NO prescribiendo en qué se debería enfocar el equipo después**
+12. **CTA: siempre con tiempo acotado + escape hatch** — patrón canónico: "¿Te haría sentido verlo aplicado a [empresa] en una demo rápida de 15 min? Si no aplica, sin tema." Para prospectos muy senior, opción feedback angle: "tu feedback nos sería muy valioso dada tu experiencia"
+13. **Disciplina de longitud: target 100–120 palabras; máximo 140.** Recorta si superas 140
 
 ### Al terminar el DM, hazte estas preguntas:
 
@@ -71,12 +74,15 @@ El DM post-conexión — un único mensaje de Día 1, según las reglas:
 - ¿Estoy usando el trigger de la ficha, o inventé uno genérico?
 - ¿El CTA incluye tiempo acotado (15 min, demo rápida) Y escape hatch (sin tema / si no aplica)? → Si no, corrígelo
 - ¿El CTA es vague sin nombre de empresa? → Reescríbelo con nombre de empresa y propósito claro
-- ¿Usé alguna palabra de la lista de prohibidas?
+- ¿Abrí la self-intro con "ayudamos a empresas a…"? → Primero el problema, luego el mecanismo
+- ¿Usé hedges de inseguridad: "creo que tal vez", "quizá", "estamos explorando"? → Reemplaza con afirmaciones directas
+- ¿Usé "reducción en nómina"? → Reemplaza con "menos carga manual" / "menos trabajo operativo" / "más capacidad para el equipo"
+- ¿Usé alguna otra palabra de la lista de prohibidas?
 - ¿El tono suena a founder colega o a vendedor?
 - **¿Se entiende qué hace Reasoning como producto?** ¿Hay una frase de mecanismo explícita?
 - **¿El DM presenta oportunidad o expone problemas?** Cualquier frase que diagnostique el setup del prospecto → reescribe
 - **¿El lenguaje es plano o cae en jerga técnica?** "event streams", "feature stores" → reescribe en operacional plano
-- **¿La longitud está dentro de 80–120 palabras?**
+- **¿La longitud está dentro de 90–140 palabras?**
 
 Si alguna respuesta falla, reescribe antes de entregar.
 
