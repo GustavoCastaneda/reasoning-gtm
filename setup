@@ -27,20 +27,30 @@ for entry in "$INSTALL_DIR"/*/; do
   echo "    ✓ /$skill_name"
 done
 
-# 2. Copy agents
+# 2. Symlink references directory so agents can read rule files from any CWD
+echo "  Instalando referencias..."
+REFS_TARGET="$CLAUDE_DIR/references"
+[ -e "$REFS_TARGET" ] && [ ! -L "$REFS_TARGET" ] && rm -rf "$REFS_TARGET"
+ln -snf "$INSTALL_DIR/outreach/references" "$REFS_TARGET"
+echo "    ✓ ~/.claude/references/ → outreach/references/"
+
+# 3. Copy agents and rewrite reference paths to absolute so they resolve from any CWD
 echo "  Instalando agents..."
 installed_agents=()
 if [ -d "$INSTALL_DIR/agents" ]; then
   for agent_file in "$INSTALL_DIR/agents"/*.md; do
     [ -f "$agent_file" ] || continue
     agent_name="$(basename "$agent_file")"
-    cp -f "$agent_file" "$AGENTS_DIR/$agent_name"
+    dest="$AGENTS_DIR/$agent_name"
+    cp -f "$agent_file" "$dest"
+    # Replace relative "outreach/references/" with absolute path that works from any project
+    sed -i '' "s|outreach/references/|${REFS_TARGET}/|g" "$dest"
     installed_agents+=("$agent_name")
     echo "    ✓ $agent_name"
   done
 fi
 
-# 3. Install .mcp.json (merge if user already has one)
+# 4. Install .mcp.json (merge if user already has one)
 echo "  Instalando MCP servers..."
 MCP_SOURCE="$INSTALL_DIR/.mcp.json"
 MCP_TARGET="$CLAUDE_DIR/.mcp.json"
