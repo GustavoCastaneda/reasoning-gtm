@@ -32,7 +32,7 @@ El DM **debe contener una frase explícita** que enuncie qué hace Reasoning com
 ## FORMATO — LINKEDIN DM
 
 - **Sin subject.** LinkedIn DMs no tienen línea de asunto.
-- **90–140 palabras.** Target 100–120. Sin data-validator — el judge valida inline. Recorta si pasas de 140.
+- **60–120 palabras.** Target 80–100. El DM de pitch post-respuesta (sin T0) puede ser tan corto como 60 palabras. Sin data-validator — el judge valida inline. Recorta si pasas de 120.
 - **Apertura con saludo cálido.** "Hola [Nombre]! ¿Cómo estás?" es el tono correcto — founder colega, no vendedor. El prospecto ya vio la cara del founder y aceptó la conexión; el saludo establece que esto es peer-to-peer, no un pitch automatizado.
 - **Sin links en el cuerpo.** LinkedIn penaliza el algoritmo y se siente como spam.
 - **Sin bullet points, sin párrafos de más de 2 líneas.**
@@ -58,6 +58,12 @@ Hola [Nombre]! ¿Cómo estás?
 Soy [Gustavo / Founder & CEO] de reasoning.so. [Trigger específico — vi que lideras X en [empresa] / lo que construyen en [empresa] / tu experiencia en X].
 ```
 
+**Conector especial — "nos toca directo"**
+La frase `"es un tema que nos toca directo"` cierra T1 y elimina la necesidad de T2. Posiciona al founder como par trabajando en el mismo problema, no como vendedor buscando un cliente. Es el conector más eficiente validado en campo:
+- Nombra el rol → dice que les aplica directamente → va a T3
+- Ejemplo: `"Vi que llevas el revenue analytics en Church & Dwight. Me llamó la atención tu experiencia porque es un tema que nos toca directo."`
+- Variante: `"Me llamó la atención tu perfil porque [TEMA SIMPLE] es un tema que nos toca directo."`
+
 **Anti-patrones PROHIBIDOS en el inicio:**
 - ❌ `Gracias por aceptar mi solicitud de conexión.` — template, pesa en contra
 - ❌ `Me pareció muy interesante tu perfil.` — genérico, no dice nada
@@ -76,18 +82,31 @@ Siempre presente. Tono de founder colega. El prospecto ya vio el perfil — el s
 `Soy [Gustavo / Founder & CEO] de reasoning.so. [Trigger específico — vi que lideras X en [empresa] / lo que construyen en [empresa]]`
 La self-intro como founder establece credibilidad. El trigger nombra empresa + rol + contexto observable. Ver sección TRIGGER arriba.
 
-**T2 — Empatía vertical** (1–2 líneas)
-Reto del sector como **hipótesis general**, no diagnóstico específico del prospecto. Demuestra que entiendes la realidad operacional del equipo en ese vertical. Teje 2–3 sistemas/fuentes obvias del vertical naturalmente. Nunca cuestionador, siempre oportunidad.
+**T2 — Empatía vertical** [OPCIONAL — elige UNA variante o ninguna]
 
-Anti-patrón: "Tu equipo seguro tiene problemas con X." → Patrón válido: "En [vertical] con [sistemas obvios del sector], el equipo pasa la mayor parte del tiempo [dolor del 80% manual]."
+Tres variantes válidas:
 
-**T3 — Mecanismo + Compresión + Liberación** (2 líneas)
-Los tres elementos en orden:
-1. Qué hace Reasoning (explícito, con verbos concretos: limpieza, deduplicación, homologación, gobernanza)
-2. Compresión temporal (semanas/meses → días)
-3. Qué trabajo manual desaparece — descriptivo, **nunca prescriptivo** sobre en qué se debería enfocar el equipo después
+- **Variante A — "nos toca directo"** (más simple, más usada): Al final de T1, cierra con `"es un tema que nos toca directo"`. Elimina T2 por completo — el DM va directo a T3. Usar cuando el trigger de T1 nombra empresa + rol con suficiente especificidad para que el fit sea obvio. Ejemplo: `"Vi que llevas el revenue analytics en Church & Dwight. Me llamó la atención tu experiencia porque es un tema que nos toca directo."`
 
-El cierre responde UNA sola pregunta: ¿de qué trabajo manual se libera el equipo? No prescribe el refocus — eso es decisión del prospecto.
+- **Variante B — pain en 1 oración**: Una sola oración que nombra los activos de datos del sector. Hipótesis de industria, nunca diagnóstico del prospecto. Usar cuando el vertical necesita un puente para que el fit sea claro. Ejemplo: `"En organizaciones con tantos activos, inmuebles, contratos, inquilinos y fuentes operativas, mucho del trabajo de IT/data termina yéndose en conciliar y limpiar información antes de que negocio pueda analizarla."`
+
+- **Variante C — pain con 80%**: Pain sectorial + ancla con el 80%. Usar cuando el rol del prospecto es directamente de datos (Head of Data, CDO, Director de Analytics). Ejemplo: `"En reasoning estamos resolviendo un problema muy concreto: los equipos de datos pasan hasta el 80% de su tiempo limpiando y conciliando información antes de poder analizarla, datos de crédito en múltiples ERPs, cartera dispersa, definiciones distintas entre áreas."`
+
+Si la self-intro ya integra la value prop (patrón #4 KAM Solar): omitir T2 completamente.
+
+**T3 — Mecanismo + Output** (1–2 líneas)
+
+Dos variantes igualmente válidas — elegir según qué usó T2:
+
+**Variante simple** (usar cuando T2 fue omitido o se usó "nos toca directo"):
+> `"Nosotros estamos construyendo una plataforma que simplifica y automatiza toda la generación de analítica y BI. Se conecta a tu base de datos y en segundos tienes respuestas que hoy toman horas de trabajo manual."`
+Energía de startup activa ("estamos construyendo"), output en resultado final, sin enumeración técnica de procesos.
+
+**Variante con enumeración** (usar solo después de T2 con pain sectorial):
+> `"Nuestra plataforma automatiza esa capa — limpieza, homologación y gobierno de datos — para convertir semanas de trabajo en días, con trazabilidad y menos carga operativa para el equipo."`
+Solo válida cuando T2 ya pintó el contexto del sector. Si no hubo T2, usar variante simple.
+
+**Prohibido**: usar ambas variantes en el mismo DM. Prohibido usar enumeración sin T2 previo.
 
 **T4 — CTA con tiempo acotado + escape hatch** (1 línea)
 Pide la demo directamente con dos ingredientes obligatorios: límite de tiempo explícito + escape hatch.

@@ -60,8 +60,16 @@ El DM post-conexión — un único mensaje de Día 1, según las reglas:
 2. **Self-intro como founder**: "Soy Founder & CEO de reasoning.so" o "Soy Gustavo, Founder & CEO de reasoning.so" — establece contexto, no se siente como vendedor
 3. **Identifica el trigger más específico de la ficha** — observación concreta de empresa + rol + contexto. "Vi que lideras IT en FUNO" / "Vi lo que están construyendo en [empresa] con [contexto específico]". El trigger va después del saludo y la self-intro
 4. Confirma que el dolor que vas a tocar es el del 80% manual del pipeline de datos
-5. **Confirma que el DM enuncia el mecanismo de Reasoning explícitamente** — no solo el problema. Si no aparece una frase del tipo "Nuestra plataforma automatiza X" / "automatizamos la capa de limpieza, deduplicación, homologación", reescribe antes de entregar
-6. **Nombra el problema antes que la solución.** La self-intro no abre con "ayudamos a empresas a…" — primero el problema concreto que el prospecto reconoce, luego el mecanismo de Reasoning
+5. **Confirma que el DM enuncia el mecanismo de Reasoning**. Dos variantes válidas — elige según lo que usaste en T2:
+   - **Variante simple** (cuando T2 fue omitido o usaste "nos toca directo"): `"Nosotros estamos construyendo una plataforma que simplifica y automatiza toda la generación de analítica y BI. Se conecta a tu base de datos y en segundos tienes respuestas que hoy toman horas de trabajo manual."`
+   - **Variante con enumeración** (solo si hubo T2 con pain sectorial): `"Nuestra plataforma automatiza esa capa — limpieza, homologación y gobierno de datos — para convertir semanas de trabajo en días, con trazabilidad."`
+   Si no aparece ninguna de las dos, reescribe. Si usaste variante con enumeración sin T2 previo, reescribe con variante simple.
+6. **T2 es opcional — elige la variante correcta para este prospecto**:
+   - Si el trigger de T1 nombra empresa + rol con claridad y el fit es obvio: usa `"es un tema que nos toca directo"` al final de T1 y ve directo a T3 (variante simple).
+   - Si el vertical necesita contexto para que el fit sea claro: usa 1 oración de pain con los activos del sector (T2 variante B).
+   - Si el rol del prospecto es directamente de datos (Head of Data, CDO, Director de Analytics): usa el 80% ancla (T2 variante C).
+   - Si ya integraste la value prop en la self-intro (patrón KAM Solar): omite T2 completamente.
+   No fuerces T2. Si el DM fluye mejor sin él, omítelo.
 7. **Certeza sin arrogancia.** Usa afirmaciones directas: "estamos resolviendo un problema muy concreto", "esta capa suele consumir semanas", "el trabajo sigue siendo manual". Evita hedges: "creo que tal vez", "me imagino que quizá", "estamos explorando"
 8. **Sin "reducción en nómina".** Usa "menos carga manual", "menos trabajo operativo", "más capacidad para el equipo", "más trazabilidad"
 9. **Tono empático, nunca presuntuoso.** T2 debe ser hipótesis general sobre la industria, nunca diagnóstico específico del stack del prospecto
@@ -78,6 +86,8 @@ El DM post-conexión — un único mensaje de Día 1, según las reglas:
 - ¿Abrí con "Gracias por conectar" o un cumplido sin sustancia? → Elimínalo
 - ¿El DM cabe en pantalla de teléfono sin scroll excesivo?
 - ¿Estoy usando el trigger de la ficha, o inventé uno genérico?
+- ¿Elegí la variante correcta de T2? Si el trigger es específico y el fit es obvio, ¿usé "nos toca directo" en lugar de un párrafo de empatía vertical?
+- ¿La variante de T3 corresponde a lo que usé en T2? (sin T2 → variante simple; con T2 → enumeración válida)
 - ¿El CTA incluye tiempo acotado (15 min, demo rápida) Y escape hatch (sin tema / si no aplica)? → Si no, corrígelo
 - ¿El CTA es vague sin nombre de empresa? → Reescríbelo con nombre de empresa y propósito claro
 - ¿Abrí la self-intro con "ayudamos a empresas a…"? → Primero el problema, luego el mecanismo
@@ -118,6 +128,10 @@ Al final del draft agrega esta sección de autocrítica:
 • Datos puntuales presentes: [confirma 80% / semanas-meses-a-días / industrias — sin fabricación]
 • Liberación del equipo en T3: [cita la frase de cierre y argumenta que describe disappearance sin prescribir refocus]
 • CTA usado: [cita el CTA y confirma que incluye tiempo acotado + escape hatch + nombre de empresa]
+• Modo del DM: [COMPLETO (T0+T1+T2+T3+T4) / POST-RESPUESTA (T1+T2+T3+T4 — sin saludo inicial)]
+• T2 elegido: [OMITIDO + "nos toca directo" / 1 oración pain (variante B) / pain + 80% (variante C)] — [cita la línea exacta, o "omitido"]
+• T3 variante: [SIMPLE ("estamos construyendo...") / CON-ENUMERACIÓN ("automatiza esa capa...")] — [cita la línea del mecanismo]
+• Energía de startup: ["estamos construyendo" presente / "Nuestra plataforma" — revisar si aplica enumeración]
 • Conteo de palabras: [N palabras]
 • Punto más débil del draft: [qué parte te genera más duda]
 • Riesgo de sonar genérico, presuntuoso o copy-paste: [Alto / Medio / Bajo] — [razón]

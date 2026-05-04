@@ -26,6 +26,14 @@
 - `Hola [Nombre]! ¿Cómo estás?` — apertura estándar
 - `Hola [Nombre]! Como estas?` — variante informal (sin signos de interrogación de apertura — más casual)
 
+### Conector de trigger (T1 → T3 directo, reemplaza T2 completo)
+- `es un tema que nos toca directo` — cierra T1 y va directo a T3; posiciona al founder como par, no como vendedor
+- `Me llamó la atención tu perfil porque [TEMA SIMPLE] es un tema que nos toca directo` — variante con el contexto explícito del tema
+
+### Señales de startup (preferir sobre lenguaje corporativo)
+- `estamos construyendo una plataforma que...` — energía de founder activo; preferir sobre "Nuestra plataforma automatiza"
+- `No te quito mucho tiempo` — señal de respeto, baja fricción de entrada; usar cuando el DM va directo al pitch sin preámbulo largo
+
 ### Ancla del pain (usar en T1/T2)
 - `estamos resolviendo un problema muy concreto`
 - `el trabajo sigue siendo manual`
@@ -60,13 +68,20 @@ T1 — Self-intro + Trigger específico (1–2 líneas)
 "Soy [Gustavo / Founder & CEO] de reasoning.so. [observación concreta — vi que lideras X en [empresa] / lo que están construyendo en [empresa] con [contexto]]"
 La observación nombra empresa + rol + contexto observable. NO genérico.
 
-T2 — Empatía vertical (1–2 líneas)
-Pain sectorial con los términos del negocio del prospecto. Hipótesis de industria, nunca diagnóstico.
-Usar activos específicos del sector: "inmuebles, contratos, inquilinos" (RE), "cartera dispersa, múltiples ERPs" (fintech), etc.
+T2 — Empatía vertical [OPCIONAL — elige UNA variante o ninguna]
+Variante A (más simple): omitir T2; cerrar T1 con "es un tema que nos toca directo" e ir directo a T3.
+Variante B (1 oración): 1 oración con los activos de datos del sector, sin elaborar. Hipótesis de industria, nunca diagnóstico.
+Variante C (pain + 80%): activos del sector + "los equipos de datos pasan hasta el 80% de su tiempo limpiando y conciliando información". Usar cuando el rol es directamente de datos (Head of Data, CDO, Director de Analytics).
+Si la self-intro ya integra la value prop (patrón KAM Solar #4): omitir T2.
 
-T3 — Mecanismo + Compresión + Liberación (2 líneas)
-"Nuestra plataforma automatiza esa capa: limpieza, deduplicación, homologación y gobierno de datos.
-Lo que normalmente toma semanas o meses puede convertirse en días, con menos carga operativa para el equipo."
+T3 — Mecanismo + Output [DOS VARIANTES]
+Variante simple (cuando T2 fue omitido o "nos toca directo"):
+"Nosotros estamos construyendo una plataforma que simplifica y automatiza toda la generación de analítica y BI. Se conecta a tu base de datos y en segundos tienes respuestas que hoy toman horas de trabajo manual."
+
+Variante con enumeración (solo después de T2 con pain sectorial):
+"Nuestra plataforma automatiza esa capa — limpieza, homologación y gobierno de datos — para convertir semanas de trabajo en días, con trazabilidad y menos carga operativa para el equipo."
+
+Regla: si hubo T2 → puede usarse enumeración. Si no hubo T2 → variante simple. Nunca ambas juntas.
 
 T4 — CTA con tiempo acotado + escape hatch (1 línea)
 "¿Te haría sentido verlo aplicado a [empresa] en una demo rápida de 15 min? Si no aplica, sin tema."
