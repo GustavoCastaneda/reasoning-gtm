@@ -36,6 +36,16 @@ echo "    ✓ ~/.claude/references/ → outreach/references/"
 
 # 3. Copy agents and rewrite reference paths to absolute so they resolve from any CWD
 echo "  Instalando agents..."
+
+# Remove stale agents that were archived or renamed in this repo
+for stale in linkedin-writer-agent.md linkedin-critic-agent.md linkedin-judge-agent.md; do
+  stale_path="$AGENTS_DIR/$stale"
+  if [ -f "$stale_path" ]; then
+    rm -f "$stale_path"
+    echo "    ✗ $stale (archivado — eliminado)"
+  fi
+done
+
 installed_agents=()
 if [ -d "$INSTALL_DIR/agents" ]; then
   for agent_file in "$INSTALL_DIR/agents"/*.md; do
