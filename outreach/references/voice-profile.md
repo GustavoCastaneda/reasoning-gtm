@@ -109,6 +109,36 @@ Nunca "platicarlo" o "verlo" sin propósito. El CTA nombra qué se gana con la c
 
 ---
 
+## Frases en inglés (prospectos US/Canadá)
+
+> Usar estas frases para prospectos con base en US, Canadá o contexto angloparlante. Son los equivalentes validados de las frases características en español — no inferir traducciones.
+
+### T0 — Apertura
+- `"Hey [Nombre]! How's it going?"` — estándar (peer-level, casual)
+- `"Hey [Nombre]! How are you?"` — variante ligeramente más formal
+
+### Escape hatch
+- `"no worries"` — forma corta
+- `"If it's not relevant to what you're building, no worries."` — forma completa
+- `"If it doesn't apply to what you're working on, no worries."` — variante
+
+### Pain connector (equivalente en inglés de "es un tema que nos toca directo")
+- `"it's something we work on directly"` — cierra T1, posiciona al founder como par, va directo a T3
+
+### T3 variante simple (cuando T2 fue omitido o se usó pain connector)
+- `"We're building a platform that simplifies and automates the entire data prep layer before analytics can run. It connects to your database and in seconds you get answers that today take hours of manual work."`
+- **Regla**: usar `"We're building"` — startup energy. Solo cuando NO hubo T2 con pain sectorial.
+
+### T3 variante con enumeración (solo después de T2 con pain sectorial)
+- `"Our platform automates that layer — cleaning, deduplication, and harmonization — turning weeks of prep into days, with more traceability and less manual load on the team."`
+- **Regla**: usar `"Our platform automates"` — el pain de T2 ya estableció el contexto. NO usar `"We're building"` con enumeración.
+
+### CTA canónico
+- `"Would it make sense to see it applied to [empresa] in a quick 15-min demo? If it's not relevant to what you're building, no worries."`
+- `"Would it make sense to see it? It's 15 min and if it doesn't apply to what you're building, no worries."`
+
+---
+
 ## Correcciones acumuladas — NO hacer
 
 ### Tono y apertura

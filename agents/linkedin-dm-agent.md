@@ -39,6 +39,9 @@ Lee el **Índice** al inicio de `outreach/references/linkedin-corpus.md`.
 Identifica las 2–3 entradas más relevantes por vertical y/o rol del prospecto.
 Lee solo esas entradas saltando directo a `## #N`.
 
+**Cuarto — Contexto de iteraciones previas (si fue provisto por el SKILL):**
+Si el SKILL pasó lecciones de intentos anteriores con este lead, tratar ese contexto como la señal de calibración de mayor prioridad. Sobrepone las inferencias del corpus. Aplica la lección antes de escribir T2 — no después.
+
 ---
 
 ## PASO 1 — Escribe el DM

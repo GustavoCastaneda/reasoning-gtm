@@ -50,6 +50,7 @@ Invoca al `linkedin-dm-agent` con:
 - El archivo `outreach/references/linkedin-rules.md`
 - El archivo `outreach/references/voice-profile.md`
 - **El modo detectado en Paso 0**: COMPLETO o POST-RESPUESTA
+- **Contexto de iteraciones previas** (si aplica): si la ficha contiene una sección `## Iteraciones previas`, incluirla como contexto adicional al agente con el prefijo: `"Contexto adicional — lecciones de intentos previos con este lead: [contenido]"`
 
 El agente escribe el DM, se auto-evalúa, reescribe una vez si score < 8.5, y entrega el DM con el bloque SELF-EVALUATION incluido.
 
