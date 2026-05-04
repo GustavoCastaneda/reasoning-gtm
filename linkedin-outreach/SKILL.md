@@ -28,12 +28,32 @@ Ejecuta el loop de refinamiento completo antes de mostrar cualquier resultado en
 
 ## FLUJO COMPLETO
 
+### Paso 0 — Detectar modo del DM
+
+Antes de invocar al Writer, determina si el usuario está en modo **COMPLETO** o **POST-RESPUESTA**:
+
+**MODO COMPLETO** (default): El founder no ha contactado al prospecto aún. El DM incluye T0 (saludo "Hola [Nombre]! ¿Cómo estás?") + T1 + T2 + T3 + T4.
+
+**MODO POST-RESPUESTA**: El founder ya envió el saludo y recibió respuesta. Ahora necesita el mensaje de pitch. El DM incluye T1 + T2 + T3 + T4 — **sin T0** (no repetir el saludo que ya se envió).
+
+**Cómo detectar el modo** (revisar $ARGUMENTS y el mensaje del usuario):
+- Si el usuario menciona "ya le mandé el saludo", "ya me respondió", "ya conectamos y respondió", "post-respuesta", "ya respondió el saludo" → **MODO POST-RESPUESTA**
+- Si $ARGUMENTS contiene `post-respuesta` o `pitch` → **MODO POST-RESPUESTA**
+- Sin contexto de conversación previa → **MODO COMPLETO**
+
+**Anunciar el modo detectado** en 1 línea antes de invocar al Writer:
+- Modo completo: `"Generando DM completo (saludo + pitch) para [Empresa]."`
+- Modo post-respuesta: `"Generando mensaje de pitch post-respuesta para [Empresa] — sin saludo inicial."`
+
+---
+
 ### Paso 1 — LinkedIn Writer
 
 Invoca al `linkedin-writer-agent` con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/linkedin-rules.md`
 - El archivo `outreach/references/voice-profile.md`
+- **El modo detectado en Paso 0**: COMPLETO (incluir T0 — saludo inicial) o POST-RESPUESTA (omitir T0 — el saludo ya fue enviado y respondido)
 
 El Writer produce el primer draft con su autocrítica.
 
