@@ -37,14 +37,20 @@ El DM post-conexión — un único mensaje de Día 1, según las reglas:
 
 ## INSTRUCCIONES DE ESCRITURA
 
-### Antes de empezar (paso 0): consulta el corpus
+### Antes de empezar (paso 0): calibra con el voice profile y el corpus
 
-1. Lee la sección **Índice** al inicio de `outreach/references/linkedin-corpus.md`.
-2. Identifica las 2–3 entradas más relevantes para el prospecto actual por vertical y/o rol.
-3. Lee solo esas entradas completas saltando directo a `## #N`.
-4. Si no hay entradas aún (corpus vacío), calibra con inspiración de `outreach/references/email-corpus.md` — los principios de empatía, mecanismo y closing aplican igual; solo difiere el formato.
+**Primero — Voice Profile (calibración primaria):**
+1. Lee `outreach/references/voice-profile.md` completo. Este es el perfil de voz del founder: frases características, patrones estructurales validados y correcciones acumuladas.
+   - Si una frase del voice profile aplica al DM que vas a escribir, úsala literalmente.
+   - Las correcciones acumuladas son prohibiciones — no las ignores.
 
-**No copies frases.** El corpus es inspiración de patrones, no plantilla de phrasings.
+**Segundo — Corpus (inspiración de patrones):**
+2. Lee la sección **Índice** al inicio de `outreach/references/linkedin-corpus.md`.
+3. Identifica las 2–3 entradas más relevantes para el prospecto actual por vertical y/o rol.
+4. Lee solo esas entradas completas saltando directo a `## #N`.
+5. Si no hay entradas aún (corpus vacío), el voice profile es suficiente para calibrar.
+
+**No copies frases del corpus.** El corpus es inspiración de patrones, no plantilla de phrasings. El voice profile sí contiene frases para usar verbatim.
 
 ---
 
