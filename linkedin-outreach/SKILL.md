@@ -1,11 +1,9 @@
 ---
 description: >
-  Genera el DM de LinkedIn post-conexión para un lead usando un loop de
-  refinamiento entre tres agentes especializados. Se activa cuando el
-  usuario pide el mensaje de LinkedIn después de que el prospecto aceptó
-  la conexión. Toma la ficha de investigación del contexto o del archivo
-  local. Output: texto en el chat para copiar y pegar directamente en
-  LinkedIn — no crea draft en Gmail.
+  Genera el DM de LinkedIn post-conexión para un lead. Invoca al
+  linkedin-dm-agent (agente único que escribe, se auto-evalúa y
+  reescribe si aplica). Output: texto en el chat para copiar y pegar
+  directamente en LinkedIn — no crea draft en Gmail.
 allowed-tools:
   - Skill
   - Read
@@ -18,11 +16,9 @@ Toma la ficha de investigación del lead disponible en el contexto. Si se especi
 
 Si la ficha no está en el contexto de la sesión, busca el archivo local: `leads/[empresa-slug]/ficha.md` (slug = nombre de la empresa en minúsculas, espacios → guiones, sin acentos). Si el archivo tampoco existe, detente: "No encuentro la ficha de [empresa]. Corre primero `/research` o pega la ficha en el chat."
 
-**Foco: DM post-conexión (Día 1).** No generes follow-ups ni mensajes de reconexión — esos se trabajan con contexto fresco si hay o no respuesta.
+**Foco: DM post-conexión (Día 1).** No generes follow-ups ni mensajes de reconexión.
 
 **Output: texto en el chat para copiar y pegar en LinkedIn directamente.** No creas draft en Gmail.
-
-Ejecuta el loop de refinamiento completo antes de mostrar cualquier resultado en el chat. El founder solo ve el DM cuando alcanza 8.5 o después de 3 iteraciones.
 
 ---
 
@@ -30,145 +26,105 @@ Ejecuta el loop de refinamiento completo antes de mostrar cualquier resultado en
 
 ### Paso 0 — Detectar modo del DM
 
-Antes de invocar al Writer, determina si el usuario está en modo **COMPLETO** o **POST-RESPUESTA**:
+Antes de invocar al agente, determina el modo:
 
-**MODO COMPLETO** (default): El founder no ha contactado al prospecto aún. El DM incluye T0 (saludo "Hola [Nombre]! ¿Cómo estás?") + T1 + T2 + T3 + T4.
+**MODO COMPLETO** (default): El founder no ha contactado al prospecto aún. El DM incluye T0 (saludo) + T1 + T2 + T3 + T4.
 
-**MODO POST-RESPUESTA**: El founder ya envió el saludo y recibió respuesta. Ahora necesita el mensaje de pitch. El DM incluye T1 + T2 + T3 + T4 — **sin T0** (no repetir el saludo que ya se envió).
+**MODO POST-RESPUESTA**: El founder ya envió el saludo y recibió respuesta. El DM incluye T1 + T2 + T3 + T4 — sin T0.
 
-**Cómo detectar el modo** (revisar $ARGUMENTS y el mensaje del usuario):
-- Si el usuario menciona "ya le mandé el saludo", "ya me respondió", "ya conectamos y respondió", "post-respuesta", "ya respondió el saludo" → **MODO POST-RESPUESTA**
-- Si $ARGUMENTS contiene `post-respuesta` o `pitch` → **MODO POST-RESPUESTA**
+**Cómo detectar** (revisar $ARGUMENTS y el mensaje del usuario):
+- "ya le mandé el saludo", "ya me respondió", "ya conectamos y respondió", "post-respuesta", "ya respondió el saludo" → **MODO POST-RESPUESTA**
+- $ARGUMENTS contiene `post-respuesta` o `pitch` → **MODO POST-RESPUESTA**
 - Sin contexto de conversación previa → **MODO COMPLETO**
 
-**Anunciar el modo detectado** en 1 línea antes de invocar al Writer:
-- Modo completo: `"Generando DM completo (saludo + pitch) para [Empresa]."`
-- Modo post-respuesta: `"Generando mensaje de pitch post-respuesta para [Empresa] — sin saludo inicial."`
+Anuncia el modo en 1 línea antes de invocar al agente:
+- `"Generando DM completo (saludo + pitch) para [Empresa]."`
+- `"Generando mensaje de pitch post-respuesta para [Empresa] — sin saludo inicial."`
 
 ---
 
-### Paso 1 — LinkedIn Writer
+### Paso 1 — Invocar linkedin-dm-agent
 
-Invoca al `linkedin-writer-agent` con:
+Invoca al `linkedin-dm-agent` con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/linkedin-rules.md`
 - El archivo `outreach/references/voice-profile.md`
-- **El modo detectado en Paso 0**: COMPLETO (incluir T0 — saludo inicial) o POST-RESPUESTA (omitir T0 — el saludo ya fue enviado y respondido)
+- **El modo detectado en Paso 0**: COMPLETO o POST-RESPUESTA
 
-El Writer produce el primer draft con su autocrítica.
-
----
-
-### Paso 2 — LinkedIn Critic + LinkedIn Judge en paralelo
-
-Invoca **simultáneamente** al `linkedin-critic-agent` y al `linkedin-judge-agent`. Ambos reciben:
-- La ficha de investigación del lead
-- El archivo `outreach/references/linkedin-rules.md`
-- El draft más reciente del Writer (con su autocrítica)
-
-El Critic evalúa calidad, tono, mecanismo y cumplimiento de reglas.
-El Judge evalúa el impacto desde la perspectiva del prospecto y asigna calificación 1–10.
-
-**Nota:** el Judge evalúa el draft como el prospecto lo vería — sin ver el reporte del Critic. Esto es correcto: el prospecto tampoco lo vería. El Writer sí recibe ambos reportes en la siguiente iteración.
+El agente escribe el DM, se auto-evalúa, reescribe una vez si score < 8.5, y entrega el DM con el bloque SELF-EVALUATION incluido.
 
 ---
 
-### Paso 3 — Decisión del loop
+### Paso 2 — Mostrar en el chat
 
-```
-¿Calificación del Judge ≥ 8.5?
-    Sí → ir a Paso 4 (entregar)
-    No → ¿iteraciones completadas < 3?
-              Sí → LinkedIn Writer reescribe con AMBOS reportes (Critic + Judge) → regresar a Paso 2
-              No → ir a Paso 4 con el mejor draft alcanzado
-```
-
-El loop máximo es 3 iteraciones (cada iteración = [Critic+Judge simultáneos] → Writer reescribe si aplica). Si después de 3 iteraciones no se alcanza 8.5, se entrega el mejor draft con nota de calificación.
-
-**Al reescribir**, invoca al `linkedin-writer-agent` con:
-- La ficha de investigación del lead
-- El archivo `outreach/references/linkedin-rules.md`
-- El archivo `outreach/references/voice-profile.md`
-- El draft anterior
-- El reporte completo del Critic
-- El reporte completo del Judge (incluye calificación y mejoras específicas)
-
----
-
-### Paso 4 — Mostrar en el chat
-
-Muestra el progreso y el resultado final:
+Presenta el resultado al founder:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 LINKEDIN DM: [Empresa] — [Contacto] | [Puesto]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-PROCESO DE REFINAMIENTO
-• Iteración 1: [calificación del Judge]
-• Iteración 2: [calificación del Judge] (si aplica)
-• Iteración 3: [calificación del Judge] (si aplica)
-• Calificación final: [X.X] / 10
+[Modo: COMPLETO / POST-RESPUESTA]
+Score: [X.X] / 10[⚠️ si < 8.5]
+[Si hubo reescritura: "Reescribí porque: [razón]"]
 
 ─────────────────────────────────────────
 
 💬 DM POST-CONEXIÓN — Día 1
 
-[cuerpo completo del DM — solo texto, listo para copiar y pegar]
+[cuerpo completo del DM]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ¿Apruebas este DM? Responde "sí" para confirmar.
 ```
 
+Si score < 8.5, incluye nota: `"⚠️ Score debajo del umbral (8.5). El agente no pudo mejorarlo en la reescritura — revisa antes de enviar o pide ajustes específicos."`
+
 ---
 
-### Paso 5 — Después del visto bueno
+### Paso 3 — Después del visto bueno
 
 Cuando el usuario apruebe, ejecuta sin pedir más confirmación:
 
 **HubSpot:**
 - Cambia `hs_lead_status` a `ATTEMPTED_TO_CONTACT`
-- Agrega nota: "LinkedIn DM Día 1 aprobado — [fecha]. Calificación final: [X.X]/10."
+- Agrega nota: "LinkedIn DM Día 1 aprobado — [fecha]. Score: [X.X]/10."
 
 **Confirmar en el chat:**
 
 | Empresa | DM aprobado | HubSpot | Corpus |
 |---------|-------------|---------|--------|
-| [nombre] | ✅ Texto copiado | ✅ ATTEMPTED_TO_CONTACT | ✅ Entrada #N |
+| [nombre] | ✅ Texto listo | ✅ ATTEMPTED_TO_CONTACT | ✅ Entrada #N |
 
 ---
 
-### Paso 5.5 — Aprendizaje automático: agregar entrada al corpus de LinkedIn
+### Paso 3.5 — Aprendizaje automático: agregar entrada al corpus
 
-Sin pedir confirmación, genera y agrega una entrada al corpus de LinkedIn inmediatamente después de confirmar la tabla del Paso 5.
+Sin pedir confirmación, agrega una entrada al corpus de LinkedIn inmediatamente después de confirmar la tabla del Paso 3.
 
-**Qué extraer de la sesión:**
-
-- **DM aprobado**: el que el usuario dijo "sí" — usa la versión final que el usuario aceptó.
+**Qué extraer:**
+- **DM aprobado**: versión final que el usuario aceptó.
 - **Empresa**: preservar sin anonimizar.
-- **Contacto**: reemplazar el nombre real con `[Contacto]`.
-- **Calificación**: la del Judge sobre el draft más cercano al aprobado.
-- **Principal aprendizaje**: qué cambió del primer draft al aprobado. Si Judge aprobó en primera iteración, documenta qué funcionó.
+- **Contacto**: reemplazar nombre real con `[Contacto]`.
+- **Score**: el del agente sobre el draft aprobado.
+- **Principal aprendizaje**: qué cambió del primer draft al aprobado. Si el agente reescribió, qué falló. Si el usuario corrigió algo post-agente, qué y por qué.
 
 **Leer el corpus para obtener el número siguiente:**
-
 Lee `outreach/references/linkedin-corpus.md` y encuentra la última entrada `## #N —`. La nueva entrada es `#N+1`.
 
-**Actualizar el índice:**
-
-Agrega una fila al índice en `outreach/references/linkedin-corpus.md`:
+**Actualizar el índice** con una fila nueva:
 ```
 | #N+1 | [vertical] | [rol] | [patrón corto] | Aprobado |
 ```
 
-**Formato de la entrada a agregar:**
+**Formato de la entrada:**
 
 ```markdown
 ## #[N+1] — [Patrón corto de 3–6 palabras] ([vertical])
 
 **Prospecto**: [Rol] en **[Empresa]** ([descripción de 1 línea del vertical]).
 
-**DM aprobado por el [Judge / usuario] ([score]/10)**:
+**DM aprobado por el [agente / usuario] ([score]/10)**:
 
 > [cuerpo verbatim — nombre del contacto → [Contacto]]
 
@@ -177,30 +133,30 @@ Agrega una fila al índice en `outreach/references/linkedin-corpus.md`:
 **✅ Lo que funcionó**:
 • [elemento específico]
 
-**❌ Lo que se rechazó / Lo que el usuario corrigió**:
-• [qué se detectó + cita del feedback si existe]
+**❌ Lo que se rechazó / Lo que el usuario corrigió** (si aplica):
+• [qué se detectó + razón]
 
 **📝 Lección**: [principio internalizable en 2–4 líneas]
 ```
 
 **Dónde insertar**: usa `Edit` para agregar la entrada justo **antes** de la línea `## Cómo se agregan entradas nuevas` en `outreach/references/linkedin-corpus.md`.
 
-**Si no hubo rechazos** (Judge aprobó en primera iteración): omite la sección `❌` y documenta solo `✅` + lección.
+**Si no hubo rechazos** (el agente aprobó en primera iteración): omite la sección `❌`.
 
-**Confirmar** actualizando la tabla del Paso 5 con `✅ Entrada #N+1` en la columna Corpus.
+**Confirmar** actualizando la tabla del Paso 3 con `✅ Entrada #N+1` en la columna Corpus.
 
 ---
 
-### Paso 5.7 — Oferta de actualizar el Voice Profile (si score ≥9.0)
+### Paso 3.7 — Oferta de actualizar el Voice Profile (si score ≥ 9.0)
 
-Si el Judge aprobó con calificación ≥9.0 en la primera o segunda iteración, pregunta al usuario:
+Si el agente aprobó con score ≥ 9.0 en la primera iteración, pregunta al usuario:
 
 ```
 ¿Quieres actualizar el voice profile con el patrón de este DM?
-El DM obtuvo [X.X]/10 en iteración [N] — hay un patrón ganador que vale capturar.
+Score: [X.X]/10 en primera iteración — hay un patrón ganador que vale capturar.
 Responde "sí" para agregar las frases clave a voice-profile.md.
 ```
 
 Si el usuario dice sí, agrega en `outreach/references/voice-profile.md`:
-- En "Mensajes de referencia de alta puntuación": una fila nueva con el corpus ID y por qué es referencia
-- En "Frases características" si hay frases nuevas que no estaban documentadas
+- En "Mensajes de referencia de alta puntuación": una fila nueva con el corpus ID y por qué es referencia.
+- En "Frases características" si hay frases nuevas no documentadas.
