@@ -12,6 +12,7 @@ allowed-tools:
   - Read
   - Bash
   - AskUserQuestion
+  - Agent
 ---
 
 # /gtm — Orquestador GTM
@@ -126,12 +127,35 @@ No avances al Paso 4 sin una respuesta. Si la respuesta requiere payload (las pr
 
 ## Paso 4 — Ejecutar la cadena
 
+### Modo lead único (N = 1)
+
 Para cada skill en la cadena, en orden estricto:
 
 1. Anuncia al usuario qué skill vas a invocar y por qué (1 línea cada uno).
 2. Invoca el skill via `Skill` tool. Para el primer skill, pasa el payload normalizado en `args`. Para los siguientes, NO pases args — leen las fichas del contexto de conversación que dejó el skill anterior.
 3. Espera a que termine y el output esté en el contexto antes de seguir.
 4. **No insertes confirmaciones entre skills.** Los sub-skills tienen sus propios gates donde importa: `/outreach` pide aprobación antes de crear el Gmail draft; `/post-llamada` antes de actualizar HubSpot. Respeta esos gates pero no añadas extras.
+
+---
+
+### Modo multi-lead (N > 1 leads)
+
+Cuando la cadena incluye más de un lead y la cadena arranca con `/research`, usa procesamiento en paralelo:
+
+**Fase A — Research en paralelo**
+Anuncia: "Investigando [N] leads en paralelo..."
+Lanza N sub-agentes simultáneos usando la herramienta `Agent`, uno por lead. Cada sub-agente recibe la fila de datos de su lead y ejecuta `/research`.
+Espera a que **todos** terminen antes de continuar.
+
+**Fase B — HubSpot en paralelo** (si la cadena incluye `/create-company` → `/create-contact`)
+Lanza N sub-agentes simultáneos, uno por lead. Cada sub-agente ejecuta `/create-company` → `/create-contact` para su lead usando la ficha que generó el research.
+Espera a que **todos** terminen antes de continuar.
+
+**Fase C — Outreach secuencial** (si la cadena incluye `/outreach` o `/linkedin-outreach`)
+El outreach se procesa de a **un lead a la vez** — el founder necesita leer, revisar y aprobar cada mensaje antes de continuar con el siguiente.
+Anuncia el orden antes de empezar: "Procesando outreach para [Lead1], luego [Lead2]..."
+
+**Regla de fallback**: si un sub-agente falla (timeout, error de herramienta), márca ese lead como `⚠️ requiere retry` en el resumen final y continúa con los demás. No bloquees toda la cadena por un lead.
 
 ### Excepciones que cortan la cadena
 

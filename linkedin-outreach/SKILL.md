@@ -33,61 +33,49 @@ Ejecuta el loop de refinamiento completo antes de mostrar cualquier resultado en
 Invoca al `linkedin-writer-agent` con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/linkedin-rules.md`
+- El archivo `outreach/references/voice-profile.md`
 
 El Writer produce el primer draft con su autocrítica.
 
 ---
 
-### Paso 2 — LinkedIn Critic
+### Paso 2 — LinkedIn Critic + LinkedIn Judge en paralelo
 
-Invoca al `linkedin-critic-agent` con:
+Invoca **simultáneamente** al `linkedin-critic-agent` y al `linkedin-judge-agent`. Ambos reciben:
 - La ficha de investigación del lead
 - El archivo `outreach/references/linkedin-rules.md`
-- El draft del Writer incluyendo su autocrítica
+- El draft más reciente del Writer (con su autocrítica)
 
-El Critic produce el reporte de revisión con recomendaciones.
+El Critic evalúa calidad, tono, mecanismo y cumplimiento de reglas.
+El Judge evalúa el impacto desde la perspectiva del prospecto y asigna calificación 1–10.
+
+**Nota:** el Judge evalúa el draft como el prospecto lo vería — sin ver el reporte del Critic. Esto es correcto: el prospecto tampoco lo vería. El Writer sí recibe ambos reportes en la siguiente iteración.
 
 ---
 
-### Paso 3 — LinkedIn Writer reescribe (si el Critic recomienda)
+### Paso 3 — Decisión del loop
 
-Si el Critic veredicta "Sí" a reescribir, invoca al `linkedin-writer-agent` nuevamente con:
+```
+¿Calificación del Judge ≥ 8.5?
+    Sí → ir a Paso 4 (entregar)
+    No → ¿iteraciones completadas < 3?
+              Sí → LinkedIn Writer reescribe con AMBOS reportes (Critic + Judge) → regresar a Paso 2
+              No → ir a Paso 4 con el mejor draft alcanzado
+```
+
+El loop máximo es 3 iteraciones (cada iteración = [Critic+Judge simultáneos] → Writer reescribe si aplica). Si después de 3 iteraciones no se alcanza 8.5, se entrega el mejor draft con nota de calificación.
+
+**Al reescribir**, invoca al `linkedin-writer-agent` con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/linkedin-rules.md`
+- El archivo `outreach/references/voice-profile.md`
 - El draft anterior
 - El reporte completo del Critic
-
-Si el Critic veredicta "No" (draft está bien), salta directamente al Paso 4.
-
----
-
-### Paso 4 — LinkedIn Judge
-
-Invoca al `linkedin-judge-agent` con:
-- La ficha de investigación del lead
-- El archivo `outreach/references/linkedin-rules.md`
-- El draft más reciente del Writer
-- El reporte del Critic
-
-El Judge produce la calificación y el veredicto desde la perspectiva del prospecto.
+- El reporte completo del Judge (incluye calificación y mejoras específicas)
 
 ---
 
-### Paso 5 — Decisión del loop
-
-```
-¿Calificación ≥ 8.5?
-    Sí → ir a Paso 6
-    No → ¿iteraciones < 3?
-              Sí → regresar al Paso 2 con el feedback del Judge (Critic vuelve a revisar)
-              No → ir al Paso 6 con el mejor draft alcanzado
-```
-
-El loop máximo es 3 iteraciones (cada iteración = Critic → Writer reescribe → Judge). Si después de 3 iteraciones no se alcanza 8.5, se entrega el mejor draft con nota de calificación.
-
----
-
-### Paso 6 — Mostrar en el chat
+### Paso 4 — Mostrar en el chat
 
 Muestra el progreso y el resultado final:
 
@@ -114,7 +102,7 @@ PROCESO DE REFINAMIENTO
 
 ---
 
-### Paso 7 — Después del visto bueno
+### Paso 5 — Después del visto bueno
 
 Cuando el usuario apruebe, ejecuta sin pedir más confirmación:
 
@@ -130,9 +118,9 @@ Cuando el usuario apruebe, ejecuta sin pedir más confirmación:
 
 ---
 
-### Paso 7.5 — Aprendizaje automático: agregar entrada al corpus de LinkedIn
+### Paso 5.5 — Aprendizaje automático: agregar entrada al corpus de LinkedIn
 
-Sin pedir confirmación, genera y agrega una entrada al corpus de LinkedIn inmediatamente después de confirmar la tabla del Paso 7.
+Sin pedir confirmación, genera y agrega una entrada al corpus de LinkedIn inmediatamente después de confirmar la tabla del Paso 5.
 
 **Qué extraer de la sesión:**
 
@@ -140,11 +128,11 @@ Sin pedir confirmación, genera y agrega una entrada al corpus de LinkedIn inmed
 - **Empresa**: preservar sin anonimizar.
 - **Contacto**: reemplazar el nombre real con `[Contacto]`.
 - **Calificación**: la del Judge sobre el draft más cercano al aprobado.
-- **Principal aprendizaje**: qué cambió del primer draft al aprobado.
+- **Principal aprendizaje**: qué cambió del primer draft al aprobado. Si Judge aprobó en primera iteración, documenta qué funcionó.
 
 **Leer el corpus para obtener el número siguiente:**
 
-Lee `outreach/references/linkedin-corpus.md` y encuentra la última entrada `## #N —`. La nueva entrada es `#N+1`. Si el corpus está vacío (solo tiene el índice), la primera entrada es `#1`.
+Lee `outreach/references/linkedin-corpus.md` y encuentra la última entrada `## #N —`. La nueva entrada es `#N+1`.
 
 **Actualizar el índice:**
 
@@ -179,4 +167,20 @@ Agrega una fila al índice en `outreach/references/linkedin-corpus.md`:
 
 **Si no hubo rechazos** (Judge aprobó en primera iteración): omite la sección `❌` y documenta solo `✅` + lección.
 
-**Confirmar** actualizando la tabla del Paso 7 con `✅ Entrada #N+1` en la columna Corpus.
+**Confirmar** actualizando la tabla del Paso 5 con `✅ Entrada #N+1` en la columna Corpus.
+
+---
+
+### Paso 5.7 — Oferta de actualizar el Voice Profile (si score ≥9.0)
+
+Si el Judge aprobó con calificación ≥9.0 en la primera o segunda iteración, pregunta al usuario:
+
+```
+¿Quieres actualizar el voice profile con el patrón de este DM?
+El DM obtuvo [X.X]/10 en iteración [N] — hay un patrón ganador que vale capturar.
+Responde "sí" para agregar las frases clave a voice-profile.md.
+```
+
+Si el usuario dice sí, agrega en `outreach/references/voice-profile.md`:
+- En "Mensajes de referencia de alta puntuación": una fila nueva con el corpus ID y por qué es referencia
+- En "Frases características" si hay frases nuevas que no estaban documentadas

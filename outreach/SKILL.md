@@ -30,6 +30,7 @@ Ejecuta el loop de refinamiento completo antes de mostrar cualquier resultado en
 Invoca al `writer-agent` con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/outreach-rules.md`
+- El archivo `outreach/references/voice-profile.md`
 
 El Writer produce el primer draft con su autocrítica.
 
@@ -44,7 +45,7 @@ El Validator verifica que los **datos puntuales obligatorios** estén presentes 
 
 ```
 ¿VEREDICTO del Validator?
-    PASS → continuar al Paso 3 (Critic)
+    PASS → continuar al Paso 3 (Critic + Judge en paralelo)
     FAIL — ¿el único chequeo fallido es el #12 (longitud)?
         SÍ (solo falló longitud) → Gate de longitud:
               Mostrar al founder:
@@ -54,81 +55,55 @@ El Validator verifica que los **datos puntuales obligatorios** estén presentes 
               Si elige A → regresar al Paso 1 con gap de longitud. Máximo 2 retries.
               Si elige B → agregar [OVERRIDE-LENGTH: autorizado] al contexto y re-invocar
                            el Validator (ahora pasa Chequeo 12 como PASS override) →
-                           continuar al Paso 3 (Critic)
+                           continuar al Paso 3 (Critic + Judge en paralelo)
         NO (hay otros FAILs además de longitud) → regresar al Paso 1 con la lista de gaps.
            El Writer reescribe corrigiendo los datos faltantes. Después del rewrite, vuelve al Paso 2.
-           Máximo 2 retries por iteración antes de continuar a Critic con warning.
+           Máximo 2 retries por iteración antes de continuar con warning.
 ```
 
 ---
 
-### Paso 3 — Critic
-Invoca al `critic-agent` con:
+### Paso 3 — Critic + Judge en paralelo
+
+Invoca **simultáneamente** al `critic-agent` y al `judge-agent`. Ambos reciben:
 - La ficha de investigación del lead
 - El archivo `outreach/references/outreach-rules.md`
-- El draft del Writer incluyendo su autocrítica
-- El reporte del Validator (PASS — para que el Critic confíe en presencia de datos y se enfoque en calidad)
+- El draft del Writer (con su autocrítica)
+- El reporte del Validator (PASS — para que Critic confíe en los datos y se enfoque en calidad)
 
-El Critic produce el reporte de revisión con recomendaciones de tono, integración, hook.
+El Critic produce recomendaciones de tono, integración y hook.
+El Judge produce calificación 1–10 desde la perspectiva del prospecto.
+
+**Nota:** el Judge evalúa el draft como el prospecto lo leería — sin ver el reporte del Critic. El Writer sí recibe ambos reportes en la siguiente iteración.
 
 ---
 
-### Paso 4 — Writer reescribe
-Invoca al `writer-agent` nuevamente con:
+### Paso 4 — Decisión del loop
+
+```
+¿Calificación del Judge ≥ 8.5?
+    Sí → ir a Paso 5 (mostrar resultado)
+    No → ¿iteraciones completadas < 3?
+              Sí → Writer reescribe con AMBOS reportes (Critic + Judge) →
+                   Validator nuevamente (Paso 2) → Critic+Judge en paralelo (Paso 3)
+              No → ir a Paso 5 con el mejor draft alcanzado
+```
+
+El loop máximo es 3 iteraciones (cada iteración = Writer → Validator → [Critic+Judge simultáneos]). Si después de 3 iteraciones no se alcanza 8.5, se entrega el mejor draft con nota de calificación.
+
+**Al reescribir**, invoca al `writer-agent` con:
 - La ficha de investigación del lead
 - El archivo `outreach/references/outreach-rules.md`
+- El archivo `outreach/references/voice-profile.md`
 - El draft anterior
 - El reporte completo del Critic
+- El reporte completo del Judge (incluye calificación y mejoras específicas)
 
-El Writer produce el draft revisado incorporando las recomendaciones.
-
----
-
-### Paso 5 — Data Validator (segundo gate)
-Invoca al `data-validator-agent` otra vez con el draft revisado.
-
-```
-¿VEREDICTO?
-    PASS → continuar al Paso 6 (Judge)
-    FAIL — ¿el único chequeo fallido es el #12 (longitud)?
-        SÍ (solo falló longitud) → Gate de longitud:
-              Si [OVERRIDE-LENGTH: autorizado] ya está activo en el contexto → continuar
-              al Paso 6 (Judge) directamente — el founder ya autorizó la longitud.
-              Si no está activo → mostrar al founder el mismo gate que en Paso 2 y aplicar
-              la misma lógica (A: recortar / B: autorizar).
-        NO (hay otros FAILs) → regresar al Paso 4 con la lista de gaps. Máximo 2 retries.
-```
-
-Esto evita que el Critic introduzca cambios que rompen la presencia de datos puntuales.
+Después del rewrite, el Validator debe aprobar el nuevo draft antes de pasar a Critic+Judge nuevamente. Si el Validator falla (fuera del gate de longitud): 2 retries máximo.
 
 ---
 
-### Paso 6 — Judge
-Invoca al `judge-agent` con:
-- La ficha de investigación del lead
-- El archivo `outreach/references/outreach-rules.md`
-- El draft revisado del Writer
-- El reporte del Critic
-
-El Judge produce la calificación y el veredicto desde la perspectiva del prospecto.
-
----
-
-### Paso 7 — Decisión del loop
-
-```
-¿Calificación ≥ 8.5?
-    Sí → ir a Paso 8
-    No → ¿iteraciones < 3?
-              Sí → regresar al Paso 3 con el feedback del Judge (Critic vuelve a revisar)
-              No → ir al Paso 8 con el mejor draft alcanzado
-```
-
-El loop máximo es 3 iteraciones (cada iteración = Critic → Writer reescribe → Validator → Judge). Si después de 3 iteraciones no se alcanza 8.5, se entrega el mejor draft con nota de calificación.
-
----
-
-### Paso 8 — Mostrar en el chat
+### Paso 5 — Mostrar en el chat
 
 Muestra el progreso y el resultado final:
 
@@ -156,7 +131,7 @@ Subject: [subject]
 
 ---
 
-### Paso 9 — Después del visto bueno
+### Paso 6 — Después del visto bueno
 
 Cuando el usuario apruebe, ejecuta sin pedir más confirmación:
 
@@ -175,7 +150,7 @@ Cuando el usuario apruebe, ejecuta sin pedir más confirmación:
 
 ---
 
-### Paso 9.5 — Aprendizaje automático: agregar entrada al corpus
+### Paso 6.5 — Aprendizaje automático: agregar entrada al corpus
 
 Sin pedir confirmación, genera y agrega una entrada al corpus de outreach inmediatamente después de confirmar la tabla del Paso 9.
 
