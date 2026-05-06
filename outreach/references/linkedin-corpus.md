@@ -20,6 +20,8 @@ Biblioteca de DMs aprobados y rechazados. Cada entrada captura qué funcionó, q
 | #10 | Retail / Pet | Director de Innovación | "No te quito mucho tiempo" + trigger de rol de innovación | Generó interés |
 | #11 | Tech / Marketplace | Analítica | Dos pasos: saludo → pitch; respuesta con "ya tenemos herramienta" | Generó respuesta — no-fit con contexto |
 | #12 | Retail / Lifestyle | Director de área | Patrón estándar + escape hatch — respuesta de no-fit cortés | Generó respuesta — no-fit con contexto |
+| #13 | Cleantech / EV | BI Supervisor | Trigger de ronda + escala de flota + activos sectoriales (telemetría, recarga, leasing) | Aprobado |
+| #14 | Cleantech / EV | BI Supervisor | POST-RESPUESTA condensado — T2+T3 fusionados, 3 párrafos, ~65 palabras | Aprobado — corrección de longitud visual |
 
 ---
 
@@ -333,6 +335,67 @@ Biblioteca de DMs aprobados y rechazados. Cada entrada captura qué funcionó, q
 • **El tono fue correcto**: Aunque no hubo fit, el prospecto tomó el tiempo de consultar y responder con contexto — señal de que el mensaje no sonó como spam.
 
 **📝 Lección**: Un DM bien construido genera respuesta incluso sin fit. El valor de un "no" con contexto: (1) el prospecto puede referir a alguien con fit, (2) el founder aprende más sobre el segmento, (3) la relación queda abierta para el futuro. El escape hatch es el ingrediente que convierte "ignorar" en "responder cortésmente". Sin escape hatch, los no-fits simplemente desaparecen.
+
+---
+
+## #13 — "No te quito mucho tiempo" post-respuesta (Cleantech / EV)
+
+**Prospecto**: Business Intelligence Supervisor en **VEMO** (startup mexicana de movilidad eléctrica — flotas EV en lease para Uber/Didi, plataforma ZEE de telemetría propia, USD $250M levantados sep 2025).
+
+**DM enviado por el usuario (modo POST-RESPUESTA — Juan Manuel respondió el saludo)**:
+
+> Todo muy bien [Contacto], oye no te quito mucho tiempo, vi que llevas BI y Analytics.
+>
+> Estoy construyendo reasoning.so, el problema que atacamos es que para que los datos puedan ser analizados o llegar al BI, hay una parte de preparación y limpieza que le consume a los equipos un 80% de su tiempo, antes de llegar al análisis, múltiples ERPs, fuentes de datos distintas, datos sucios, etc.
+>
+> Justo esa capa es la que automatiza nuestra plataforma, con agentes de AI todo ese trabajo de limpieza, homologación y gobierno de datos — para convertir semanas de trabajo en días, con trazabilidad y menos carga operativa para el equipo.
+>
+> ¿Te haría sentido verlo en una call rápida de 15 min? Si no aplica, sin tema, de igual forma tu feedback me sería muy valioso. Abrazo.
+
+(~95 palabras.)
+
+**❌ Lo que generó el agente vs. lo que el usuario envió**:
+• El agente generó un DM en MODO COMPLETO (con T0 saludo) — el usuario ya había intercambiado el saludo y necesitaba el pitch post-respuesta.
+• El agente usó trigger específico de VEMO (telemetría, ronda USD $250M) — el usuario usó trigger más genérico de rol ("vi que llevas BI y Analytics") y se enfocó en el mecanismo.
+• El usuario incluyó "con agentes de AI" — excepción deliberada a la regla de no mencionar "AI"; el founder decidió usarlo en este caso.
+
+**✅ Lo que funcionó en la versión del usuario**:
+• **"No te quito mucho tiempo"** como apertura post-respuesta — señal de respeto, baja fricción, tono de founder peer.
+• **"Estoy construyendo reasoning.so"** — energía de startup activa, no pitch corporativo. Más auténtico que "Soy Founder & CEO de".
+• **80% integrado en la descripción del problema** — "le consume a los equipos un 80% de su tiempo, antes de llegar al análisis" — natural, no como estadística flotante.
+• **Patrón C en CTA**: "de igual forma tu feedback me sería muy valioso" — repositiona la solicitud como pedido de criterio experto, no solo de una venta. Funciona especialmente bien cuando el prospecto respondió al saludo (ya hay rapport mínimo).
+• **"Abrazo"** como cierre — calienta el tono, refuerza peer-to-peer.
+
+**📝 Lección**: En modo POST-RESPUESTA, el usuario prefiere un pitch más conversacional que el que genera el agente: (1) "No te quito mucho tiempo" en lugar de trigger ultra-específico; (2) energía de "Estoy construyendo" en lugar de self-intro formal; (3) Patrón C en CTA cuando ya hay un intercambio previo — convierte la solicitud en pedido de feedback, no de venta. El agente debe detectar el modo POST-RESPUESTA desde la ficha o el contexto del chat y generar directamente en ese modo.
+
+---
+
+## #14 — POST-RESPUESTA condensado: T2+T3 fusionados (Cleantech / EV)
+
+**Prospecto**: Business Intelligence Supervisor en **VEMO** (startup mexicana de movilidad eléctrica).
+
+**Contexto**: #13 captura la versión que el usuario envió (~95 palabras, 4 párrafos). En móvil se veía visualmente largo — demasiado scroll. Esta entrada es la versión corregida, condensada a 3 párrafos y ~65 palabras.
+
+**DM condensado aprobado (~65 palabras)**:
+
+> Todo muy bien Juan Ma! Oye, no te quito mucho tiempo — vi que llevas BI y Analytics en VEMO.
+>
+> Estoy construyendo reasoning.so. El problema que atacamos: los equipos de datos pasan hasta el 80% de su tiempo limpiando y conciliando fuentes antes de poder analizarlas. Nuestra plataforma automatiza esa capa — limpieza, homologación y gobierno de datos — para convertir semanas en días.
+>
+> ¿Te haría sentido verlo en 15 min? Si no aplica, sin tema. Abrazo.
+
+**❌ Lo que se cortó vs. #13**:
+• "múltiples ERPs, fuentes de datos distintas, datos sucios, etc." — redundante con el 80%; el stat ya ancla el problema
+• "con agentes de AI" — eliminado (regla de no mencionar tecnología)
+• "de igual forma tu feedback me sería muy valioso" — removido del CTA escrito; puede decirse verbalmente si responde
+• 4 párrafos → 3 párrafos: T2 y T3 fusionados en un solo bloque
+
+**✅ Lo que funcionó**:
+• **3 párrafos en móvil = sin scroll excesivo** — regla práctica: POST-RESPUESTA debe caber en pantalla sin scroll.
+• **T2+T3 fusionados**: "El problema que atacamos: [80%]. Nuestra plataforma automatiza esa capa — [enumeración] — para convertir semanas en días." — fluye como una sola idea, no como dos secciones separadas.
+• **CTA comprimido**: "¿Te haría sentido verlo en 15 min? Si no aplica, sin tema. Abrazo." — tres oraciones cortas, mismo efecto que la versión larga.
+
+**📝 Lección**: En POST-RESPUESTA, el límite práctico no es solo de palabras sino de **párrafos visibles en móvil**: máximo 3. Si T2 y T3 son párrafos separados con CTA = 4 bloques → cortar. La fusión T2+T3 es la palanca más eficiente: describe el problema y el mecanismo en un solo bloque sin perder claridad. Los detalles redundantes del pain (enumeración de fuentes) se eliminan primero — el 80% ya hace el trabajo solo.
 
 ---
 
